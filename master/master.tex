@@ -1,0 +1,230 @@
+% ============================================================
+%  Omniflow — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+% ── Core packages ──────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{setspace}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+% ── Page geometry ──────────────────────────────────────────
+\geometry{
+    a4paper,
+    left   = 0mm,
+    right  = 0mm,
+    top    = 0mm,
+    bottom = 0mm,
+    noheadfoot
+}
+\setlength{\parindent}{0pt}
+
+% ── Brand colours (Tailwind Blue palette) ──────────────────
+\definecolor{BluePrimary}{HTML}{2563EB}   % blue-600
+\definecolor{BlueDark}   {HTML}{1E3A8A}   % blue-900
+\definecolor{BlueLight}  {HTML}{60A5FA}   % blue-400
+\definecolor{BlueAccent} {HTML}{4338CA}   % indigo-700
+\definecolor{BlueBg}     {HTML}{EFF6FF}   % blue-50
+\definecolor{BlueMid}    {HTML}{DBEAFE}   % blue-100
+\definecolor{TextDark}   {HTML}{1E293B}   % slate-800
+\definecolor{TextLight}  {HTML}{64748B}   % slate-500
+\definecolor{White}      {HTML}{FFFFFF}
+
+% ── Fonts ──────────────────────────────────────────────────
+% pdflatex: use Helvetica-like sans (closest to Plus Jakarta Sans available)
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Hyperref ───────────────────────────────────────────────
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = BluePrimary,
+    hidelinks
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── Full-page gradient background via TikZ ─────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    % Gradient base: top-left #F8FAFC → mid #EFF6FF → bottom-right #E0F2FE
+    \shade[
+        top color    = {rgb,255:red,248;green,250;blue,252},
+        bottom color = {rgb,255:red,224;green,242;blue,254},
+        shading angle = 135
+    ]
+    (current page.north west) rectangle (current page.south east);
+
+    % ── Decorative circles (brand accent) ──────────────────
+    % Large circle — top-right
+    \fill[BluePrimary, opacity=0.07]
+        ([xshift=5cm, yshift=-5cm] current page.north east) circle (9cm);
+    % Medium circle — bottom-left
+    \fill[BlueDark, opacity=0.05]
+        ([xshift=-3cm, yshift=3cm] current page.south west) circle (7cm);
+    % Small accent circle
+    \fill[BlueLight, opacity=0.12]
+        ([xshift=2cm, yshift=-14cm] current page.north west) circle (3.5cm);
+
+    % ── Bottom accent bar ──────────────────────────────────
+    \fill[BluePrimary]
+        (current page.south west)
+        rectangle
+        ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+% ── Content layer ──────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+
+    % ── Logo ───────────────────────────────────────────────
+    \node[
+        anchor = north,
+        yshift = -3.5cm
+    ] at (current page.north) {%
+        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+    };
+
+    % ── Tagline ────────────────────────────────────────────
+    \node[
+        anchor = north,
+        yshift = -7.0cm,
+        text width = 14cm,
+        align = center
+    ] at (current page.north) {%
+        {\fontsize{14}{18}\selectfont\bfseries\color{BluePrimary}
+        Indonesia's Next AI-Native ERP}
+    };
+
+    % ── Sub-tagline ────────────────────────────────────────
+    \node[
+        anchor = north,
+        yshift = -8.5cm,
+        text width = 14cm,
+        align = center
+    ] at (current page.north) {%
+        {\fontsize{11}{16}\selectfont\color{TextLight}
+        Transforming Business Operations with Intelligent Automation}
+    };
+
+    % ── Thin separator line ────────────────────────────────
+    % (removed — badge sudah cukup sebagai visual divider)
+
+    % ── Document type badge ────────────────────────────────
+    \node[
+        anchor       = north,
+        yshift       = -10.2cm,
+        fill         = BluePrimary,
+        text         = White,
+        rounded corners = 6pt,
+        inner xsep   = 12pt,
+        inner ysep   = 8pt,
+        font         = \fontsize{9}{11}\selectfont\bfseries
+    ] at (current page.north) {MARKETING KIT  ·  2026};
+
+    % ── Key metrics row — pure TikZ, no minipage/tabular ──
+    % Cards naik ke -13cm dari north (bawah badge dengan gap 1.5cm)
+    % Card height 2.8cm, width 4.3cm, gap 0.6cm
+
+    % Card 1
+    \draw[BlueMid, line width=1pt, rounded corners=8pt]
+        ([xshift=-7.05cm, yshift=-15.8cm] current page.north)
+        rectangle
+        ([xshift=-2.75cm, yshift=-13.0cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-13.9cm] current page.north)
+        {{\fontsize{26}{30}\selectfont\bfseries\color{BluePrimary} 18}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.1cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Modul Terintegrasi}};
+
+    % Card 2
+    \draw[BlueMid, line width=1pt, rounded corners=8pt]
+        ([xshift=-2.15cm, yshift=-15.8cm] current page.north)
+        rectangle
+        ([xshift=2.15cm,  yshift=-13.0cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-13.9cm] current page.north)
+        {{\fontsize{26}{30}\selectfont\bfseries\color{BluePrimary} 50+}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.1cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Integrasi Platform}};
+
+    % Card 3
+    \draw[BlueMid, line width=1pt, rounded corners=8pt]
+        ([xshift=2.75cm, yshift=-15.8cm] current page.north)
+        rectangle
+        ([xshift=7.05cm, yshift=-13.0cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-13.9cm] current page.north)
+        {{\fontsize{26}{30}\selectfont\bfseries\color{BluePrimary} 99.9\%}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.1cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Uptime SLA}};
+
+    % ── Highlight box ──────────────────────────────────────
+    \node[
+        anchor      = north,
+        yshift      = -17.2cm,
+        fill        = BlueBg,
+        draw        = BluePrimary,
+        line width  = 1.2pt,
+        rounded corners = 8pt,
+        inner sep   = 14pt,
+        text width  = 12.5cm,
+        align       = center
+    ] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark}
+        Solusi ERP terintegrasi untuk transformasi bisnis — \textbf{\color{BluePrimary}dipercaya 10.000+ bisnis} di Indonesia.
+        \textbf{\color{BluePrimary} Free trial 30 hari}, tanpa biaya setup, tanpa kartu kredit.}
+    };
+
+    % ── Bottom bar — richer footer ─────────────────────────
+    % Bar background sudah digambar di layer pertama (yshift=1.8cm)
+    % Baris 1: website + email + phone  |  baris 2: alamat + jam
+    % Gunakan dua node terpisah agar vertical spacing bersih
+
+    % Baris atas — kontak utama
+    \node[
+        anchor    = south,
+        yshift    = 1.0cm,
+        text width = 19cm,
+        align     = center
+    ] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id
+        \enspace\textcolor{BlueLight}{|}\enspace
+        contact@omniflow.id
+        \enspace\textcolor{BlueLight}{|}\enspace
+        +62 821 2560 9413
+        }%
+    };
+
+    % Baris bawah — alamat + jam kerja
+    \node[
+        anchor    = south,
+        yshift    = 0.22cm,
+        text width = 19cm,
+        align     = center
+    ] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace
+        Senin–Jumat, 08.00–18.00 WIB
+        }%
+    };
+
+\end{tikzpicture}
+
+\newpage   % subsequent pages of the marketing kit start here
+
+\end{document}

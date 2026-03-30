@@ -1,0 +1,26 @@
+# ── LaTeX build artifacts ──────────────────────────────────
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# ── Output PDFs (compiled output, not source) ──────────────
+*.pdf
+
+# ── Logo copies (source lives in ../compro/) ───────────────
+master/logo.png
+master/logo-white.png
