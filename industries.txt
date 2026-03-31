@@ -1,0 +1,86 @@
+Fitness and wellness
+Pilates
+Yoga
+Gym
+Personal trainer
+dance studio
+martial arts
+cross fit
+dll
+
+sports and recreation
+padel
+billiard
+futsal
+badminton
+tenis
+golf
+golf simulator
+table tenis
+archery
+dll
+
+beauty and personal care
+barbershop
+hair salon
+nail salon
+eyelash
+broco
+spa
+massage
+reflexology
+tattoo
+dll
+
+medical and clinical
+simklinik
+simrs
+dentist/dental
+aesthetic clinic/facial
+physiotherapy
+psychology
+nutritionist
+chiropractic
+dll
+
+education and training
+music school
+language course
+tutor private
+coding bootcamp
+art class
+workshop
+school
+university
+dll
+
+space and resource rental
+coworking
+meeting room
+studio rental
+podcast studio
+event room
+photo studio
+dll
+
+pet services
+pet grooming
+vet clinic
+pet hotel
+pet daycare
+dll
+
+automate services
+car wash
+auto detailing
+workshop ringan
+tire service
+dll
+
+therapy and professional services
+psychologist
+coach
+consultant
+financial advisor
+legal consultation
+dll
