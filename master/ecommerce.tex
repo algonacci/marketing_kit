@@ -1,0 +1,537 @@
+% ============================================================
+%  Omniflow E-Commerce — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+% ── Core packages ──────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+% ── Page geometry ──────────────────────────────────────────
+\geometry{
+    a4paper,
+    left   = 0mm,
+    right  = 0mm,
+    top    = 0mm,
+    bottom = 0mm,
+    noheadfoot
+}
+\setlength{\parindent}{0pt}
+
+% ── Brand colours ──────────────────────────────────────────
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg}  {HTML}{ECFDF5}
+\definecolor{EmeraldDark}{HTML}{065F46}
+
+% ── Fonts ──────────────────────────────────────────────────
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Hyperref ───────────────────────────────────────────────
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+% ── Helper macros ──────────────────────────────────────────
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace
+            Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\ecomheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW E-COMMERCE --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER PAGE ─────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[
+        top color    = {rgb,255:red,236;green,253;blue,245},
+        bottom color = {rgb,255:red,167;green,243;blue,208},
+        shading angle = 135
+    ]
+    (current page.north west) rectangle (current page.south east);
+
+    \fill[EmeraldPrimary, opacity=0.07]
+        ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[BluePrimary, opacity=0.05]
+        ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[EmeraldPrimary, opacity=0.06]
+        ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+
+    \fill[BluePrimary]
+        (current page.south west)
+        rectangle
+        ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {%
+        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+    };
+
+    \node[
+        anchor=north, yshift=-6.8cm,
+        fill=EmeraldPrimary, text=White,
+        rounded corners=20pt,
+        inner xsep=14pt, inner ysep=6pt,
+        font=\fontsize{9}{11}\selectfont\bfseries
+    ] at (current page.north) {MODULE: E-COMMERCE};
+
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Toko Online Profesional, Tanpa Kerumitan Teknis}%
+    };
+
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight}
+        Platform e-commerce lengkap dengan manajemen produk, pesanan, pengiriman,
+        promosi, dan pembayaran --- semua dalam satu dashboard terpusat.}%
+    };
+
+    % Card 1
+    \draw[EmeraldBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{22}{26}\selectfont\bfseries\color{EmeraldPrimary} Multi}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Payment Gateway}};
+
+    % Card 2
+    \draw[EmeraldBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=2.15cm,  yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{22}{26}\selectfont\bfseries\color{EmeraldPrimary} Promo}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Voucher \& Diskon}};
+
+    % Card 3
+    \draw[EmeraldBg, line width=1pt, rounded corners=8pt]
+        ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{22}{26}\selectfont\bfseries\color{EmeraldPrimary} Review}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} \& Rating Produk}};
+
+    \node[
+        anchor=north, yshift=-17.2cm,
+        fill=EmeraldBg, draw=EmeraldPrimary, line width=1.2pt,
+        rounded corners=8pt, inner sep=14pt,
+        text width=12.5cm, align=center
+    ] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{EmeraldPrimary}Dipercaya ratusan toko online} di Indonesia.
+        Uji coba gratis 30 hari, tanpa biaya setup, tanpa kartu kredit.}%
+    };
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+    };
+
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+    };
+\end{tikzpicture}
+
+\newpage
+
+% ============================================================
+%  PAGE 2 — Pain Points + Testimoni
+% ============================================================
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\ecomheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW E-COMMERCE?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Toko online yang tidak terkelola dengan baik kehilangan penjualan setiap hari. Omniflow E-Commerce memberikan kendali penuh atas produk, pesanan, dan pelanggan Anda dari satu dashboard.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Stok tidak sinkron} --- overselling karena tidak ada update real-time\par\vspace{4pt}%
+    \textbullet\ \textbf{Pesanan manual} --- status order dikelola lewat chat dan spreadsheet\par\vspace{4pt}%
+    \textbullet\ \textbf{Promo tidak teratur} --- diskon dan voucher diurus secara ad hoc\par\vspace{4pt}%
+    \textbullet\ \textbf{Pengiriman kacau} --- ongkos kirim salah, area tidak tersedia\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada ulasan} --- tidak ada sistem review produk terverifikasi\par\vspace{4pt}%
+    \textbullet\ \textbf{Laporan buta} --- tidak tahu produk mana yang paling laris}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW E-COMMERCE MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Stok otomatis} --- saldo stok terpotong saat checkout, real-time\par\vspace{4pt}%
+    \textbullet\ \textbf{Dashboard pesanan} --- tracking status dari pending hingga delivered\par\vspace{4pt}%
+    \textbullet\ \textbf{Promosi \& voucher} --- sistem promosi fleksibel berbasis kategori/produk\par\vspace{4pt}%
+    \textbullet\ \textbf{Ongkos kirim dinamis} --- kalkulasi otomatis per kota \& berat pembelian\par\vspace{4pt}%
+    \textbullet\ \textbf{Review terverifikasi} --- ulasan hanya dari pembeli yang terbukti\par\vspace{4pt}%
+    \textbullet\ \textbf{Analitik penjualan} --- laporan produk terlaris, trafik, konversi}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Sebelumnya kami kelola toko lewat WhatsApp, sering kehabisan stok tiba-tiba. Sejak pakai Omniflow, semua pesanan tercatat rapi dan stok selalu akurat.''}
+
+    \vspace{4pt}
+    {\bfseries\color{EmeraldDark} Rina Kusuma} {\color{TextLight}--- Owner, Butik Fashion Online, Jakarta}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Fitur voucher dan promosi sangat membantu saat kampanye Harbolnas. Omisi pesanan turun drastis sejak ada sistem tracking yang jelas.''}
+
+    \vspace{4pt}
+    {\bfseries\color{EmeraldDark} Budi Santoso} {\color{TextLight}--- Manajer Operasional, Toko Elektronik, Surabaya}}
+\end{minipage}
+
+\newpage
+
+% ============================================================
+%  PAGE 3 — Fitur Utama + Segera Hadir
+% ============================================================
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\ecomheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW E-COMMERCE}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 1. Manajemen Produk \& Katalog}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Kategori produk bersarang dengan slug SEO-friendly\par\vspace{2pt}%
+    \textbullet\ Harga, stok, multi-gambar per produk\par\vspace{2pt}%
+    \textbullet\ Aktifkan/nonaktifkan produk tanpa hapus data\par\vspace{2pt}%
+    \textbullet\ Counter views produk untuk analitik popularitas}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 2. Keranjang \& Checkout}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Keranjang belanja dengan status active/completed/abandoned\par\vspace{2pt}%
+    \textbullet\ Magic link login --- pelanggan tanpa perlu password\par\vspace{2pt}%
+    \textbullet\ Multi-alamat pengiriman tersimpan per pelanggan\par\vspace{2pt}%
+    \textbullet\ Validasi area pengiriman secara otomatis}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 3. Manajemen Pesanan}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Status order: pending, processing, shipped, delivered, cancelled\par\vspace{2pt}%
+    \textbullet\ Riwayat status perubahan dengan audit trail lengkap\par\vspace{2pt}%
+    \textbullet\ Multi-payment gateway: Midtrans, VA, QRIS, kartu kredit\par\vspace{2pt}%
+    \textbullet\ Webhook notifikasi pembayaran otomatis}%
+
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 4. Promosi, Voucher \& Diskon}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Promosi fleksibel: persen, nominal, free shipping\par\vspace{2pt}%
+    \textbullet\ Target promosi: semua produk, kategori, atau item spesifik\par\vspace{2pt}%
+    \textbullet\ Voucher unik dengan batas pemakaian \& ekspirasi\par\vspace{2pt}%
+    \textbullet\ Voucher eksklusif per pelanggan (first order, loyalitas)}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 5. Pengiriman Dinamis}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Konfigurasi wilayah (region) \& kota pengiriman\par\vspace{2pt}%
+    \textbullet\ Ongkos kirim berbasis rentang nilai pembelian\par\vspace{2pt}%
+    \textbullet\ Slot waktu pengiriman dengan cutoff jam order\par\vspace{2pt}%
+    \textbullet\ Jadwal libur toko (store holidays) otomatis}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 6. Review \& Rating Produk}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Ulasan hanya dari pembeli terverifikasi (per order item)\par\vspace{2pt}%
+    \textbullet\ Rating bintang, judul, komentar, foto ulasan\par\vspace{2pt}%
+    \textbullet\ Moderasi admin: approve/reject sebelum tampil\par\vspace{2pt}%
+    \textbullet\ Counter helpful count untuk kualitas ulasan}%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\colorbox{BlueBg}{%
+\begin{minipage}{\dimexpr\textwidth-14pt}
+    \vspace{6pt}
+    {\fontsize{9.5}{13}\selectfont\bfseries\color{BlueDark} SEGERA HADIR}
+    \vspace{4pt}
+
+    \noindent
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Integrasi Marketplace (Shopee, Tokopedia, Lazada)\par\vspace{2pt}%
+        \textbullet\ Sinkronisasi stok multi-channel otomatis}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Program Loyalitas \& Poin Reward\par\vspace{2pt}%
+        \textbullet\ Laporan Konversi \& Abandoned Cart}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Upsell \& Cross-sell Otomatis\par\vspace{2pt}%
+        \textbullet\ Integrasi Akuntansi Otomatis}%
+    \end{minipage}
+    \vspace{6pt}
+\end{minipage}}
+
+\vspace{4pt}
+{\fontsize{8.5}{11}\selectfont\itshape\color{TextLight}
+Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
+
+\newpage
+
+% ============================================================
+%  PAGE 4 — Dampak Terukur + Stats + Testimoni + CTA
+% ============================================================
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\ecomheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR UNTUK BISNIS ANDA}
+
+\noindent
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 40\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Peningkatan\\ konversi checkout}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 0}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Stok salah\\ (real-time sync)}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 3x}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Lebih cepat proses\\ manajemen pesanan}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 25\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Peningkatan\\ repeat order}
+\end{minipage}
+
+\vspace{8pt}
+
+% Stats bar
+\noindent
+\begin{tikzpicture}
+    \fill[EmeraldBg] (0,0) rectangle (\textwidth, 1.4cm);
+    \node[anchor=west, xshift=10pt] at (0, 0.7cm)
+        {{\fontsize{9}{12}\selectfont\color{EmeraldDark}
+        \textbf{Multi-gateway:} Midtrans, VA Bank, QRIS, Kartu Kredit
+        \quad\textcolor{EmeraldPrimary}{\textbullet}\quad
+        \textbf{Integrasi:} Shopify-like API, Custom Webhook
+        \quad\textcolor{EmeraldPrimary}{\textbullet}\quad
+        \textbf{Multi-bahasa:} ID \& EN}};
+\end{tikzpicture}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Fitur pengiriman dinamis sangat membantu kami yang melayani ratusan kota. Ongkir langsung kalkulasi otomatis, nol komplain salah hitung.''}
+
+    \vspace{4pt}
+    {\bfseries\color{EmeraldDark} Dewi Hartanti} {\color{TextLight}--- CEO, Herbal Indonesia, Bandung}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Sistem review terverifikasi meningkatkan kepercayaan pembeli baru. Konversi toko kami naik 40\% dalam 2 bulan pertama pemakaian.''}
+
+    \vspace{4pt}
+    {\bfseries\color{EmeraldDark} Hendra Wijaya} {\color{TextLight}--- Founder, Toko Skincare, Yogyakarta}}
+\end{minipage}
+
+\vspace{8pt}
+
+\sectiontitle{SIAP MULAI BERJUALAN ONLINE?}
+
+\noindent
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{EmeraldBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{EmeraldPrimary} 1}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Pilih Modul}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Pilih paket yang\\ sesuai skala bisnis Anda}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{EmeraldBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{EmeraldPrimary} 2}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Kontak via WhatsApp}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} +62 821 2560 9413\\ Tim kami siap membantu}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{EmeraldBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{EmeraldPrimary} 3}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Langsung Produktif}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Toko online Anda\\ aktif dalam hitungan jam}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}
+
+\vspace{8pt}
+
+% CTA Bar
+\begin{tikzpicture}
+    \fill[BluePrimary] (0,0) rectangle (\textwidth, 1.6cm);
+    \node[anchor=west, xshift=14pt] at (0, 0.8cm)
+        {{\fontsize{11}{14}\selectfont\bfseries\color{White}
+        Mulai gratis 30 hari --- Tidak perlu kartu kredit}};
+    \node[anchor=east, xshift=-14pt] at (\textwidth, 0.8cm)
+        {{\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id \enspace|\enspace +62 821 2560 9413}};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,623 @@
+% ============================================================
+%  Omniflow Payment Gateway — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+% ── Core packages ──────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+% ── Page geometry ──────────────────────────────────────────
+\geometry{
+    a4paper,
+    left   = 0mm,
+    right  = 0mm,
+    top    = 0mm,
+    bottom = 0mm,
+    noheadfoot
+}
+\setlength{\parindent}{0pt}
+
+% ── Brand colours ──────────────────────────────────────────
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{GreenPrimary}{HTML}{16A34A}
+\definecolor{GreenBg}    {HTML}{F0FDF4}
+\definecolor{GreenDark}  {HTML}{14532D}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{TealPrimary}{HTML}{0D9488}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+
+% ── Fonts ──────────────────────────────────────────────────
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Hyperref ───────────────────────────────────────────────
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = BluePrimary,
+    hidelinks
+}
+
+% ── Helper macros ──────────────────────────────────────────
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace
+            Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\pgheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW PAYMENT GATEWAY — MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER PAGE ─────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[
+        top color    = {rgb,255:red,240;green,253;blue,244},
+        bottom color = {rgb,255:red,187;green,247;blue,208},
+        shading angle = 135
+    ]
+    (current page.north west) rectangle (current page.south east);
+
+    \fill[GreenPrimary, opacity=0.07]
+        ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[TealPrimary, opacity=0.05]
+        ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[GreenPrimary, opacity=0.06]
+        ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+
+    \fill[BluePrimary]
+        (current page.south west)
+        rectangle
+        ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {%
+        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+    };
+
+    \node[
+        anchor=north, yshift=-6.8cm,
+        fill=GreenPrimary, text=White,
+        rounded corners=20pt,
+        inner xsep=14pt, inner ysep=6pt,
+        font=\fontsize{9}{11}\selectfont\bfseries
+    ] at (current page.north) {MODULE: PAYMENT GATEWAY};
+
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Terima Pembayaran dari Mana Saja}%
+    };
+
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight}
+        Multi-gateway, multi-channel pembayaran dalam satu platform ---
+        QRIS, Virtual Account, kartu kredit, e-wallet, hingga transfer bank.}%
+    };
+
+    % Card 1
+    \draw[GreenBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{GreenPrimary} Multi-GW}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Midtrans, Xendit, dll.}};
+
+    % Card 2
+    \draw[GreenBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=2.15cm,  yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{GreenPrimary} Wallet}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Saldo \& Topup}};
+
+    % Card 3
+    \draw[GreenBg, line width=1pt, rounded corners=8pt]
+        ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{GreenPrimary} Webhook}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Real-time Update}};
+
+    \node[
+        anchor=north, yshift=-17.2cm,
+        fill=GreenBg, draw=GreenPrimary, line width=1.2pt,
+        rounded corners=8pt, inner sep=14pt,
+        text width=12.5cm, align=center
+    ] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{GreenPrimary}Dipercaya ratusan bisnis online} di Indonesia.
+        Uji coba gratis 30 hari, tanpa biaya setup, tanpa kartu kredit.}%
+    };
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+    };
+
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+    };
+\end{tikzpicture}
+
+\newpage
+
+% ============================================================
+%  PAGE 2 — Pain Points + Testimoni
+% ============================================================
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\pgheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW PAYMENT GATEWAY?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Integrasi pembayaran yang rumit dan tidak terelacak membuat bisnis kehilangan transaksi. Omniflow Payment Gateway menyederhanakan semua ini dalam satu platform.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Integrasi terpisah} --- tiap gateway punya kode dan flow berbeda\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada retry} --- transaksi gagal tidak bisa dicoba ulang otomatis\par\vspace{4pt}%
+    \textbullet\ \textbf{Webhook tidak aman} --- notifikasi pembayaran sering duplikat atau hilang\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada saldo terpusat} --- sulit rekonsiliasi penerimaan dari berbagai channel\par\vspace{4pt}%
+    \textbullet\ \textbf{Riwayat tidak lengkap} --- sulit audit transaksi yang bermasalah\par\vspace{4pt}%
+    \textbullet\ \textbf{Skalabilitas terbatas} --- sulit tambah gateway baru tanpa koding ulang}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{GreenPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW PAYMENT GATEWAY MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Multi-gateway satu API} --- Midtrans, PayPal, Xendit, Tripay dalam satu platform\par\vspace{4pt}%
+    \textbullet\ \textbf{Retry logic otomatis} --- payment\_attempts melacak setiap percobaan transaksi\par\vspace{4pt}%
+    \textbullet\ \textbf{Webhook idempotent} --- log unik mencegah duplikasi notifikasi pembayaran\par\vspace{4pt}%
+    \textbullet\ \textbf{Wallet terpusat} --- saldo per user, topup, transfer, dan riwayat lengkap\par\vspace{4pt}%
+    \textbullet\ \textbf{Audit trail lengkap} --- setiap transaksi tercatat dengan status detail\par\vspace{4pt}%
+    \textbullet\ \textbf{QRIS, VA, CC, e-wallet} --- semua channel populer Indonesia didukung}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{GreenPrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White}
+        Bisnis yang pakai Omniflow Payment Gateway menurunkan \textbf{tingkat kegagalan transaksi hingga 85\%} berkat retry logic dan webhook idempotency.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Omniflow Payment Gateway menyatukan semua channel pembayaran kami. QRIS, VA, dan e-wallet semua terpantau di satu dashboard. Rekonsiliasi yang dulu butuh sehari, sekarang selesai dalam hitungan menit.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Rini Pratiwi}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} CFO, Toko Online Berkah Jaya}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Webhook idempotency log adalah fitur yang kami butuhkan sejak lama. Tidak ada lagi transaksi yang diproses dua kali akibat notifikasi duplikat. Sistem keuangan kami jauh lebih akurat sekarang.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Eko Prabowo}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} CTO, Platform Marketplace Mandiri}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 3 — Fitur Utama
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\pgheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW PAYMENT GATEWAY}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dirancang untuk toko online, marketplace, dan platform digital Indonesia --- setiap fitur berikut sudah berjalan dan aktif digunakan.}
+
+\vspace{6pt}
+
+% ── Fitur 1 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{GreenPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 1. Multi-Gateway Support}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Satu integrasi untuk semua gateway pembayaran populer.\par\vspace{3pt}
+    \textbullet\ Midtrans, PayPal, Xendit, Tripay\par\vspace{2pt}%
+    \textbullet\ QRIS, Virtual Account, Kartu Kredit\par\vspace{2pt}%
+    \textbullet\ E-wallet: GoPay, OVO, DANA, LinkAja\par\vspace{2pt}%
+    \textbullet\ Mudah tambah gateway baru tanpa ubah kode}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 2. Wallet \& Saldo Pengguna}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola saldo digital per pengguna dengan lengkap.\par\vspace{3pt}
+    \textbullet\ Saldo real-time per user\par\vspace{2pt}%
+    \textbullet\ Topup saldo melalui berbagai channel\par\vspace{2pt}%
+    \textbullet\ Transfer saldo antar pengguna\par\vspace{2pt}%
+    \textbullet\ Riwayat transaksi wallet lengkap}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 3 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{TealPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 3. Payment Attempts \& Retry}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Tingkatkan success rate dengan retry logic yang cerdas.\par\vspace{3pt}
+    \textbullet\ Lacak setiap percobaan pembayaran per transaksi\par\vspace{2pt}%
+    \textbullet\ Status: pending, success, failed, cancelled\par\vspace{2pt}%
+    \textbullet\ Retry otomatis untuk transaksi yang gagal\par\vspace{2pt}%
+    \textbullet\ Log lengkap untuk audit dan debugging}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 4. Webhook Idempotency}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Notifikasi pembayaran yang andal tanpa duplikasi.\par\vspace{3pt}
+    \textbullet\ Log idempotency untuk setiap notifikasi webhook\par\vspace{2pt}%
+    \textbullet\ Cegah pemrosesan ganda transaksi yang sama\par\vspace{2pt}%
+    \textbullet\ Dukungan semua event webhook gateway\par\vspace{2pt}%
+    \textbullet\ Audit log lengkap dengan timestamp akurat}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 5 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 5. Riwayat Transaksi Lengkap}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Visibilitas penuh atas semua transaksi pembayaran.\par\vspace{3pt}
+    \textbullet\ Rekap transaksi: topup, transfer, pembayaran\par\vspace{2pt}%
+    \textbullet\ Filter berdasarkan gateway, status, rentang waktu\par\vspace{2pt}%
+    \textbullet\ Detail penuh per transaksi untuk rekonsiliasi\par\vspace{2pt}%
+    \textbullet\ Export data untuk keperluan akuntansi}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{GreenDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 6. Keamanan Transaksi}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Standar keamanan tinggi untuk lindungi setiap transaksi.\par\vspace{3pt}
+    \textbullet\ Enkripsi end-to-end semua data pembayaran\par\vspace{2pt}%
+    \textbullet\ Token unik per transaksi anti-replay attack\par\vspace{2pt}%
+    \textbullet\ Validasi signature webhook dari gateway\par\vspace{2pt}%
+    \textbullet\ Compliance standar keamanan pembayaran}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Segera Hadir ───────────────────────────────────────────
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        Disbursement \& Payout Massal\enspace\textcolor{BluePrimary}{·}\enspace
+        Split Payment\enspace\textcolor{BluePrimary}{·}\enspace
+        Recurring Billing\enspace\textcolor{BluePrimary}{·}\enspace
+        Integrasi Akuntansi\enspace\textcolor{BluePrimary}{·}\enspace
+        dan banyak lagi lainnya.}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 4 — Benefits + Stats + Testimoni + CTA
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\pgheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR PADA BISNIS ANDA}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Bergabunglah dengan ratusan bisnis online dan platform digital yang sudah mengoptimalkan penerimaan pembayaran mereka dengan Omniflow Payment Gateway.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{GreenPrimary} 85\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Penurunan Gagal Transaksi}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Retry logic otomatis dan webhook idempotent memastikan transaksi diproses dengan benar.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{GreenPrimary} 0\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Duplikasi Transaksi}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Webhook idempotency log menjamin setiap notifikasi pembayaran hanya diproses satu kali.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{GreenPrimary} Multi}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Channel Pembayaran}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}QRIS, VA, kartu kredit, GoPay, OVO, DANA, LinkAja --- semua tersedia dalam satu integrasi.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{GreenPrimary} Real-time}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Status Pembayaran}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Notifikasi webhook real-time memastikan status pembayaran selalu akurat tanpa polling manual.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 10.000+}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Pengguna Aktif}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} SLA Uptime}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Sebelum pakai Omniflow, kami harus maintain kode integrasi untuk tiga gateway berbeda. Sekarang cukup satu API, semua channel tersedia. Tim engineering kami bisa fokus ke fitur produk, bukan maintenance integrasi.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Arif Wibowo}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Lead Engineer, Startup Fintech Merdeka}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{GreenPrimary} 85\%}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} penurunan kegagalan transaksi}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} dengan Omniflow Payment Gateway}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul Payment}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Aktifkan channel pembayaran yang Anda butuhkan.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Langsung Produktif}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Tim kami bantu onboarding dalam 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White}
+        Terima Pembayaran Lebih Cepat \& Lebih Aman Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid}
+        Uji coba gratis 30 hari \enspace\textbullet\enspace Tanpa biaya setup \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

@@ -1,0 +1,623 @@
+% ============================================================
+%  Omniflow LMS — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+% ── Core packages ──────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+% ── Page geometry ──────────────────────────────────────────
+\geometry{
+    a4paper,
+    left   = 0mm,
+    right  = 0mm,
+    top    = 0mm,
+    bottom = 0mm,
+    noheadfoot
+}
+\setlength{\parindent}{0pt}
+
+% ── Brand colours ──────────────────────────────────────────
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{VioletPrimary}{HTML}{6D28D9}
+\definecolor{VioletBg}   {HTML}{EDE9FE}
+\definecolor{VioletDark} {HTML}{4C1D95}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg}  {HTML}{ECFDF5}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+
+% ── Fonts ──────────────────────────────────────────────────
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Hyperref ───────────────────────────────────────────────
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = BluePrimary,
+    hidelinks
+}
+
+% ── Helper macros ──────────────────────────────────────────
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace
+            Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\lmsheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW LMS — MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER PAGE ─────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[
+        top color    = {rgb,255:red,237;green,233;blue,254},
+        bottom color = {rgb,255:red,221;green,214;blue,254},
+        shading angle = 135
+    ]
+    (current page.north west) rectangle (current page.south east);
+
+    \fill[VioletPrimary, opacity=0.07]
+        ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[BluePrimary, opacity=0.05]
+        ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[VioletPrimary, opacity=0.06]
+        ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+
+    \fill[BluePrimary]
+        (current page.south west)
+        rectangle
+        ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {%
+        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+    };
+
+    \node[
+        anchor=north, yshift=-6.8cm,
+        fill=VioletPrimary, text=White,
+        rounded corners=20pt,
+        inner xsep=14pt, inner ysep=6pt,
+        font=\fontsize{9}{11}\selectfont\bfseries
+    ] at (current page.north) {MODULE: LMS};
+
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Platform Belajar \& Pelatihan Terpadu}%
+    };
+
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight}
+        Kelola batch pelatihan, distribusikan materi, terima tugas, dan nilai peserta ---
+        semua dalam satu sistem yang terintegrasi dengan tim Anda.}%
+    };
+
+    % Card 1
+    \draw[VioletBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} Batch}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Kelas \& Program}};
+
+    % Card 2
+    \draw[VioletBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=2.15cm,  yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} Grading}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Nilai Otomatis}};
+
+    % Card 3
+    \draw[VioletBg, line width=1pt, rounded corners=8pt]
+        ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} Library}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Materi Terpusat}};
+
+    \node[
+        anchor=north, yshift=-17.2cm,
+        fill=VioletBg, draw=VioletPrimary, line width=1.2pt,
+        rounded corners=8pt, inner sep=14pt,
+        text width=12.5cm, align=center
+    ] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{VioletPrimary}Dipercaya oleh perusahaan \& lembaga pelatihan} di Indonesia.
+        Uji coba gratis 30 hari, tanpa biaya setup, tanpa kartu kredit.}%
+    };
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+    };
+
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+    };
+\end{tikzpicture}
+
+\newpage
+
+% ============================================================
+%  PAGE 2 — Pain Points + Testimoni
+% ============================================================
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\lmsheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW LMS?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Pelatihan yang tidak terstruktur membuang waktu dan uang. Omniflow LMS memastikan setiap peserta mendapatkan materi yang tepat, mengerjakan tugas, dan dinilai secara transparan.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM LMS}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Materi tersebar} --- file di email, grup WA, Google Drive, tidak terorganisir\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada tracking} --- tidak tahu peserta mana yang sudah belajar atau belum\par\vspace{4pt}%
+    \textbullet\ \textbf{Penilaian manual} --- koreksi tugas satu per satu lewat email menghabiskan waktu\par\vspace{4pt}%
+    \textbullet\ \textbf{Batch tidak konsisten} --- tiap pelatihan diulang dari nol tanpa template\par\vspace{4pt}%
+    \textbullet\ \textbf{Library tidak terawat} --- referensi lama sulit ditemukan kembali\par\vspace{4pt}%
+    \textbullet\ \textbf{Laporan tidak ada} --- tidak bisa tahu efektivitas program pelatihan}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{VioletPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW LMS MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Materi terpusat} --- semua konten tersimpan rapi di satu platform\par\vspace{4pt}%
+    \textbullet\ \textbf{Batch terstruktur} --- kelompokkan peserta, assign materi, pantau progres\par\vspace{4pt}%
+    \textbullet\ \textbf{Tugas \& grading digital} --- peserta submit link, admin beri nilai \& komentar\par\vspace{4pt}%
+    \textbullet\ \textbf{Resource library} --- kumpulkan materi referensi per tipe untuk digunakan ulang\par\vspace{4pt}%
+    \textbullet\ \textbf{Role-based akses} --- Admin, Manager, User dengan hak akses berbeda\par\vspace{4pt}%
+    \textbullet\ \textbf{Activity log} --- rekam semua aktivitas peserta lengkap dengan device \& browser}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{VioletPrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White}
+        Perusahaan yang pakai Omniflow LMS memangkas \textbf{waktu administrasi pelatihan hingga 60\%} dan meningkatkan konsistensi onboarding karyawan baru.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Omniflow LMS mengubah cara kami onboarding karyawan baru. Semua materi SOP tersimpan rapi, peserta bisa belajar mandiri, dan kami tinggal pantau progres serta nilai tugas mereka.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Dwi Hartanti}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} HR Manager, Mitra Solusi Nusantara}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Fitur batch dan submission grading sangat membantu lembaga kursus kami. Peserta submit tugas, trainer langsung beri nilai dengan komentar. Tidak perlu bolak-balik email lagi.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Ahmad Fauzi}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Direktur, Akademi Digital Kreatif}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 3 — Fitur Utama
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\lmsheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW LMS}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dirancang untuk pelatihan korporat, lembaga kursus, dan tim HR Indonesia --- setiap fitur berikut sudah berjalan dan aktif digunakan.}
+
+\vspace{6pt}
+
+% ── Fitur 1 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{VioletPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 1. Manajemen Batch}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola kelompok pelatihan dengan tipe yang fleksibel.\par\vspace{3pt}
+    \textbullet\ Buat batch kelas atau program dengan nama unik\par\vspace{2pt}%
+    \textbullet\ Tambahkan peserta ke batch dengan mudah\par\vspace{2pt}%
+    \textbullet\ Satu batch bisa berisi banyak materi berbeda\par\vspace{2pt}%
+    \textbullet\ Assign submission (tugas) per batch}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 2. Distribusi Materi}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Konten pelatihan terstruktur dan mudah diakses peserta.\par\vspace{3pt}
+    \textbullet\ Buat materi dengan konten teks lengkap (LONGTEXT)\par\vspace{2pt}%
+    \textbullet\ Hubungkan materi ke satu atau beberapa batch\par\vspace{2pt}%
+    \textbullet\ Peserta akses materi sesuai batch yang diikuti\par\vspace{2pt}%
+    \textbullet\ Materi dapat dipakai ulang di batch lain}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 3 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 3. Tugas \& Penilaian Digital}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Proses pengumpulan dan penilaian tugas yang efisien.\par\vspace{3pt}
+    \textbullet\ Buat submission (tugas) dengan deskripsi jelas\par\vspace{2pt}%
+    \textbullet\ Peserta submit link hasil pekerjaan mereka\par\vspace{2pt}%
+    \textbullet\ Admin beri nilai (desimal) dan komentar umpan balik\par\vspace{2pt}%
+    \textbullet\ Riwayat penilaian tersimpan per peserta}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 4. Resource Library}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Repositori materi referensi yang dapat digunakan ulang.\par\vspace{3pt}
+    \textbullet\ Buat resource dengan tipe fleksibel (artikel, SOP, dll.)\par\vspace{2pt}%
+    \textbullet\ Konten lengkap dalam format teks (LONGTEXT)\par\vspace{2pt}%
+    \textbullet\ Mudah dicari dan diakses kapan saja\par\vspace{2pt}%
+    \textbullet\ Terpisah dari materi batch untuk kegunaan mandiri}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 5 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 5. Role \& Akses Pengguna}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kontrol akses yang tepat untuk setiap peran di organisasi.\par\vspace{3pt}
+    \textbullet\ Tiga peran: Admin, Manager, User (peserta)\par\vspace{2pt}%
+    \textbullet\ Login dengan email + password yang aman\par\vspace{2pt}%
+    \textbullet\ Profil lengkap dengan foto per pengguna\par\vspace{2pt}%
+    \textbullet\ Activity log: rekam IP, device, browser, platform}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{VioletDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 6. Activity Monitoring}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pantau aktivitas seluruh pengguna secara real-time.\par\vspace{3pt}
+    \textbullet\ Log setiap aktivitas dengan timestamp akurat\par\vspace{2pt}%
+    \textbullet\ Rekam IP address, tipe device, browser, OS\par\vspace{2pt}%
+    \textbullet\ Identifikasi peserta yang tidak aktif\par\vspace{2pt}%
+    \textbullet\ Audit trail lengkap untuk kebutuhan compliance}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Segera Hadir ───────────────────────────────────────────
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        Video Streaming Materi\enspace\textcolor{BluePrimary}{·}\enspace
+        Quiz Otomatis dengan Skor\enspace\textcolor{BluePrimary}{·}\enspace
+        Sertifikat Digital\enspace\textcolor{BluePrimary}{·}\enspace
+        Progress Tracking per Peserta\enspace\textcolor{BluePrimary}{·}\enspace
+        dan banyak lagi lainnya.}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 4 — Benefits + Stats + Testimoni + CTA
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\lmsheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR PADA PROGRAM PELATIHAN ANDA}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Bergabunglah dengan ratusan perusahaan dan lembaga pelatihan yang sudah meningkatkan efektivitas dan efisiensi program mereka dengan Omniflow LMS.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} 60\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Hemat Waktu Administrasi}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Distribusi materi, pengumpulan tugas, dan penilaian berjalan otomatis tanpa email manual.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} 100\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Materi Terarsip Rapi}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Tidak ada lagi materi hilang. Semua tersimpan di platform dan bisa digunakan ulang kapan saja.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} Multi}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Batch Paralel}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Jalankan banyak program pelatihan sekaligus dengan peserta dan materi yang berbeda tanpa konflik.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} Digital}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Grading Transparan}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Peserta mendapat nilai dan feedback tertulis dari trainer --- proses yang adil dan terdokumentasi.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 10.000+}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Pengguna Aktif}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} SLA Uptime}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Resource library di Omniflow LMS jadi repositori SOP perusahaan kami. Karyawan baru tinggal akses, baca, dan pahami --- tidak perlu nunggu trainer yang sibuk.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Siti Rahmawati}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Training \& Development Lead, Nusantara Retail Group}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{VioletPrimary} 60\%}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} hemat waktu administrasi}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} pelatihan dengan Omniflow LMS}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul LMS}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Mulai import materi dan batch pelatihan hari ini.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Langsung Produktif}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Tim kami bantu onboarding dalam 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White}
+        Tingkatkan Efektivitas Pelatihan Bisnis Anda Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid}
+        Uji coba gratis 30 hari \enspace\textbullet\enspace Tanpa biaya setup \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

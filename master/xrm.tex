@@ -1,0 +1,623 @@
+% ============================================================
+%  Omniflow XRM — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+% ── Core packages ──────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+% ── Page geometry ──────────────────────────────────────────
+\geometry{
+    a4paper,
+    left   = 0mm,
+    right  = 0mm,
+    top    = 0mm,
+    bottom = 0mm,
+    noheadfoot
+}
+\setlength{\parindent}{0pt}
+
+% ── Brand colours ──────────────────────────────────────────
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{PurpleBg}  {HTML}{F5F3FF}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg} {HTML}{ECFDF5}
+\definecolor{EmeraldDark}{HTML}{065F46}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{RosePrimary}{HTML}{E11D48}
+\definecolor{RoseBg}    {HTML}{FFF1F2}
+
+% ── Fonts ──────────────────────────────────────────────────
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Hyperref ───────────────────────────────────────────────
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = BluePrimary,
+    hidelinks
+}
+
+% ── Helper macros ──────────────────────────────────────────
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace
+            Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\xrmheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW XRM — MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER PAGE ─────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[
+        top color    = {rgb,255:red,255;green,241;blue,242},
+        bottom color = {rgb,255:red,254;green,205;blue,211},
+        shading angle = 135
+    ]
+    (current page.north west) rectangle (current page.south east);
+
+    \fill[RosePrimary, opacity=0.07]
+        ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[PurplePrimary, opacity=0.05]
+        ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[RosePrimary, opacity=0.06]
+        ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+
+    \fill[BluePrimary]
+        (current page.south west)
+        rectangle
+        ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {%
+        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+    };
+
+    \node[
+        anchor=north, yshift=-6.8cm,
+        fill=RosePrimary, text=White,
+        rounded corners=20pt,
+        inner xsep=14pt, inner ysep=6pt,
+        font=\fontsize{9}{11}\selectfont\bfseries
+    ] at (current page.north) {MODULE: XRM};
+
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Kelola Relasi Bisnis Anda Lebih Cerdas}%
+    };
+
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight}
+        Satu platform untuk mengelola seluruh mitra bisnis — pelanggan, vendor,
+        dan kontak — beserta riwayat interaksi secara lengkap.}%
+    };
+
+    % Card 1
+    \draw[RoseBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{22}{26}\selectfont\bfseries\color{RosePrimary} 360\textdegree}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Profil Mitra Bisnis}};
+
+    % Card 2
+    \draw[RoseBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=2.15cm,  yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{22}{26}\selectfont\bfseries\color{RosePrimary} 9 Tipe}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Log Interaksi}};
+
+    % Card 3
+    \draw[RoseBg, line width=1pt, rounded corners=8pt]
+        ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{22}{26}\selectfont\bfseries\color{RosePrimary} AI}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Relationship Copilot}};
+
+    \node[
+        anchor=north, yshift=-17.2cm,
+        fill=RoseBg, draw=RosePrimary, line width=1.2pt,
+        rounded corners=8pt, inner sep=14pt,
+        text width=12.5cm, align=center
+    ] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{RosePrimary}Dipercaya ribuan tim sales \& account management} di Indonesia.
+        Uji coba gratis 30 hari, tanpa biaya setup, tanpa kartu kredit.}%
+    };
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+    };
+
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+    };
+\end{tikzpicture}
+
+\newpage
+
+% ============================================================
+%  PAGE 2 — Pain Points + Testimoni
+% ============================================================
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\xrmheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW XRM?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Relasi bisnis yang tidak terkelola dengan baik berarti peluang yang hilang. Omniflow XRM memastikan setiap interaksi dengan mitra bisnis tercatat, terlacak, dan ditindaklanjuti.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM XRM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Data mitra tersebar} — kontak di HP, notes di email, PIC di Excel\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada riwayat} — lupa siapa yang sudah dihubungi dan kapan\par\vspace{4pt}%
+    \textbullet\ \textbf{Follow-up terlewat} — janji temu dan deadline tidak terlacak\par\vspace{4pt}%
+    \textbullet\ \textbf{Ganti sales, lost context} — saat sales resign, semua data ikut hilang\par\vspace{4pt}%
+    \textbullet\ \textbf{Dokumen berserakan} — kontrak, penawaran, invoice tersimpan terpisah\par\vspace{4pt}%
+    \textbullet\ \textbf{Laporan manual} — tidak ada visibilitas pipeline \& performa tim sales}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RosePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW XRM MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Profil 360\textdegree} — kontak, alamat, rekening, dokumen, NPWP dalam satu tempat\par\vspace{4pt}%
+    \textbullet\ \textbf{Log interaksi lengkap} — rekam setiap telepon, meeting, email, kunjungan\par\vspace{4pt}%
+    \textbullet\ \textbf{Follow-up terstruktur} — jadwal follow-up dengan tanggal \& catatan\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada data hilang} — semua tersimpan di platform, bukan di HP sales\par\vspace{4pt}%
+    \textbullet\ \textbf{Manajemen dokumen} — lampirkan kontrak \& penawaran langsung ke partner\par\vspace{4pt}%
+    \textbullet\ \textbf{AI Relationship Copilot} — analisis pola interaksi \& rekomendasi tindakan}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{RosePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White}
+        Tim sales yang pakai Omniflow XRM meningkatkan \textbf{conversion rate hingga 30\%} berkat follow-up yang tidak pernah terlewat.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Omniflow XRM mengubah cara kami mengelola ratusan mitra bisnis. Semua riwayat interaksi tersimpan rapi. Sales baru pun langsung bisa melanjutkan dari mana yang lama berhenti.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Fajar Nugraha}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Sales Director, Distribusi Bersama Mandiri}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Fitur log interaksi dengan reminder follow-up sangat game-changer. Tidak ada lagi prospek yang jatuh karena lupa dihubungi. Pipeline kami sekarang jauh lebih terkontrol.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Melinda Sari}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Account Manager, Solusi Teknologi Prima}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 3 — Fitur Utama
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\xrmheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW XRM}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dirancang untuk tim sales, account management, dan procurement Indonesia — setiap fitur berikut sudah berjalan dan aktif digunakan.}
+
+\vspace{6pt}
+
+% ── Fitur 1 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RosePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 1. Manajemen Mitra Bisnis}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Profil lengkap setiap partner dengan kode unik otomatis.\par\vspace{3pt}
+    \textbullet\ Tipe: Customer, Vendor, atau keduanya\par\vspace{2pt}%
+    \textbullet\ NPWP, email, telepon, website\par\vspace{2pt}%
+    \textbullet\ Kode partner unik (PTN-000001) anti-duplikasi\par\vspace{2pt}%
+    \textbullet\ Status aktif, prospek, atau non-aktif}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 2. Profil 360\textdegree Partner}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Semua data penting partner tersimpan di satu tempat.\par\vspace{3pt}
+    \textbullet\ Multi-alamat (kantor, pengiriman, penagihan)\par\vspace{2pt}%
+    \textbullet\ Kontak PIC dengan jabatan \& divisi\par\vspace{2pt}%
+    \textbullet\ Rekening bank \& data keuangan partner\par\vspace{2pt}%
+    \textbullet\ Dokumen terlampir: kontrak, KTP, NPWP}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 3 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 3. Log Interaksi Lengkap}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Rekam setiap titik sentuh dengan partner bisnis Anda.\par\vspace{3pt}
+    \textbullet\ Tipe: telepon, meeting, email, kunjungan, catatan\par\vspace{2pt}%
+    \textbullet\ Tipe bisnis: quotation, invoice, pembayaran\par\vspace{2pt}%
+    \textbullet\ Status: scheduled, completed, postponed, cancelled\par\vspace{2pt}%
+    \textbullet\ Prioritas, rating kinerja \& ketepatan waktu}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 4. Follow-up \& Task Management}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Tidak ada peluang yang terlewat karena lupa follow-up.\par\vspace{3pt}
+    \textbullet\ Set tanggal \& catatan follow-up per interaksi\par\vspace{2pt}%
+    \textbullet\ Assign interaksi ke staf yang bertanggung jawab\par\vspace{2pt}%
+    \textbullet\ Flag \textit{needs follow-up} per interaksi\par\vspace{2pt}%
+    \textbullet\ Terhubung ke quotation, invoice, \& sales order}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 5 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 5. Peran \& Akses Tim}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kontrol siapa yang bisa melihat dan mengelola data partner.\par\vspace{3pt}
+    \textbullet\ Role-based access: admin, sales, account manager\par\vspace{2pt}%
+    \textbullet\ Assign multiple role per partner\par\vspace{2pt}%
+    \textbullet\ Audit log setiap perubahan data partner\par\vspace{2pt}%
+    \textbullet\ Isolasi data antar tim jika diperlukan}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 6. AI Relationship Copilot}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Asisten AI yang memahami konteks relasi bisnis Anda.\par\vspace{3pt}
+    \textbullet\ Analisis pola interaksi \& identifikasi risiko churn\par\vspace{2pt}%
+    \textbullet\ Rekomendasi waktu terbaik untuk follow-up\par\vspace{2pt}%
+    \textbullet\ Multi-model AI yang dapat dikonfigurasi\par\vspace{2pt}%
+    \textbullet\ Context-aware: histori partner \& data transaksi}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Segera Hadir ───────────────────────────────────────────
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        Pipeline \& Kanban Deal Management\enspace\textcolor{BluePrimary}{·}\enspace
+        Email Campaign\enspace\textcolor{BluePrimary}{·}\enspace
+        Lead Scoring Otomatis\enspace\textcolor{BluePrimary}{·}\enspace
+        dan banyak lagi lainnya.}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 4 — Benefits + Stats + Testimoni + CTA
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\xrmheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR PADA TIM SALES ANDA}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Bergabunglah dengan ribuan tim sales dan account management yang sudah meningkatkan produktivitas mereka dengan Omniflow XRM.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{RosePrimary} 30\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Peningkatan Conversion Rate}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Follow-up yang konsisten dan terstruktur meningkatkan peluang closing deal hingga 30\%.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{RosePrimary} 0\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Data Hilang Saat Ganti Sales}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Semua riwayat interaksi tersimpan di platform — transisi antar sales menjadi mulus tanpa kehilangan konteks.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{RosePrimary} 360\textdegree}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Visibilitas Tiap Partner}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Dari kontak PIC, rekening, dokumen hingga riwayat interaksi — semua tersedia dalam satu profil partner.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{RosePrimary} 9 Tipe}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Log Interaksi Terintegrasi}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Telepon, meeting, email, kunjungan, catatan, task, quotation, invoice, hingga pembayaran — semua tercatat.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 10.000+}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Pengguna Aktif}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} SLA Uptime}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``AI Copilot di XRM sangat membantu saya mengidentifikasi partner mana yang sudah lama tidak dihubungi. Saya tinggal tanya, dan sistem langsung memberikan daftar prioritas follow-up hari ini.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Rizky Pratama}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Head of Business Development, Karya Nusantara}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{RosePrimary} 30\%}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} peningkatan conversion rate}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} dengan Omniflow XRM}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul XRM}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Mulai import data mitra bisnis Anda hari ini.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Langsung Produktif}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Tim kami bantu onboarding dalam 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White}
+        Bangun Relasi Bisnis yang Lebih Kuat Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid}
+        Uji coba gratis 30 hari \enspace\textbullet\enspace Tanpa biaya setup \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

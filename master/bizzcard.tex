@@ -1,0 +1,622 @@
+% ============================================================
+%  Omniflow Bizzcard — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+% ── Core packages ──────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+% ── Page geometry ──────────────────────────────────────────
+\geometry{
+    a4paper,
+    left   = 0mm,
+    right  = 0mm,
+    top    = 0mm,
+    bottom = 0mm,
+    noheadfoot
+}
+\setlength{\parindent}{0pt}
+
+% ── Brand colours ──────────────────────────────────────────
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{FuchsiaPrimary}{HTML}{A21CAF}
+\definecolor{FuchsiaBg}  {HTML}{FDF4FF}
+\definecolor{FuchsiaDark}{HTML}{701A75}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+
+% ── Fonts ──────────────────────────────────────────────────
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Hyperref ───────────────────────────────────────────────
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = BluePrimary,
+    hidelinks
+}
+
+% ── Helper macros ──────────────────────────────────────────
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace
+            Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\bizzheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW BIZZCARD — MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER PAGE ─────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[
+        top color    = {rgb,255:red,253;green,244;blue,255},
+        bottom color = {rgb,255:red,245;green,208;blue,254},
+        shading angle = 135
+    ]
+    (current page.north west) rectangle (current page.south east);
+
+    \fill[FuchsiaPrimary, opacity=0.07]
+        ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[PurplePrimary, opacity=0.05]
+        ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[FuchsiaPrimary, opacity=0.06]
+        ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+
+    \fill[BluePrimary]
+        (current page.south west)
+        rectangle
+        ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {%
+        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+    };
+
+    \node[
+        anchor=north, yshift=-6.8cm,
+        fill=FuchsiaPrimary, text=White,
+        rounded corners=20pt,
+        inner xsep=14pt, inner ysep=6pt,
+        font=\fontsize{9}{11}\selectfont\bfseries
+    ] at (current page.north) {MODULE: BIZZCARD};
+
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Profil Digital \& Asesmen Psikologi Profesional}%
+    };
+
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight}
+        Buat kartu nama digital yang cerdas sekaligus lakukan asesmen psikologi terstandar
+        untuk rekrutmen, pengembangan tim, dan pemahaman diri profesional.}%
+    };
+
+    % Card 1
+    \draw[FuchsiaBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{FuchsiaPrimary} Profil}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Digital \& Publik}};
+
+    % Card 2
+    \draw[FuchsiaBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=2.15cm,  yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{FuchsiaPrimary} Asesmen}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Psikologi Terstandar}};
+
+    % Card 3
+    \draw[FuchsiaBg, line width=1pt, rounded corners=8pt]
+        ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{FuchsiaPrimary} AI}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Interpretasi Otomatis}};
+
+    \node[
+        anchor=north, yshift=-17.2cm,
+        fill=FuchsiaBg, draw=FuchsiaPrimary, line width=1.2pt,
+        rounded corners=8pt, inner sep=14pt,
+        text width=12.5cm, align=center
+    ] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{FuchsiaPrimary}Dipercaya tim HR dan profesional} di Indonesia untuk rekrutmen berbasis data.
+        Uji coba gratis 30 hari, tanpa biaya setup, tanpa kartu kredit.}%
+    };
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+    };
+
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+    };
+\end{tikzpicture}
+
+\newpage
+
+% ============================================================
+%  PAGE 2 — Pain Points + Testimoni
+% ============================================================
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\bizzheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW BIZZCARD?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Kartu nama fisik mudah hilang dan tidak bisa diukur. Rekrutmen tanpa data psikologi menghasilkan keputusan yang tidak akurat. Omniflow Bizzcard menjawab keduanya.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Kartu nama fisik hilang} --- kartu dicetak mahal, mudah hilang, sulit diupdate\par\vspace{4pt}%
+    \textbullet\ \textbf{Profil tidak terupdate} --- perubahan posisi atau kontak tidak tersinkron\par\vspace{4pt}%
+    \textbullet\ \textbf{Rekrutmen tanpa data} --- keputusan hire hanya berdasar CV dan wawancara\par\vspace{4pt}%
+    \textbullet\ \textbf{Asesmen manual lambat} --- tes psikologi kertas membutuhkan waktu lama\par\vspace{4pt}%
+    \textbullet\ \textbf{Interpretasi tidak konsisten} --- penilaian bergantung pada penilai yang berbeda\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada data historis} --- hasil asesmen lama tidak tersimpan dengan baik}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{FuchsiaPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW BIZZCARD MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Profil digital} --- kartu nama yang selalu terupdate, bisa dibagikan via link\par\vspace{4pt}%
+    \textbullet\ \textbf{Asesmen digital} --- psikologi test online yang cepat dan terstandar\par\vspace{4pt}%
+    \textbullet\ \textbf{Versi asesmen fleksibel} --- schema, scoring, dan norma dapat dikonfigurasi\par\vspace{4pt}%
+    \textbullet\ \textbf{AI interpretasi otomatis} --- hasil asesmen dianalisis dan dijelaskan oleh AI\par\vspace{4pt}%
+    \textbullet\ \textbf{Histori lengkap} --- semua hasil asesmen tersimpan dan dapat diakses kembali\par\vspace{4pt}%
+    \textbullet\ \textbf{Multi-kategori asesmen} --- psikologi, kompetensi, kepribadian, dan lainnya}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{FuchsiaPrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White}
+        Tim HR yang pakai Omniflow Bizzcard meningkatkan \textbf{akurasi keputusan rekrutmen hingga 40\%} berkat data asesmen psikologi yang objektif dan terstandar.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Omniflow Bizzcard mengubah cara kami melakukan asesmen kandidat. Sekarang semua tes dilakukan online, hasilnya langsung muncul dengan interpretasi AI. Proses rekrutmen yang dulu butuh seminggu jadi selesai dalam sehari.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Hendra Kurniawan}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} HR Director, Perusahaan Manufaktur Nasional}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Fitur profil digital Bizzcard sangat membantu networking profesional kami. Cukup bagikan link, semua informasi kontak dan profil sudah tersedia lengkap. Tidak perlu cetak kartu nama lagi.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Lina Wijaya}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Business Development Manager, Konsultan Bisnis Indonesia}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 3 — Fitur Utama
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\bizzheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW BIZZCARD}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dirancang untuk tim HR, profesional, dan organisasi Indonesia yang membutuhkan profil digital dan asesmen berbasis data --- semua fitur sudah berjalan aktif.}
+
+\vspace{6pt}
+
+% ── Fitur 1 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{FuchsiaPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 1. Definisi Asesmen Fleksibel}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Buat asesmen yang dapat dikonfigurasi sepenuhnya.\par\vspace{3pt}
+    \textbullet\ Kategori asesmen: psikologi, kompetensi, kepribadian\par\vspace{2pt}%
+    \textbullet\ Engine type yang dapat disesuaikan per asesmen\par\vspace{2pt}%
+    \textbullet\ Buat dan kelola banyak jenis asesmen berbeda\par\vspace{2pt}%
+    \textbullet\ Nama dan deskripsi asesmen yang jelas}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 2. Versi Asesmen Terstandar}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola versi asesmen dengan standar ilmiah.\par\vspace{3pt}
+    \textbullet\ Schema JSON untuk struktur pertanyaan fleksibel\par\vspace{2pt}%
+    \textbullet\ Scoring JSON untuk aturan penilaian\par\vspace{2pt}%
+    \textbullet\ Norm JSON untuk interpretasi berbasis norma\par\vspace{2pt}%
+    \textbullet\ Versioning untuk pembaruan asesmen tanpa menghilangkan data lama}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 3 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 3. Proses Asesmen Digital}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pengalaman asesmen yang mulus dari awal hingga selesai.\par\vspace{3pt}
+    \textbullet\ Status attempt: draft, submitted, completed\par\vspace{2pt}%
+    \textbullet\ Respons per pertanyaan tersimpan otomatis\par\vspace{2pt}%
+    \textbullet\ Bisa dilanjutkan jika terputus di tengah jalan\par\vspace{2pt}%
+    \textbullet\ Tampilan adaptif untuk semua perangkat}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 4. Hasil \& Interpretasi AI}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Hasil asesmen yang bermakna dan mudah dipahami.\par\vspace{3pt}
+    \textbullet\ Score JSON terperinci per dimensi penilaian\par\vspace{2pt}%
+    \textbullet\ Interpretation JSON berbasis norma populasi\par\vspace{2pt}%
+    \textbullet\ AI Copilot untuk analisis dan rekomendasi\par\vspace{2pt}%
+    \textbullet\ Riwayat semua hasil per kandidat/karyawan}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 5 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 5. AI Assistant \& Copilot}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kecerdasan buatan untuk membantu analisis mendalam.\par\vspace{3pt}
+    \textbullet\ AI Assistant untuk pertanyaan seputar hasil asesmen\par\vspace{2pt}%
+    \textbullet\ AI Copilot untuk rekomendasi pengembangan\par\vspace{2pt}%
+    \textbullet\ Multi-model AI yang dapat dikonfigurasi\par\vspace{2pt}%
+    \textbullet\ Context-aware berdasarkan profil dan histori}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{FuchsiaDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 6. Manajemen Pengguna}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola akses dan profil semua pengguna platform.\par\vspace{3pt}
+    \textbullet\ Profil lengkap dengan foto dan data kontak\par\vspace{2pt}%
+    \textbullet\ Role-based access untuk admin dan peserta\par\vspace{2pt}%
+    \textbullet\ Undang kandidat untuk mengisi asesmen\par\vspace{2pt}%
+    \textbullet\ Dashboard HR untuk memantau semua asesmen}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Segera Hadir ───────────────────────────────────────────
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        Kartu Nama Digital dengan QR Code\enspace\textcolor{BluePrimary}{·}\enspace
+        Share Profil Publik\enspace\textcolor{BluePrimary}{·}\enspace
+        Integrasi HRIS\enspace\textcolor{BluePrimary}{·}\enspace
+        Laporan Asesmen PDF\enspace\textcolor{BluePrimary}{·}\enspace
+        dan banyak lagi lainnya.}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 4 — Benefits + Stats + Testimoni + CTA
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\bizzheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR PADA PROSES HR \& NETWORKING ANDA}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Bergabunglah dengan ratusan profesional HR dan organisasi Indonesia yang sudah mengoptimalkan rekrutmen dan networking mereka dengan Omniflow Bizzcard.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{FuchsiaPrimary} 40\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Akurasi Keputusan Rekrutmen}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Data asesmen psikologi yang objektif mengurangi bias dalam proses seleksi kandidat.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{FuchsiaPrimary} 70\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Lebih Cepat Proses Asesmen}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Asesmen digital dengan interpretasi AI otomatis memangkas waktu evaluasi dari hari menjadi jam.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{FuchsiaPrimary} Digital}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Profil yang Selalu Aktual}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Profil digital yang diperbarui langsung tersinkron di semua tempat --- tidak ada kartu nama usang.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{FuchsiaPrimary} AI}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Interpretasi \& Rekomendasi}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}AI Copilot menganalisis hasil asesmen dan memberikan rekomendasi pengembangan yang spesifik.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 10.000+}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Pengguna Aktif}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} SLA Uptime}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``AI Copilot di Bizzcard memberikan insight yang sangat berharga dari hasil asesmen kandidat. Kami kini bisa membuat keputusan rekrutmen yang jauh lebih objektif dan berbasis data, bukan hanya intuisi.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Maya Rahayu}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Talent Acquisition Lead, Perusahaan Teknologi Indonesia}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{FuchsiaPrimary} 40\%}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} akurasi keputusan rekrutmen}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} dengan Omniflow Bizzcard}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul Bizzcard}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Mulai buat asesmen dan profil digital hari ini.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Langsung Produktif}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Tim kami bantu onboarding dalam 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White}
+        Rekrut Lebih Cerdas \& Bangun Profil Profesional Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid}
+        Uji coba gratis 30 hari \enspace\textbullet\enspace Tanpa biaya setup \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

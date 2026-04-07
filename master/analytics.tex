@@ -1,0 +1,623 @@
+% ============================================================
+%  Omniflow Analytics — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+% ── Core packages ──────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+% ── Page geometry ──────────────────────────────────────────
+\geometry{
+    a4paper,
+    left   = 0mm,
+    right  = 0mm,
+    top    = 0mm,
+    bottom = 0mm,
+    noheadfoot
+}
+\setlength{\parindent}{0pt}
+
+% ── Brand colours ──────────────────────────────────────────
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{IndigoPrimary}{HTML}{4F46E5}
+\definecolor{IndigoBg}   {HTML}{EEF2FF}
+\definecolor{IndigoDark} {HTML}{312E81}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{TealPrimary}{HTML}{0D9488}
+
+% ── Fonts ──────────────────────────────────────────────────
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Hyperref ───────────────────────────────────────────────
+\hypersetup{
+    colorlinks = true,
+    urlcolor   = BluePrimary,
+    hidelinks
+}
+
+% ── Helper macros ──────────────────────────────────────────
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id
+            \enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace
+            Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\analyticsheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW ANALYTICS — MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER PAGE ─────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[
+        top color    = {rgb,255:red,238;green,242;blue,255},
+        bottom color = {rgb,255:red,199;green,210;blue,254},
+        shading angle = 135
+    ]
+    (current page.north west) rectangle (current page.south east);
+
+    \fill[IndigoPrimary, opacity=0.07]
+        ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[TealPrimary, opacity=0.05]
+        ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[IndigoPrimary, opacity=0.06]
+        ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+
+    \fill[BluePrimary]
+        (current page.south west)
+        rectangle
+        ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {%
+        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+    };
+
+    \node[
+        anchor=north, yshift=-6.8cm,
+        fill=IndigoPrimary, text=White,
+        rounded corners=20pt,
+        inner xsep=14pt, inner ysep=6pt,
+        font=\fontsize{9}{11}\selectfont\bfseries
+    ] at (current page.north) {MODULE: ANALYTICS};
+
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Ubah Data Bisnis Jadi Keputusan yang Tepat}%
+    };
+
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight}
+        Dashboard analitik terpadu yang mengkonsolidasikan data dari seluruh modul Omniflow ---
+        penjualan, inventori, keuangan, dan operasional dalam satu tampilan yang jelas.}%
+    };
+
+    % Card 1
+    \draw[IndigoBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{IndigoPrimary} Unified}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Dashboard Terpadu}};
+
+    % Card 2
+    \draw[IndigoBg, line width=1pt, rounded corners=8pt]
+        ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=2.15cm,  yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{IndigoPrimary} Real-time}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Data Langsung}};
+
+    % Card 3
+    \draw[IndigoBg, line width=1pt, rounded corners=8pt]
+        ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle
+        ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{IndigoPrimary} AI}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Insight Otomatis}};
+
+    \node[
+        anchor=north, yshift=-17.2cm,
+        fill=IndigoBg, draw=IndigoPrimary, line width=1.2pt,
+        rounded corners=8pt, inner sep=14pt,
+        text width=12.5cm, align=center
+    ] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{IndigoPrimary}Satu dashboard untuk seluruh bisnis Anda} --- tidak perlu pindah-pindah tool.
+        Uji coba gratis 30 hari, tanpa biaya setup, tanpa kartu kredit.}%
+    };
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+    };
+
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+    };
+\end{tikzpicture}
+
+\newpage
+
+% ============================================================
+%  PAGE 2 — Pain Points + Testimoni
+% ============================================================
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\analyticsheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW ANALYTICS?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Data bisnis yang tersebar di berbagai sistem membuat keputusan lambat dan tidak akurat. Omniflow Analytics menyatukan semua data dalam satu dashboard yang bisa langsung diaksi.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Data tersebar} --- penjualan di satu sistem, inventori di lain, keuangan di Excel\par\vspace{4pt}%
+    \textbullet\ \textbf{Laporan lambat} --- butuh berhari-hari untuk kumpulkan dan rekap data\par\vspace{4pt}%
+    \textbullet\ \textbf{Insight tidak real-time} --- saat laporan selesai, datanya sudah usang\par\vspace{4pt}%
+    \textbullet\ \textbf{Keputusan berdasar intuisi} --- tidak ada data untuk mendukung keputusan\par\vspace{4pt}%
+    \textbullet\ \textbf{Metrik tidak konsisten} --- tiap departemen punya definisi angka berbeda\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada early warning} --- masalah baru diketahui setelah terlambat}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW ANALYTICS MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Dashboard terpadu} --- semua data dari modul Omniflow dalam satu tampilan\par\vspace{4pt}%
+    \textbullet\ \textbf{Data real-time} --- angka diperbarui otomatis tanpa rekap manual\par\vspace{4pt}%
+    \textbullet\ \textbf{KPI yang dapat dikonfigurasi} --- tentukan metrik yang penting bagi bisnis Anda\par\vspace{4pt}%
+    \textbullet\ \textbf{Tren \& perbandingan} --- bandingkan performa periode ke periode\par\vspace{4pt}%
+    \textbullet\ \textbf{AI Insight} --- sistem mendeteksi anomali dan memberikan rekomendasi\par\vspace{4pt}%
+    \textbullet\ \textbf{Multi-modul} --- sales, inventori, keuangan, SDM, semua terhubung}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{IndigoPrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White}
+        Manajemen yang pakai Omniflow Analytics mengambil keputusan \textbf{5$\times$ lebih cepat} karena semua data bisnis langsung tersedia dalam satu dashboard.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Omniflow Analytics mengubah cara kami mengelola bisnis. Sekarang saya bisa lihat performa penjualan, stok kritis, dan arus kas hanya dari satu layar. Rapat manajemen jadi jauh lebih produktif dan berbasis data.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Santoso Wibawa}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} CEO, Grup Ritel Modern Indonesia}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Fitur AI Insight di Analytics mendeteksi penurunan performa cabang kami bahkan sebelum tim lapangan melaporkannya. Kami bisa intervensi lebih awal dan menghindari kerugian yang lebih besar.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Kartika Sari}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Operations Director, Jaringan Distribusi Nasional}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 3 — Fitur Utama
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\analyticsheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW ANALYTICS}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dirancang untuk pemilik bisnis, manajemen, dan tim operasional Indonesia yang butuh visibilitas penuh atas seluruh kinerja bisnis mereka.}
+
+\vspace{6pt}
+
+% ── Fitur 1 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 1. Dashboard Terpadu Multi-Modul}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Satu tampilan untuk seluruh data bisnis Anda.\par\vspace{3pt}
+    \textbullet\ Integrasikan data dari Sales, HRIS, Inventori, Akuntansi\par\vspace{2pt}%
+    \textbullet\ Widget yang dapat dikonfigurasi per peran pengguna\par\vspace{2pt}%
+    \textbullet\ Ringkasan eksekutif harian otomatis\par\vspace{2pt}%
+    \textbullet\ Tampilan responsif untuk desktop dan mobile}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 2. Analitik Penjualan}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pantau performa penjualan secara mendalam.\par\vspace{3pt}
+    \textbullet\ Revenue, invoice, dan pembayaran real-time\par\vspace{2pt}%
+    \textbullet\ Tren penjualan harian, mingguan, bulanan\par\vspace{2pt}%
+    \textbullet\ Performa per produk, kategori, dan sales\par\vspace{2pt}%
+    \textbullet\ Outstanding invoice dan aging analysis}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 3 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 3. Analitik Inventori \& Stok}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Visibilitas stok seluruh gudang dan outlet.\par\vspace{3pt}
+    \textbullet\ Saldo stok real-time per produk dan lokasi\par\vspace{2pt}%
+    \textbullet\ Alert stok kritis dan hampir habis\par\vspace{2pt}%
+    \textbullet\ Pergerakan stok dan tren mutasi\par\vspace{2pt}%
+    \textbullet\ Performa opname dan akurasi stok}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 4. Analitik Keuangan}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pantau kesehatan keuangan bisnis secara real-time.\par\vspace{3pt}
+    \textbullet\ Arus kas masuk dan keluar harian\par\vspace{2pt}%
+    \textbullet\ Laporan laba rugi ringkas per periode\par\vspace{2pt}%
+    \textbullet\ Performa pembelian dan hutang ke supplier\par\vspace{2pt}%
+    \textbullet\ Rekonsiliasi pembayaran dan piutang}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Fitur 5 ────────────────────────────────────────────────
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 5. Analitik SDM \& Operasional}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Data SDM dan operasional dalam satu dashboard.\par\vspace{3pt}
+    \textbullet\ Kehadiran, absensi, dan lembur karyawan\par\vspace{2pt}%
+    \textbullet\ Performa per departemen dan cabang\par\vspace{2pt}%
+    \textbullet\ Status aset dan utilisasi peralatan\par\vspace{2pt}%
+    \textbullet\ Tren pertumbuhan tenaga kerja}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 6. AI Insight \& Anomali Detection}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kecerdasan buatan untuk proaktif mendeteksi masalah.\par\vspace{3pt}
+    \textbullet\ Deteksi anomali otomatis pada metrik kritis\par\vspace{2pt}%
+    \textbullet\ Prediksi tren berdasarkan data historis\par\vspace{2pt}%
+    \textbullet\ Rekomendasi tindakan berbasis AI\par\vspace{2pt}%
+    \textbullet\ Alert otomatis ke manajemen untuk isu kritis}%
+\end{minipage}
+
+\vspace{8pt}
+
+% ── Segera Hadir ───────────────────────────────────────────
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        Custom Dashboard Builder\enspace\textcolor{BluePrimary}{·}\enspace
+        Export Laporan PDF \& Excel\enspace\textcolor{BluePrimary}{·}\enspace
+        Drill-down Charts Interaktif\enspace\textcolor{BluePrimary}{·}\enspace
+        Notifikasi Threshold Otomatis\enspace\textcolor{BluePrimary}{·}\enspace
+        dan banyak lagi lainnya.}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ============================================================
+%  PAGE 4 — Benefits + Stats + Testimoni + CTA
+% ============================================================
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\analyticsheader
+\compactfooter
+
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR PADA PENGAMBILAN KEPUTUSAN BISNIS}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Bergabunglah dengan ratusan pemilik bisnis dan eksekutif Indonesia yang sudah mengambil keputusan lebih cepat dan lebih akurat dengan Omniflow Analytics.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} 5$\times$}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Lebih Cepat Pengambilan Keputusan}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Data bisnis yang tersedia real-time memungkinkan manajemen bereaksi cepat tanpa tunggu laporan.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} 80\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Kurangi Waktu Pembuatan Laporan}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Dashboard otomatis menggantikan proses rekap manual yang makan waktu berhari-hari menjadi instan.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} Satu}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Dashboard untuk Semua Modul}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Sales, inventori, keuangan, HRIS, dan operasional terhubung dalam satu sumber data kebenaran.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} AI}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Deteksi Anomali Proaktif}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}AI mendeteksi masalah sebelum menjadi krisis --- manajemen bisa bertindak sebelum terlambat.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 10.000+}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Pengguna Aktif}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} SLA Uptime}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Dengan Omniflow Analytics, saya tidak perlu lagi minta laporan dari tiap departemen. Semua angka yang saya butuhkan sudah tersedia di dashboard saya setiap pagi. Bisnis terasa lebih terkontrol dari sebelumnya.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Bambang Setiadi}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Owner, Grup Bisnis Multi-Cabang Surabaya}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} 5$\times$}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} lebih cepat pengambilan keputusan}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} dengan Omniflow Analytics}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul Analytics}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungkan modul Omniflow dan lihat data Anda hari ini.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}
+            \end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Langsung Produktif}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Tim kami bantu onboarding dalam 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White}
+        Jadikan Data Bisnis Anda Senjata Kompetitif Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid}
+        Uji coba gratis 30 hari \enspace\textbullet\enspace Tanpa biaya setup \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

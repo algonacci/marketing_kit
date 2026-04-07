@@ -1,0 +1,483 @@
+% ============================================================
+%  Omniflow Asset Management — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{SlatePrimary}{HTML}{475569}
+\definecolor{SlateBg}    {HTML}{F1F5F9}
+\definecolor{SlateDark}  {HTML}{1E293B}
+\definecolor{TealPrimary}{HTML}{0D9488}
+\definecolor{TealBg}     {HTML}{F0FDFA}
+\definecolor{TealDark}   {HTML}{134E4A}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south)
+            {{\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}};
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south)
+            {{\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+    \end{tikzpicture}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}}
+
+\newcommand{\assetheader}{%
+    \thispagestyle{fancy}\fancyhf{}\cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW ASSET MANAGEMENT --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──────────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,240;green,253;blue,250},
+           bottom color={rgb,255:red,153;green,246;blue,228},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[TealPrimary,opacity=0.07]([xshift=-4cm,yshift=-6cm]current page.north west)circle(10cm);
+    \fill[BluePrimary,opacity=0.05]([xshift=6cm,yshift=-4cm]current page.north east)circle(8cm);
+    \fill[TealPrimary,opacity=0.06]([xshift=-2cm,yshift=-16cm]current page.north west)circle(5cm);
+    \fill[BluePrimary](current page.south west)rectangle([yshift=1.8cm]current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north,yshift=-3.2cm] at (current page.north)
+        {\includegraphics[height=2.8cm]{../../compro/logo.png}};
+
+    \node[anchor=north,yshift=-6.8cm,fill=TealPrimary,text=White,
+          rounded corners=20pt,inner xsep=14pt,inner ysep=6pt,
+          font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north)
+        {MODULE: ASSET MANAGEMENT};
+
+    \node[anchor=north,yshift=-9.0cm,text width=15cm,align=center] at (current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Tahu di Mana Aset Anda Berada, Setiap Saat}};
+
+    \node[anchor=north,yshift=-11.0cm,text width=14cm,align=center] at (current page.north)
+        {{\fontsize{11}{15}\selectfont\color{TextLight}
+        Kelola aset perusahaan dari pengadaan hingga penghapusan.
+        Pelacakan penugasan, peminjaman, dan kondisi aset secara real-time.}};
+
+    \draw[TealBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-7.05cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=-2.75cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{TealPrimary} QR}};
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Scan Aset}};
+
+    \draw[TealBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-2.15cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=2.15cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=0cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{TealPrimary} Assign}};
+    \node[anchor=center] at ([xshift=0cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Penugasan \& Peminjaman}};
+
+    \draw[TealBg,line width=1pt,rounded corners=8pt]
+        ([xshift=2.75cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=7.05cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{TealPrimary} Audit}};
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Log Event Lengkap}};
+
+    \node[anchor=north,yshift=-17.2cm,fill=TealBg,draw=TealPrimary,line width=1.2pt,
+          rounded corners=8pt,inner sep=14pt,text width=12.5cm,align=center]
+        at (current page.north)
+        {{\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{TealPrimary}Tidak ada lagi aset yang hilang atau tidak terlacak.}
+        Dari laptop, kendaraan, hingga peralatan --- semua terdata, terpantau.
+        Uji coba gratis 30 hari.}};
+
+    \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id\enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace+62 821 2560 9413}};
+    \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ─────────────────────────────────────────────────
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\assetheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW ASSET MANAGEMENT?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Tanpa sistem, aset perusahaan sering tidak diketahui lokasinya, tidak terpelihara, dan tidak bisa diaudit. Omniflow Asset Management memberi kontrol penuh atas setiap aset.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Aset tidak terlacak} --- tidak tahu siapa yang pegang apa\par\vspace{4pt}%
+    \textbullet\ \textbf{Peminjaman tidak tercatat} --- laptop dipinjam, lupa dikembalikan\par\vspace{4pt}%
+    \textbullet\ \textbf{Kondisi tidak dipantau} --- aset rusak baru diketahui saat darurat\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada audit trail} --- tidak bisa lacak histori penggunaan\par\vspace{4pt}%
+    \textbullet\ \textbf{Request tidak terstruktur} --- permintaan aset via chat informal\par\vspace{4pt}%
+    \textbullet\ \textbf{Aset hilang} --- tidak ada yang bertanggung jawab per aset}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{TealPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW ASSET MANAGEMENT}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Tag \& QR Code} --- setiap aset punya identitas unik yang bisa di-scan\par\vspace{4pt}%
+    \textbullet\ \textbf{Peminjaman terstruktur} --- durasi, checkout notes, due date\par\vspace{4pt}%
+    \textbullet\ \textbf{Monitor kondisi} --- excellent, good, fair, damaged\par\vspace{4pt}%
+    \textbullet\ \textbf{Event log lengkap} --- setiap perubahan dicatat dengan metadata\par\vspace{4pt}%
+    \textbullet\ \textbf{Request \& approval} --- proses formal, bukan lagi via chat\par\vspace{4pt}%
+    \textbullet\ \textbf{Custody tracking} --- tahu siapa pemegang aset saat ini}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{TealBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``QR code per aset mengubah cara kami audit. Scan sekali, langsung tahu status, kondisi, siapa pemegang terakhir. Audit tahunan kini selesai dalam sehari.''}
+
+    \vspace{4pt}
+    {\bfseries\color{TealDark} Bagas Setiawan} {\color{TextLight}--- IT Manager, Perusahaan Jasa, Jakarta}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{TealBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Sistem request aset formal mengakhiri drama pinjam-meminjam. Karyawan tahu prosedurnya, manajemen punya visibilitas penuh atas semua aset.''}
+
+    \vspace{4pt}
+    {\bfseries\color{TealDark} Nurul Hidayah} {\color{TextLight}--- GA Head, Startup Teknologi, Bali}}
+\end{minipage}
+
+\newpage
+
+% ── PAGE 3 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\assetheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW ASSET MANAGEMENT}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 1. Registrasi \& Identifikasi Aset}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Asset tag unik (kode identifikasi internal)\par\vspace{2pt}%
+    \textbullet\ Serial number, QR code per aset\par\vspace{2pt}%
+    \textbullet\ Kategori aset (elektronik, kendaraan, furnitur, dll)\par\vspace{2pt}%
+    \textbullet\ Status: available, assigned, borrowed, maintenance, retired\par\vspace{2pt}%
+    \textbullet\ Kondisi: excellent, good, fair, damaged\par\vspace{2pt}%
+    \textbullet\ Lokasi fisik saat ini tercatat}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 2. Penugasan Aset}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Assign ke karyawan, tim, atau lokasi tertentu\par\vspace{2pt}%
+    \textbullet\ Handover notes saat serah terima\par\vspace{2pt}%
+    \textbullet\ Tanggal mulai dan berakhir penugasan\par\vspace{2pt}%
+    \textbullet\ Riwayat penugasan lengkap per aset\par\vspace{2pt}%
+    \textbullet\ Custody type: employee / team / location}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 3. Peminjaman Aset}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Proses peminjaman dengan waktu mulai \& batas kembali\par\vspace{2pt}%
+    \textbullet\ Checkout notes dan return notes\par\vspace{2pt}%
+    \textbullet\ Status: ongoing, returned, overdue\par\vspace{2pt}%
+    \textbullet\ Notifikasi overdue (aset belum dikembalikan)}%
+
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 4. Request \& Approval}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Tipe request: assignment, borrowing, return, status\_update, archive\par\vspace{2pt}%
+    \textbullet\ Assign approver per request\par\vspace{2pt}%
+    \textbullet\ Status: pending, approved, rejected, cancelled\par\vspace{2pt}%
+    \textbullet\ Notes permintaan \& catatan reviewer\par\vspace{2pt}%
+    \textbullet\ Timestamp reviewed\_at tercatat}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 5. Event Log Aset}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Setiap kejadian pada aset tercatat (event\_type)\par\vspace{2pt}%
+    \textbullet\ Judul event, catatan, dan metadata JSON fleksibel\par\vspace{2pt}%
+    \textbullet\ Telusuri riwayat lengkap setiap aset\par\vspace{2pt}%
+    \textbullet\ Basis untuk laporan audit kapanpun}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 6. Scan Token \& QR}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Setiap aset punya scan token unik\par\vspace{2pt}%
+    \textbullet\ QR code dapat dicetak dan ditempelkan ke aset\par\vspace{2pt}%
+    \textbullet\ Scan QR langsung buka detail aset di browser\par\vspace{2pt}%
+    \textbullet\ Update status aset cepat via scan}%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\colorbox{BlueBg}{%
+\begin{minipage}{\dimexpr\textwidth-14pt}
+    \vspace{6pt}
+    {\fontsize{9.5}{13}\selectfont\bfseries\color{BlueDark} SEGERA HADIR}
+    \vspace{4pt}
+
+    \noindent
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Jadwal Pemeliharaan (Maintenance)\par\vspace{2pt}%
+        \textbullet\ Notifikasi Perawatan Berkala}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Laporan Depresiasi Aset\par\vspace{2pt}%
+        \textbullet\ Integrasi Akuntansi (Fixed Asset)}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Mobile App Scan QR\par\vspace{2pt}%
+        \textbullet\ Laporan Inventaris Aset PDF}%
+    \end{minipage}
+    \vspace{6pt}
+\end{minipage}}
+
+\vspace{4pt}
+{\fontsize{8.5}{11}\selectfont\itshape\color{TextLight}
+Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
+
+\newpage
+
+% ── PAGE 4 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\assetheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR UNTUK BISNIS ANDA}
+
+\noindent
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} 100\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Aset terdata\\ dengan lokasi}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} 0\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Peminjaman\\ tanpa catatan}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} 1 Hari}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Audit aset\\ dengan QR scan}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} Real-time}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Status \&\\ kondisi aset}
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{tikzpicture}
+    \fill[TealBg] (0,0) rectangle (\textwidth, 1.4cm);
+    \node[anchor=west,xshift=10pt] at (0,0.7cm)
+        {{\fontsize{9}{12}\selectfont\color{TealDark}
+        \textbf{Identifikasi:} Asset Tag + QR Code + Serial Number
+        \quad\textcolor{TealPrimary}{\textbullet}\quad
+        \textbf{Kategori:} Elektronik, Kendaraan, Furnitur, dll
+        \quad\textcolor{TealPrimary}{\textbullet}\quad
+        \textbf{Audit:} Penuh}};
+\end{tikzpicture}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{TealBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Sistem request aset dengan approval mengakhiri chaos peminjaman informal. Tim HR dan GA sekarang punya data akurat untuk perencanaan pengadaan.''}
+
+    \vspace{4pt}
+    {\bfseries\color{TealDark} Pratama Wijaya} {\color{TextLight}--- HR Director, Perusahaan Jasa Keuangan, Surabaya}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{TealBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Event log yang lengkap membuat kami bisa pertanggungjawabkan kondisi setiap aset saat ada klaim asuransi. Sangat membantu untuk compliance internal.''}
+
+    \vspace{4pt}
+    {\bfseries\color{TealDark} Indah Permata} {\color{TextLight}--- Finance \& Admin, Perusahaan Konstruksi, Medan}}
+\end{minipage}
+
+\vspace{8pt}
+
+\sectiontitle{SIAP MENGELOLA ASET PERUSAHAAN?}
+
+\noindent
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{TealBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{TealPrimary} 1}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Pilih Modul}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Pilih paket yang\\ sesuai skala bisnis Anda}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{TealBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{TealPrimary} 2}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Kontak via WhatsApp}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} +62 821 2560 9413\\ Tim kami siap membantu}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{TealBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{TealPrimary} 3}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Langsung Produktif}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Aset perusahaan\\ terpantau mulai hari ini}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}
+
+\vspace{8pt}
+
+\begin{tikzpicture}
+    \fill[BluePrimary] (0,0) rectangle (\textwidth, 1.6cm);
+    \node[anchor=west,xshift=14pt] at (0,0.8cm)
+        {{\fontsize{11}{14}\selectfont\bfseries\color{White}
+        Mulai gratis 30 hari --- Tidak perlu kartu kredit}};
+    \node[anchor=east,xshift=-14pt] at (\textwidth,0.8cm)
+        {{\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id\enspace|\enspace+62 821 2560 9413}};
+\end{tikzpicture}
+
+\end{document}

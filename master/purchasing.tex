@@ -1,0 +1,480 @@
+% ============================================================
+%  Omniflow Purchasing — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{OrangeBg}   {HTML}{FFF7ED}
+\definecolor{OrangeDark} {HTML}{9A3412}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south)
+            {{\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}};
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south)
+            {{\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+    \end{tikzpicture}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}}
+
+\newcommand{\purchheader}{%
+    \thispagestyle{fancy}\fancyhf{}\cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW PURCHASING --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──────────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,255;green,247;blue,237},
+           bottom color={rgb,255:red,254;green,215;blue,170},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[OrangePrimary,opacity=0.07]([xshift=-4cm,yshift=-6cm]current page.north west)circle(10cm);
+    \fill[BluePrimary,opacity=0.05]([xshift=6cm,yshift=-4cm]current page.north east)circle(8cm);
+    \fill[OrangePrimary,opacity=0.06]([xshift=-2cm,yshift=-16cm]current page.north west)circle(5cm);
+    \fill[BluePrimary](current page.south west)rectangle([yshift=1.8cm]current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north,yshift=-3.2cm] at (current page.north)
+        {\includegraphics[height=2.8cm]{../../compro/logo.png}};
+
+    \node[anchor=north,yshift=-6.8cm,fill=OrangePrimary,text=White,
+          rounded corners=20pt,inner xsep=14pt,inner ysep=6pt,
+          font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north)
+        {MODULE: PURCHASING};
+
+    \node[anchor=north,yshift=-9.0cm,text width=15cm,align=center] at (current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Kontrol Penuh Atas Pengeluaran Bisnis Anda}};
+
+    \node[anchor=north,yshift=-11.0cm,text width=14cm,align=center] at (current page.north)
+        {{\fontsize{11}{15}\selectfont\color{TextLight}
+        Kelola Purchase Order, invoice pembelian, dan lampiran dokumen
+        dengan alur approval yang transparan dan audit trail penuh.}};
+
+    \draw[OrangeBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-7.05cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=-2.75cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{OrangePrimary} PO}};
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Purchase Order}};
+
+    \draw[OrangeBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-2.15cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=2.15cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=0cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{OrangePrimary} APV}};
+    \node[anchor=center] at ([xshift=0cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Approval Workflow}};
+
+    \draw[OrangeBg,line width=1pt,rounded corners=8pt]
+        ([xshift=2.75cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=7.05cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{OrangePrimary} INV}};
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Invoice Pembelian}};
+
+    \node[anchor=north,yshift=-17.2cm,fill=OrangeBg,draw=OrangePrimary,line width=1.2pt,
+          rounded corners=8pt,inner sep=14pt,text width=12.5cm,align=center]
+        at (current page.north)
+        {{\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{OrangePrimary}Kendalikan anggaran pembelian} bisnis Anda dengan alur yang jelas dan dokumen terpusat.
+        Uji coba gratis 30 hari, tanpa kartu kredit.}};
+
+    \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id\enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace+62 821 2560 9413}};
+    \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ─────────────────────────────────────────────────
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\purchheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW PURCHASING?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Pembelian yang tidak terkelola berarti pengeluaran tak terkontrol dan pemasok yang tidak teraudit. Omniflow Purchasing memberi visibilitas penuh atas setiap rupiah yang dibelanjakan.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{PO manual} --- permintaan beli di WhatsApp atau email\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada approval} --- pembelian tanpa persetujuan berjenjang\par\vspace{4pt}%
+    \textbullet\ \textbf{Invoice berantakan} --- faktur supplier tersebar di mana-mana\par\vspace{4pt}%
+    \textbullet\ \textbf{Dokumen hilang} --- kontrak dan quotation supplier tak tersimpan\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada tracking} --- status PO tidak jelas, barang belum datang\par\vspace{4pt}%
+    \textbullet\ \textbf{Anggaran bocor} --- pembelian melebihi anggaran tanpa peringatan}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW PURCHASING MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{PO digital} --- nomor PO unik otomatis, status real-time\par\vspace{4pt}%
+    \textbullet\ \textbf{Approval berjenjang} --- assign approver, audit timestamp\par\vspace{4pt}%
+    \textbullet\ \textbf{Invoice terpusat} --- faktur supplier tertaut ke PO, tersimpan\par\vspace{4pt}%
+    \textbullet\ \textbf{Manajemen dokumen} --- upload lampiran ke S3, kategori terstruktur\par\vspace{4pt}%
+    \textbullet\ \textbf{Tracking fulfillment} --- tandai PO diterima dengan catatan lengkap\par\vspace{4pt}%
+    \textbullet\ \textbf{Audit trail penuh} --- setiap perubahan tercatat dengan timestamp}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangeBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{OrangeDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Sebelumnya approve PO lewat chat grup. Sekarang ada alur formal dengan timestamp, dan kami bisa audit kapanpun. Compliance tim keuangan jauh lebih mudah.''}
+
+    \vspace{4pt}
+    {\bfseries\color{OrangeDark} Fajar Nugroho} {\color{TextLight}--- Finance Manager, Perusahaan Manufaktur, Bekasi}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangeBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{OrangeDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Lampiran dokumen ke S3 sangat membantu. Semua invoice dan kontrak supplier tersimpan rapi, tidak ada lagi file hilang saat diaudit.''}
+
+    \vspace{4pt}
+    {\bfseries\color{OrangeDark} Lina Susanti} {\color{TextLight}--- Procurement Lead, Retail Chain, Bandung}}
+\end{minipage}
+
+\newpage
+
+% ── PAGE 3 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\purchheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW PURCHASING}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{OrangePrimary} 1. Purchase Order (PO)}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Nomor PO unik otomatis (PO-YYYY-XXXXX)\par\vspace{2pt}%
+    \textbullet\ Terhubung ke supplier di modul XRM\par\vspace{2pt}%
+    \textbullet\ Status lengkap: draft, pending\_approval, approved, ordered, fulfilled, cancelled\par\vspace{2pt}%
+    \textbullet\ Tanggal pengiriman yang diharapkan (expected delivery)\par\vspace{2pt}%
+    \textbullet\ Soft delete --- PO tidak hilang, hanya diarsip}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{OrangePrimary} 2. Approval Workflow}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Assign approver per PO sebelum diproses\par\vspace{2pt}%
+    \textbullet\ Timestamp approved\_at tercatat otomatis\par\vspace{2pt}%
+    \textbullet\ Catatan approval/rejection (approval\_note)\par\vspace{2pt}%
+    \textbullet\ Status rejected dengan alasan tercatat\par\vspace{2pt}%
+    \textbullet\ Tidak ada PO diproses tanpa approval}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{OrangePrimary} 3. Fulfillment Tracking}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Tandai PO telah dipesan ke supplier (ordered\_at)\par\vspace{2pt}%
+    \textbullet\ Tandai barang telah diterima (fulfilled\_at)\par\vspace{2pt}%
+    \textbullet\ Catat siapa yang konfirmasi penerimaan\par\vspace{2pt}%
+    \textbullet\ Catatan fulfillment untuk quality check}%
+
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{OrangePrimary} 4. Invoice Pembelian}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Invoice supplier tertaut ke PO (1:1)\par\vspace{2pt}%
+    \textbullet\ Nomor invoice, tanggal, jumlah, jatuh tempo\par\vspace{2pt}%
+    \textbullet\ Status pembayaran: unpaid, paid, cancelled\par\vspace{2pt}%
+    \textbullet\ Referensi pembayaran (nomor transfer)\par\vspace{2pt}%
+    \textbullet\ Upload file invoice (tersimpan di S3)\par\vspace{2pt}%
+    \textbullet\ Timestamp paid\_at tercatat otomatis}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{OrangePrimary} 5. Manajemen Lampiran}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Upload dokumen ke PO atau invoice\par\vspace{2pt}%
+    \textbullet\ Kategori: quotation, proposal, agreement, invoice, receipt, photo\par\vspace{2pt}%
+    \textbullet\ Metadata: nama file, tipe MIME, ukuran, S3 key\par\vspace{2pt}%
+    \textbullet\ Soft delete --- arsip, tidak hilang permanen\par\vspace{2pt}%
+    \textbullet\ Pencarian lampiran per entitas (PO/Invoice)}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{OrangePrimary} 6. Integrasi Supplier (XRM)}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Pilih supplier langsung dari database XRM\par\vspace{2pt}%
+    \textbullet\ Data supplier (kontak, alamat, rekening) otomatis terisi\par\vspace{2pt}%
+    \textbullet\ Histori pembelian tersimpan di profil supplier\par\vspace{2pt}%
+    \textbullet\ Analitik pengeluaran per supplier}%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\colorbox{BlueBg}{%
+\begin{minipage}{\dimexpr\textwidth-14pt}
+    \vspace{6pt}
+    {\fontsize{9.5}{13}\selectfont\bfseries\color{BlueDark} SEGERA HADIR}
+    \vspace{4pt}
+
+    \noindent
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Purchase Requisition (PR) sebelum PO\par\vspace{2pt}%
+        \textbullet\ Multi-approver berjenjang}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Anggaran (Budget) per Departemen\par\vspace{2pt}%
+        \textbullet\ Integrasi Akuntansi Otomatis}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Vendor Performance Scoring\par\vspace{2pt}%
+        \textbullet\ Laporan Pengeluaran PDF Otomatis}%
+    \end{minipage}
+    \vspace{6pt}
+\end{minipage}}
+
+\vspace{4pt}
+{\fontsize{8.5}{11}\selectfont\itshape\color{TextLight}
+Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
+
+\newpage
+
+% ── PAGE 4 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\purchheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR UNTUK BISNIS ANDA}
+
+\noindent
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{OrangePrimary} 100\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering PO dengan\\ approval tercatat}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{OrangePrimary} 0}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Dokumen\\ supplier hilang}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{OrangePrimary} 50\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Lebih cepat\\ proses procurement}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{OrangePrimary} Penuh}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Audit trail\\ semua transaksi}
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{tikzpicture}
+    \fill[OrangeBg] (0,0) rectangle (\textwidth, 1.4cm);
+    \node[anchor=west,xshift=10pt] at (0,0.7cm)
+        {{\fontsize{9}{12}\selectfont\color{OrangeDark}
+        \textbf{Alur:} PO Draft $\to$ Approval $\to$ Ordered $\to$ Fulfilled
+        \quad\textcolor{OrangePrimary}{\textbullet}\quad
+        \textbf{Dokumen:} S3 Storage
+        \quad\textcolor{OrangePrimary}{\textbullet}\quad
+        \textbf{Integrasi:} XRM Supplier}};
+\end{tikzpicture}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangeBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{OrangeDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Status PO real-time membuat kami tidak perlu telepon supplier untuk tanya barang sudah dikirim atau belum. Semua terpantau dari dashboard.''}
+
+    \vspace{4pt}
+    {\bfseries\color{OrangeDark} Rizky Firmansyah} {\color{TextLight}--- Operations Manager, Distributor Alkes, Jakarta}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangeBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{OrangeDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Integrasi supplier XRM sangat powerful. Kami bisa lihat histori seluruh pembelian dari satu supplier sebelum negosiasi harga ulang.''}
+
+    \vspace{4pt}
+    {\bfseries\color{OrangeDark} Tuti Rahayu} {\color{TextLight}--- Procurement Head, Perusahaan F\&B, Surabaya}}
+\end{minipage}
+
+\vspace{8pt}
+
+\sectiontitle{SIAP MENGONTROL PENGELUARAN ANDA?}
+
+\noindent
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{OrangeBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{OrangePrimary} 1}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Pilih Modul}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Pilih paket yang\\ sesuai skala bisnis Anda}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{OrangeBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{OrangePrimary} 2}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Kontak via WhatsApp}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} +62 821 2560 9413\\ Tim kami siap membantu}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{OrangeBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{OrangePrimary} 3}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Langsung Produktif}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Procurement Anda\\ terkontrol mulai hari ini}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}
+
+\vspace{8pt}
+
+\begin{tikzpicture}
+    \fill[BluePrimary] (0,0) rectangle (\textwidth, 1.6cm);
+    \node[anchor=west,xshift=14pt] at (0,0.8cm)
+        {{\fontsize{11}{14}\selectfont\bfseries\color{White}
+        Mulai gratis 30 hari --- Tidak perlu kartu kredit}};
+    \node[anchor=east,xshift=-14pt] at (\textwidth,0.8cm)
+        {{\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id\enspace|\enspace+62 821 2560 9413}};
+\end{tikzpicture}
+
+\end{document}

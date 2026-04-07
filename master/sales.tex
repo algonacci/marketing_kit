@@ -1,0 +1,463 @@
+% ============================================================
+%  Omniflow Sales — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{IndigoPrimary}{HTML}{4F46E5}
+\definecolor{IndigoBg}   {HTML}{EEF2FF}
+\definecolor{IndigoDark} {HTML}{3730A3}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}};
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+    \end{tikzpicture}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}}
+
+\newcommand{\salesheader}{%
+    \thispagestyle{fancy}\fancyhf{}\cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW SALES --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──────────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,238;green,242;blue,255},
+           bottom color={rgb,255:red,199;green,210;blue,254},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[IndigoPrimary,opacity=0.07]([xshift=-4cm,yshift=-6cm]current page.north west)circle(10cm);
+    \fill[BluePrimary,opacity=0.05]([xshift=6cm,yshift=-4cm]current page.north east)circle(8cm);
+    \fill[IndigoPrimary,opacity=0.06]([xshift=-2cm,yshift=-16cm]current page.north west)circle(5cm);
+    \fill[BluePrimary](current page.south west)rectangle([yshift=1.8cm]current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north,yshift=-3.2cm] at (current page.north)
+        {\includegraphics[height=2.8cm]{../../compro/logo.png}};
+
+    \node[anchor=north,yshift=-6.8cm,fill=IndigoPrimary,text=White,
+          rounded corners=20pt,inner xsep=14pt,inner ysep=6pt,
+          font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north)
+        {MODULE: SALES};
+
+    \node[anchor=north,yshift=-9.0cm,text width=15cm,align=center] at (current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Tutup Lebih Banyak Deal, Lebih Cepat}};
+
+    \node[anchor=north,yshift=-11.0cm,text width=14cm,align=center] at (current page.north)
+        {{\fontsize{11}{15}\selectfont\color{TextLight}
+        Dari penawaran ke invoice dalam satu alur kerja terintegrasi.
+        Pantau seluruh pipeline penjualan Anda secara real-time.}};
+
+    \draw[IndigoBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-7.05cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=-2.75cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} QUO}};
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Penawaran Digital}};
+
+    \draw[IndigoBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-2.15cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=2.15cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=0cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} SO}};
+    \node[anchor=center] at ([xshift=0cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Sales Order}};
+
+    \draw[IndigoBg,line width=1pt,rounded corners=8pt]
+        ([xshift=2.75cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=7.05cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} INV}};
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Invoice \& Bayar}};
+
+    \node[anchor=north,yshift=-17.2cm,fill=IndigoBg,draw=IndigoPrimary,line width=1.2pt,
+          rounded corners=8pt,inner sep=14pt,text width=12.5cm,align=center]
+        at (current page.north)
+        {{\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{IndigoPrimary}Percepat siklus penjualan} tim Anda dengan alur Quotation $\rightarrow$ SO $\rightarrow$ Invoice $\rightarrow$ Pembayaran.
+        Uji coba gratis 30 hari, tanpa biaya setup.}};
+
+    \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id\enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace+62 821 2560 9413}};
+    \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ─────────────────────────────────────────────────
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\salesheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW SALES?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Tim sales yang bekerja tanpa sistem terpadu membuang waktu di administrasi, bukan penjualan. Omniflow Sales mengotomatisasi alur kerja dari penawaran hingga pembayaran.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM SALES}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Penawaran manual} --- buat quotation di Word/Excel, error-prone\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada tracking} --- status deal tidak jelas, terlewat follow-up\par\vspace{4pt}%
+    \textbullet\ \textbf{Invoice terlambat} --- tagihan dikirim lambat, cash flow terganggu\par\vspace{4pt}%
+    \textbullet\ \textbf{Piutang tidak terpantau} --- tidak tahu invoice mana yang overdue\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada riwayat} --- sales resign, semua negosiasi hilang\par\vspace{4pt}%
+    \textbullet\ \textbf{Laporan tidak akurat} --- target vs aktual tidak terukur real-time}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW SALES MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Quotation digital} --- buat penawaran profesional dalam menit\par\vspace{4pt}%
+    \textbullet\ \textbf{Pipeline transparan} --- status setiap deal terpantau real-time\par\vspace{4pt}%
+    \textbullet\ \textbf{Invoice otomatis} --- konversi SO ke invoice satu klik\par\vspace{4pt}%
+    \textbullet\ \textbf{Tracking piutang} --- outstanding amount terpantau per invoice\par\vspace{4pt}%
+    \textbullet\ \textbf{Integrasi XRM} --- histori penjualan tersimpan di profil mitra\par\vspace{4pt}%
+    \textbullet\ \textbf{Laporan penjualan} --- revenue, konversi, dan performa real-time}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{IndigoDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Alur quotation ke invoice yang terintegrasi menghemat 3 jam kerja admin per hari. Tim sales kami sekarang fokus closing, bukan ngurus dokumen.''}
+
+    \vspace{4pt}
+    {\bfseries\color{IndigoDark} Andi Prasetyo} {\color{TextLight}--- Direktur Sales, Distributor FMCG, Jakarta}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{IndigoDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Tracking piutang per invoice sangat membantu cash flow kami. Tidak ada lagi tagihan yang lupa dikirim atau overdue yang tidak diketahui.''}
+
+    \vspace{4pt}
+    {\bfseries\color{IndigoDark} Sari Melati} {\color{TextLight}--- CFO, Perusahaan Jasa Konsultan, Surabaya}}
+\end{minipage}
+
+\newpage
+
+% ── PAGE 3 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\salesheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW SALES}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 1. Penawaran (Quotation)}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Nomor quotation unik otomatis (QUO-YYYY-XXXXX)\par\vspace{2pt}%
+    \textbullet\ Terhubung ke data mitra XRM (pelanggan \& kontak)\par\vspace{2pt}%
+    \textbullet\ Diskon per item (persen atau nominal)\par\vspace{2pt}%
+    \textbullet\ Status: draft, sent, accepted, rejected, expired\par\vspace{2pt}%
+    \textbullet\ Tanggal berlaku (valid until) dengan notifikasi expiry\par\vspace{2pt}%
+    \textbullet\ Alamat billing \& shipping dari profil mitra XRM}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 2. Sales Order (SO)}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Konversi quotation accepted ke SO satu klik\par\vspace{2pt}%
+    \textbullet\ Nomor SO unik otomatis (SO-YYYY-XXXXX)\par\vspace{2pt}%
+    \textbullet\ Status: draft, confirmed, completed, cancelled\par\vspace{2pt}%
+    \textbullet\ Snapshot data pelanggan saat order dibuat\par\vspace{2pt}%
+    \textbullet\ Line items dengan detail qty, harga, subtotal\par\vspace{2pt}%
+    \textbullet\ Catatan internal per SO untuk tim operasional}%
+
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 3. Invoice \& Tagihan}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Konversi SO ke invoice secara otomatis\par\vspace{2pt}%
+    \textbullet\ Nomor invoice unik (INV-YYYY-XXXXX)\par\vspace{2pt}%
+    \textbullet\ Status: draft, issued, partially\_paid, paid, overdue\par\vspace{2pt}%
+    \textbullet\ Tracking outstanding amount dan paid amount\par\vspace{2pt}%
+    \textbullet\ Due date dengan deteksi otomatis status overdue\par\vspace{2pt}%
+    \textbullet\ Pajak (tax amount) per invoice}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 4. Pencatatan Pembayaran}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Catat pembayaran per invoice (partial atau full)\par\vspace{2pt}%
+    \textbullet\ Metode: transfer bank, tunai, cek, lainnya\par\vspace{2pt}%
+    \textbullet\ Nomor referensi pembayaran (bukti transfer)\par\vspace{2pt}%
+    \textbullet\ Histori pembayaran per invoice lengkap\par\vspace{2pt}%
+    \textbullet\ Outstanding otomatis terupdate setelah bayar\par\vspace{2pt}%
+    \textbullet\ Integrasi data dengan modul Akuntansi}%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\colorbox{BlueBg}{%
+\begin{minipage}{\dimexpr\textwidth-14pt}
+    \vspace{6pt}
+    {\fontsize{9.5}{13}\selectfont\bfseries\color{BlueDark} SEGERA HADIR}
+    \vspace{4pt}
+
+    \noindent
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Pipeline \& Kanban Board Visual\par\vspace{2pt}%
+        \textbullet\ Target Sales vs Aktual per Tim}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Komisi \& Insentif Sales Otomatis\par\vspace{2pt}%
+        \textbullet\ E-Signature untuk Penawaran}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Integrasi WhatsApp untuk SO\par\vspace{2pt}%
+        \textbullet\ Laporan Revenue Otomatis PDF}%
+    \end{minipage}
+    \vspace{6pt}
+\end{minipage}}
+
+\vspace{4pt}
+{\fontsize{8.5}{11}\selectfont\itshape\color{TextLight}
+Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
+
+\newpage
+
+% ── PAGE 4 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\salesheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR UNTUK BISNIS ANDA}
+
+\noindent
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{IndigoPrimary} 60\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Lebih cepat\\ buat penawaran}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{IndigoPrimary} 3x}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Lebih cepat\\ siklus QUO ke Invoice}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{IndigoPrimary} 0\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Invoice overdue\\ yang tidak terpantau}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{IndigoPrimary} 35\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Peningkatan\\ konversi deal}
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{tikzpicture}
+    \fill[IndigoBg] (0,0) rectangle (\textwidth, 1.4cm);
+    \node[anchor=west,xshift=10pt] at (0,0.7cm)
+        {{\fontsize{9}{12}\selectfont\color{IndigoDark}
+        \textbf{Alur:} Quotation $\to$ Sales Order $\to$ Invoice $\to$ Pembayaran
+        \quad\textcolor{IndigoPrimary}{\textbullet}\quad
+        \textbf{Integrasi:} XRM, Akuntansi
+        \quad\textcolor{IndigoPrimary}{\textbullet}\quad
+        \textbf{Audit:} Penuh}};
+\end{tikzpicture}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{IndigoDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Sekarang manager bisa pantau seluruh pipeline dari satu layar. Revenue forecast jauh lebih akurat dan tim sales lebih termotivasi.''}
+
+    \vspace{4pt}
+    {\bfseries\color{IndigoDark} Benny Kurniawan} {\color{TextLight}--- VP Sales, Startup SaaS, Jakarta}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{IndigoBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{IndigoDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Integrasi dengan XRM memungkinkan kami lihat histori lengkap tiap klien sebelum negosiasi. Win rate kami meningkat signifikan.''}
+
+    \vspace{4pt}
+    {\bfseries\color{IndigoDark} Maya Saputri} {\color{TextLight}--- Head of Sales, Perusahaan Properti, Bekasi}}
+\end{minipage}
+
+\vspace{8pt}
+
+\sectiontitle{SIAP MENINGKATKAN PENJUALAN?}
+
+\noindent
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{IndigoBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} 1}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Pilih Modul}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Pilih paket yang\\ sesuai skala bisnis Anda}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{IndigoBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} 2}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Kontak via WhatsApp}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} +62 821 2560 9413\\ Tim kami siap membantu}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{IndigoBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{IndigoPrimary} 3}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Langsung Produktif}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Tim sales Anda\\ siap closing hari ini}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}
+
+\vspace{8pt}
+
+\begin{tikzpicture}
+    \fill[BluePrimary] (0,0) rectangle (\textwidth, 1.6cm);
+    \node[anchor=west,xshift=14pt] at (0,0.8cm)
+        {{\fontsize{11}{14}\selectfont\bfseries\color{White}
+        Mulai gratis 30 hari --- Tidak perlu kartu kredit}};
+    \node[anchor=east,xshift=-14pt] at (\textwidth,0.8cm)
+        {{\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id\enspace|\enspace+62 821 2560 9413}};
+\end{tikzpicture}
+
+\end{document}

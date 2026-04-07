@@ -1,0 +1,480 @@
+% ============================================================
+%  Omniflow Inventory — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{CyanPrimary}{HTML}{0891B2}
+\definecolor{CyanBg}     {HTML}{ECFEFF}
+\definecolor{CyanDark}   {HTML}{164E63}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south)
+            {{\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace
+            +62 821 2560 9413}};
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south)
+            {{\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+    \end{tikzpicture}}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}}
+
+\newcommand{\inventoryheader}{%
+    \thispagestyle{fancy}\fancyhf{}\cfoot{\thepage}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW INVENTORY --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}}
+
+% ============================================================
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──────────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,236;green,254;blue,255},
+           bottom color={rgb,255:red,165;green,243;blue,252},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[CyanPrimary,opacity=0.07]([xshift=-4cm,yshift=-6cm]current page.north west)circle(10cm);
+    \fill[BluePrimary,opacity=0.05]([xshift=6cm,yshift=-4cm]current page.north east)circle(8cm);
+    \fill[CyanPrimary,opacity=0.06]([xshift=-2cm,yshift=-16cm]current page.north west)circle(5cm);
+    \fill[BluePrimary](current page.south west)rectangle([yshift=1.8cm]current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north,yshift=-3.2cm] at (current page.north)
+        {\includegraphics[height=2.8cm]{../../compro/logo.png}};
+
+    \node[anchor=north,yshift=-6.8cm,fill=CyanPrimary,text=White,
+          rounded corners=20pt,inner xsep=14pt,inner ysep=6pt,
+          font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north)
+        {MODULE: INVENTORY};
+
+    \node[anchor=north,yshift=-9.0cm,text width=15cm,align=center] at (current page.north)
+        {{\fontsize{20}{24}\selectfont\bfseries\color{BlueDark}
+        Stok Akurat, Bisnis Lancar Tanpa Hambatan}};
+
+    \node[anchor=north,yshift=-11.0cm,text width=14cm,align=center] at (current page.north)
+        {{\fontsize{11}{15}\selectfont\color{TextLight}
+        Manajemen inventaris multi-outlet lengkap dengan pelacakan stok real-time,
+        transfer antar gudang, stock opname, dan purchase order terintegrasi.}};
+
+    \draw[CyanBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-7.05cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=-2.75cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{CyanPrimary} Multi}};
+    \node[anchor=center] at ([xshift=-4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Outlet \& Gudang}};
+
+    \draw[CyanBg,line width=1pt,rounded corners=8pt]
+        ([xshift=-2.15cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=2.15cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=0cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{CyanPrimary} Real-time}};
+    \node[anchor=center] at ([xshift=0cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Saldo Stok}};
+
+    \draw[CyanBg,line width=1pt,rounded corners=8pt]
+        ([xshift=2.75cm,yshift=-15.6cm]current page.north)rectangle
+        ([xshift=7.05cm,yshift=-13.2cm]current page.north);
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-14.0cm]current page.north)
+        {{\fontsize{18}{22}\selectfont\bfseries\color{CyanPrimary} Varian}};
+    \node[anchor=center] at ([xshift=4.9cm,yshift=-15.0cm]current page.north)
+        {{\fontsize{8}{10}\selectfont\color{TextLight} Produk \& UoM}};
+
+    \node[anchor=north,yshift=-17.2cm,fill=CyanBg,draw=CyanPrimary,line width=1.2pt,
+          rounded corners=8pt,inner sep=14pt,text width=12.5cm,align=center]
+        at (current page.north)
+        {{\fontsize{10}{14}\selectfont\color{TextDark}
+        \textbf{\color{CyanPrimary}Tidak ada lagi stok minus atau kehabisan tiba-tiba.}
+        Kelola ratusan SKU di banyak outlet dengan akurasi penuh.
+        Uji coba gratis 30 hari.}};
+
+    \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+        omniflow.id\enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id\enspace\textcolor{BlueLight}{|}\enspace+62 821 2560 9413}};
+    \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south)
+        {{\fontsize{7}{9}\selectfont\color{BlueMid}
+        Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+        \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ─────────────────────────────────────────────────
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\inventoryheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW INVENTORY?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Stok yang tidak akurat menyebabkan kehilangan penjualan dan kelebihan modal di gudang. Omniflow Inventory memberi visibilitas real-time di setiap lokasi.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Stok tidak akurat} --- pencatatan di Excel, sering selisih\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak tahu saldo per outlet} --- stok campur antar cabang\par\vspace{4pt}%
+    \textbullet\ \textbf{Transfer stok manual} --- memo fisik, tidak ada tracking\par\vspace{4pt}%
+    \textbullet\ \textbf{Opname memakan waktu} --- hitung manual berhari-hari\par\vspace{4pt}%
+    \textbullet\ \textbf{Tidak ada minimum stok} --- kehabisan baru ketahuan saat butuh\par\vspace{4pt}%
+    \textbullet\ \textbf{Varian produk kacau} --- ukuran, warna, UoM tidak terstruktur}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{CyanPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW INVENTORY MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Saldo stok real-time} --- per outlet, per gudang, per produk\par\vspace{4pt}%
+    \textbullet\ \textbf{Multi-outlet} --- kelola stok di banyak lokasi dari satu panel\par\vspace{4pt}%
+    \textbullet\ \textbf{Transfer terstruktur} --- request \& approve transfer antar gudang\par\vspace{4pt}%
+    \textbullet\ \textbf{Stock opname digital} --- buat, isi, dan finalisasi opname online\par\vspace{4pt}%
+    \textbullet\ \textbf{Minimum stok alert} --- warning otomatis saat stok mendekati batas\par\vspace{4pt}%
+    \textbullet\ \textbf{Varian \& UoM} --- kelola varian produk dan konversi satuan}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{CyanBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{CyanDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Dulu opname 3 hari, sekarang 4 jam. Semua staf bisa input dari tablet masing-masing, hasilnya langsung tersinkron dan selisih langsung ketahuan.''}
+
+    \vspace{4pt}
+    {\bfseries\color{CyanDark} Ahmad Taufik} {\color{TextLight}--- Warehouse Manager, Distributor Elektronik, Semarang}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{CyanBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{CyanDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Fitur transfer stok antar outlet sangat membantu di musim ramai. Kami bisa pantau mana outlet yang kelebihan dan mana yang kekurangan secara real-time.''}
+
+    \vspace{4pt}
+    {\bfseries\color{CyanDark} Siti Rahmawati} {\color{TextLight}--- Owner, Toko Fashion Multi-cabang, Yogyakarta}}
+\end{minipage}
+
+\newpage
+
+% ── PAGE 3 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\inventoryheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW INVENTORY}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{CyanPrimary} 1. Master Produk \& Varian}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ SKU \& barcode unik per produk\par\vspace{2pt}%
+    \textbullet\ Kategori bersarang (parent-child) dengan slug SEO\par\vspace{2pt}%
+    \textbullet\ Varian produk (ukuran, warna, dll) per SKU induk\par\vspace{2pt}%
+    \textbullet\ Multi-unit of measure (UoM) dengan konversi satuan\par\vspace{2pt}%
+    \textbullet\ Harga beli, harga jual, diskon maksimum\par\vspace{2pt}%
+    \textbullet\ Min/max stok, status taxable per produk}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{CyanPrimary} 2. Multi-Outlet \& Gudang}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Daftarkan outlet dan gudang terpisah\par\vspace{2pt}%
+    \textbullet\ Assign staf ke outlet tertentu (outlet\_users)\par\vspace{2pt}%
+    \textbullet\ Saldo stok tercatat per kombinasi produk-lokasi\par\vspace{2pt}%
+    \textbullet\ Mutasi stok teraudit: masuk, keluar, koreksi\par\vspace{2pt}%
+    \textbullet\ Register kasir per outlet untuk integrasi PoS}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{CyanPrimary} 3. Transfer Stok}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Buat request transfer antar outlet/gudang\par\vspace{2pt}%
+    \textbullet\ Item transfer dengan qty dan produk spesifik\par\vspace{2pt}%
+    \textbullet\ Status tracking transfer (pending/approved/done)\par\vspace{2pt}%
+    \textbullet\ Saldo stok otomatis disesuaikan setelah transfer}%
+
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{CyanPrimary} 4. Stock Opname}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Buat sesi opname per outlet/gudang\par\vspace{2pt}%
+    \textbullet\ Input qty fisik per item dengan catatan\par\vspace{2pt}%
+    \textbullet\ Kalkulasi selisih (stok sistem vs fisik) otomatis\par\vspace{2pt}%
+    \textbullet\ Finalisasi opname mengunci perubahan\par\vspace{2pt}%
+    \textbullet\ Penyesuaian stok (adjustment) berdasarkan hasil opname}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{CyanPrimary} 5. Purchase Order (PO Pembelian)}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Buat PO ke supplier dengan item detail\par\vspace{2pt}%
+    \textbullet\ Status PO: draft, ordered, received, cancelled\par\vspace{2pt}%
+    \textbullet\ Stok otomatis bertambah saat PO diterima\par\vspace{2pt}%
+    \textbullet\ Manajemen supplier terintegrasi}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{CyanPrimary} 6. Penjualan \& Pembayaran (PoS)}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Sales order terintegrasi dengan stok (PoS module)\par\vspace{2pt}%
+    \textbullet\ Multi-payment per transaksi penjualan\par\vspace{2pt}%
+    \textbullet\ Shift kasir dengan kontrol kas masuk/keluar\par\vspace{2pt}%
+    \textbullet\ Kelompok pelanggan \& harga segmentasi}%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\colorbox{BlueBg}{%
+\begin{minipage}{\dimexpr\textwidth-14pt}
+    \vspace{6pt}
+    {\fontsize{9.5}{13}\selectfont\bfseries\color{BlueDark} SEGERA HADIR}
+    \vspace{4pt}
+
+    \noindent
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Laporan Nilai Inventaris (FIFO/LIFO)\par\vspace{2pt}%
+        \textbullet\ Batch \& Serial Number Tracking}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Reorder Point Automation\par\vspace{2pt}%
+        \textbullet\ Integrasi Barcode Scanner}%
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.31\textwidth}
+        {\fontsize{9}{12}\selectfont\color{TextDark}%
+        \textbullet\ Laporan Pergerakan Stok PDF\par\vspace{2pt}%
+        \textbullet\ Integrasi Akuntansi COGS}%
+    \end{minipage}
+    \vspace{6pt}
+\end{minipage}}
+
+\vspace{4pt}
+{\fontsize{8.5}{11}\selectfont\itshape\color{TextLight}
+Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
+
+\newpage
+
+% ── PAGE 4 ─────────────────────────────────────────────────
+\restoregeometry
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\inventoryheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK TERUKUR UNTUK BISNIS ANDA}
+
+\noindent
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{CyanPrimary} 99\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Akurasi stok\\ dengan sistem}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{CyanPrimary} 80\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Lebih cepat\\ proses stock opname}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{CyanPrimary} Real-time}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Saldo stok\\ semua outlet}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.23\textwidth}
+    \centering
+    {\fontsize{28}{32}\selectfont\bfseries\color{CyanPrimary} 0\%}\\[3pt]
+    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Stok minus\\ tak terdeteksi}
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{tikzpicture}
+    \fill[CyanBg] (0,0) rectangle (\textwidth, 1.4cm);
+    \node[anchor=west,xshift=10pt] at (0,0.7cm)
+        {{\fontsize{9}{12}\selectfont\color{CyanDark}
+        \textbf{Fitur:} SKU + Barcode, Multi-UoM, Varian Produk
+        \quad\textcolor{CyanPrimary}{\textbullet}\quad
+        \textbf{Lokasi:} Multi-outlet \& Multi-gudang
+        \quad\textcolor{CyanPrimary}{\textbullet}\quad
+        \textbf{Integrasi:} PoS, Purchasing}};
+\end{tikzpicture}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{CyanBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{CyanDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Varian produk yang terstruktur menyelamatkan kami dari kekacauan sizing. Sekarang ada 200+ SKU tapi semua terkelola dengan rapi dan akurat.''}
+
+    \vspace{4pt}
+    {\bfseries\color{CyanDark} Hendra Kusuma} {\color{TextLight}--- Owner, Toko Sepatu, Bandung}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{CyanBg}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{CyanDark} TESTIMONI PELANGGAN}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}
+    \textit{``Minimum stok alert menghindarkan kami dari kehabisan bahan baku di saat produksi. Procurement jadi lebih proaktif dan terencana.''}
+
+    \vspace{4pt}
+    {\bfseries\color{CyanDark} Wulandari} {\color{TextLight}--- Produksi Manager, UMKM Makanan, Malang}}
+\end{minipage}
+
+\vspace{8pt}
+
+\sectiontitle{SIAP MENGELOLA STOK DENGAN PRESISI?}
+
+\noindent
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{CyanBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{CyanPrimary} 1}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Pilih Modul}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Pilih paket yang\\ sesuai skala bisnis Anda}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{CyanBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{CyanPrimary} 2}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Kontak via WhatsApp}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} +62 821 2560 9413\\ Tim kami siap membantu}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.31\textwidth}
+    \centering
+    \colorbox{CyanBg}{%
+        \begin{minipage}{\dimexpr\textwidth-16pt}
+            \vspace{8pt}\centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{CyanPrimary} 3}\\[4pt]
+            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Langsung Produktif}\\[3pt]
+            {\fontsize{8.5}{12}\selectfont\color{TextLight} Stok Anda terpantau\\ akurat mulai hari ini}
+            \vspace{8pt}
+        \end{minipage}}
+\end{minipage}
+
+\vspace{8pt}
+
+\begin{tikzpicture}
+    \fill[BluePrimary] (0,0) rectangle (\textwidth, 1.6cm);
+    \node[anchor=west,xshift=14pt] at (0,0.8cm)
+        {{\fontsize{11}{14}\selectfont\bfseries\color{White}
+        Mulai gratis 30 hari --- Tidak perlu kartu kredit}};
+    \node[anchor=east,xshift=-14pt] at (\textwidth,0.8cm)
+        {{\fontsize{9.5}{12}\selectfont\color{BlueLight}
+        omniflow.id\enspace|\enspace+62 821 2560 9413}};
+\end{tikzpicture}
+
+\end{document}
