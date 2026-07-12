@@ -30,6 +30,7 @@
     noheadfoot
 }
 \setlength{\parindent}{0pt}
+\setlength{\fboxsep}{6pt}
 
 % ── Brand colours (Tailwind Blue palette) ──────────────────
 \definecolor{BluePrimary}{HTML}{2563EB}
@@ -209,7 +210,7 @@
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
     \colorbox{RedLight}{%
-        \begin{minipage}{\dimexpr\textwidth-14pt}
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
             \vspace{5pt}
             {\fontsize{10}{13}\selectfont\bfseries\color{RedText} TANTANGAN UKM SAAT INI}
             \vspace{5pt}
@@ -225,7 +226,7 @@
 \hfill%
 \begin{minipage}[t]{0.485\textwidth}
     \colorbox{BluePrimary}{%
-        \begin{minipage}{\dimexpr\textwidth-14pt}
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
             \vspace{5pt}
             {\fontsize{10}{13}\selectfont\bfseries\color{White} SOLUSI: OMNIFLOW}
             \vspace{5pt}
