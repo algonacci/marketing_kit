@@ -1,0 +1,515 @@
+% ============================================================
+%  Omniflow Event Ticketing — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{PurpleBg}  {HTML}{F5F3FF}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg} {HTML}{ECFDF5}
+\definecolor{EmeraldDark}{HTML}{065F46}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{TealPrimary}{HTML}{0D9488}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\kitheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW EVENT TICKETING --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,248;green,250;blue,252},bottom color={rgb,255:red,224;green,242;blue,254},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[BluePrimary, opacity=0.06] ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[OrangePrimary, opacity=0.05] ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[BlueLight, opacity=0.08] ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+    \fill[BluePrimary] (current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {\includegraphics[height=2.8cm]{../logo.png}};
+    \node[anchor=north, yshift=-6.8cm, fill=OrangePrimary, text=White, rounded corners=20pt, inner xsep=14pt, inner ysep=6pt, font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north) {MODULE: EVENT TICKETING};
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark} Manajemen Event \& Tiket dengan QR}};
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight} Buat event, jual tiket, terima pembayaran, dan check-in via QR dalam satu platform.}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} QR}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Check-in Cepat}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle ([xshift=2.15cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} Midtrans}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Tiket Berbayar}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} Promo}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Kode Diskon}};
+
+    \node[anchor=north, yshift=-17.2cm, fill=BlueBg, draw=BluePrimary, line width=1.2pt, rounded corners=8pt, inner sep=14pt, text width=12.5cm, align=center] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark} \textbf{\color{BluePrimary}Dari jual tiket sampai check-in, semua otomatis.} QR unik tiap peserta, anti check-in ganda. Uji coba gratis, tanpa biaya setup.}};
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White} omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}};
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid} Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470 \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ──
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA PENYELENGGARA EVENT BUTUH OMNIFLOW?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Kelola pendaftaran lewat spreadsheet dan tiket manual bikin antrian panjang, rawan tiket palsu, dan rekonsiliasi pembayaran yang berantakan.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} KELOLA EVENT CARA LAMA}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Registrasi manual} --- spreadsheet sulit dipantau real-time\par\vspace{4pt}%
+    \textbullet\ \textbf{Antrian panjang} --- check-in lambat di pintu masuk\par\vspace{4pt}%
+    \textbullet\ \textbf{Tiket palsu} --- sulit verifikasi keaslian tiket\par\vspace{4pt}%
+    \textbullet\ \textbf{Bayar ribet} --- rekonsiliasi manual rawan salah\par\vspace{4pt}%
+    \textbullet\ \textbf{Check-in ganda} --- satu tiket dipakai berkali-kali\par\vspace{4pt}%
+    \textbullet\ \textbf{Tanpa data} --- tak tahu penjualan real-time}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW EVENT TICKETING MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Registrasi online} --- form publik, terpantau real-time\par\vspace{4pt}%
+    \textbullet\ \textbf{QR check-in} --- scan cepat di pintu masuk\par\vspace{4pt}%
+    \textbullet\ \textbf{Tiket terverifikasi} --- QR unik, anti pemalsuan\par\vspace{4pt}%
+    \textbullet\ \textbf{Bayar otomatis} --- Midtrans, konfirmasi instan\par\vspace{4pt}%
+    \textbullet\ \textbf{Anti check-in ganda} --- validasi atomik sekali pakai\par\vspace{4pt}%
+    \textbullet\ \textbf{Dashboard live} --- pantau penjualan \& hadir}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White} Setiap peserta dapat QR unik. Scan sekali di pintu masuk, sistem otomatis mencegah check-in ganda --- antrian cepat, data akurat.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Check-in event kami yang biasanya antri panjang, sekarang cukup scan QR. Cepat, rapi, dan datanya langsung masuk ke dashboard.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Prita Ramadhani}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Event Organizer, Konferensi Tech}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Integrasi Midtrans membuat penjualan tiket berbayar jadi mudah. Pembayaran masuk otomatis, tidak ada lagi rekonsiliasi manual.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Dimas Aryo}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Founder, Komunitas Kreatif}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ── PAGE 3 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW EVENT TICKETING}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Sistem ticketing lengkap dengan pembayaran dan QR check-in --- siap untuk event online, offline, maupun hybrid.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Manajemen Event}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Buat \& kelola event dengan mudah.\par\vspace{3pt}
+    \textbullet\ Online, offline, atau hybrid\par\vspace{2pt}%
+    \textbullet\ Kapasitas, lokasi, jadwal\par\vspace{2pt}%
+    \textbullet\ Thumbnail via unggah cloud\par\vspace{2pt}%
+    \textbullet\ Publish/unpublish sekali klik}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Tiket Berjenjang}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Jual berbagai kelas tiket.\par\vspace{3pt}
+    \textbullet\ VIP, Regular, Early Bird\par\vspace{2pt}%
+    \textbullet\ Harga \& kuota per jenis\par\vspace{2pt}%
+    \textbullet\ Jendela waktu penjualan\par\vspace{2pt}%
+    \textbullet\ Pelacakan jumlah terjual}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Registrasi \& Promo}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pendaftaran publik yang mulus.\par\vspace{3pt}
+    \textbullet\ Halaman event publik per slug\par\vspace{2pt}%
+    \textbullet\ Form nama, email, telepon\par\vspace{2pt}%
+    \textbullet\ Kode promo (persen/nominal)\par\vspace{2pt}%
+    \textbullet\ Cegah pendaftaran ganda}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} QR Check-in}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Masuk cepat, anti kecurangan.\par\vspace{3pt}
+    \textbullet\ QR unik tiap peserta\par\vspace{2pt}%
+    \textbullet\ Scanner \& check-in manual\par\vspace{2pt}%
+    \textbullet\ Pencarian peserta cepat\par\vspace{2pt}%
+    \textbullet\ Validasi anti check-in ganda}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Pembayaran Midtrans}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Terima tiket berbayar otomatis.\par\vspace{3pt}
+    \textbullet\ Snap \& Core API\par\vspace{2pt}%
+    \textbullet\ Webhook idempotent \& aman\par\vspace{2pt}%
+    \textbullet\ Verifikasi signature\par\vspace{2pt}%
+    \textbullet\ Status pembayaran terlacak}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} AI Assistant \& Copilot}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Bantuan cerdas untuk panitia.\par\vspace{3pt}
+    \textbullet\ AI Chat streaming (OpenAI)\par\vspace{2pt}%
+    \textbullet\ AI Copilot analisis layar\par\vspace{2pt}%
+    \textbullet\ Insight data event\par\vspace{2pt}%
+    \textbullet\ Multi-bahasa (ID/EN/ZH)}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark} E-tiket via WhatsApp\enspace\textcolor{BluePrimary}{\textbullet}\enspace Denah kursi (seat map)\enspace\textcolor{BluePrimary}{\textbullet}\enspace Analitik peserta lanjutan}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ── PAGE 4 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK NYATA UNTUK EVENT ANDA}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Penjualan tiket lebih mudah, check-in lebih cepat, data lebih akurat.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} QR}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Check-in Cepat}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Scan sekali, peserta masuk tanpa antri panjang.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} Auto}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Bayar Otomatis}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Midtrans proses pembayaran tanpa rekonsiliasi manual.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 0}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Tiket Ganda}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Validasi atomik mencegah satu tiket dipakai dua kali.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} Live}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Data Real-time}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Pantau penjualan \& kehadiran secara langsung.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} AES-256}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Enkripsi Data}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Selalu Online}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Tim Omniflow bantu kami setup event pertama dari nol --- jenis tiket, promo, sampai QR check-in. Semua siap sebelum hari-H.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Alya Kusuma}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Project Lead, Festival Musik}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} QR}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} check-in cepat \& aman}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} untuk setiap peserta}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Jadwalkan Demo}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Lihat alur jual tiket sampai QR check-in.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{4pt}\includegraphics[width=1.7cm]{../qr_wa.jpeg}\par\vspace{1pt}{\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Tim Kami Bantu Setup}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Onboarding dipandu langsung tim Omniflow --- \textbf{gratis}, 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White} Selenggarakan Event Tanpa Ribet Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid} Uji coba gratis 30 hari \enspace\textbullet\enspace \textbf{Tim kami bantu setup \& migrasi} \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight} omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

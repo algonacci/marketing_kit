@@ -1,0 +1,515 @@
+% ============================================================
+%  Omniflow Helpdesk — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{PurpleBg}  {HTML}{F5F3FF}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg} {HTML}{ECFDF5}
+\definecolor{EmeraldDark}{HTML}{065F46}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{TealPrimary}{HTML}{0D9488}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\kitheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW HELPDESK --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,248;green,250;blue,252},bottom color={rgb,255:red,224;green,242;blue,254},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[BluePrimary, opacity=0.06] ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[EmeraldPrimary, opacity=0.05] ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[BlueLight, opacity=0.08] ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+    \fill[BluePrimary] (current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {\includegraphics[height=2.8cm]{../logo.png}};
+    \node[anchor=north, yshift=-6.8cm, fill=EmeraldPrimary, text=White, rounded corners=20pt, inner xsep=14pt, inner ysep=6pt, font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north) {MODULE: HELPDESK};
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark} Sistem Tiket Support Pelanggan}};
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight} Kelola setiap permintaan pelanggan dalam satu alur tiket yang rapi dan terlacak.}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 4 status}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Alur Tiket}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle ([xshift=2.15cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} AI}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Asisten Support}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 24/7}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Terlacak}};
+
+    \node[anchor=north, yshift=-17.2cm, fill=BlueBg, draw=BluePrimary, line width=1.2pt, rounded corners=8pt, inner sep=14pt, text width=12.5cm, align=center] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark} \textbf{\color{BluePrimary}Tidak ada lagi keluhan yang terlewat.} Setiap tiket punya status, prioritas, dan riwayat percakapan. Uji coba gratis, tanpa biaya setup.}};
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White} omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}};
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid} Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470 \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ──
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA TIM SUPPORT ANDA BUTUH OMNIFLOW HELPDESK?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Keluhan pelanggan masuk dari berbagai arah --- email, chat, telepon. Tanpa sistem, tiket mudah terlewat, lambat ditangani, dan sulit dilacak progresnya.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} SUPPORT TANPA SISTEM}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Keluhan tercecer} --- tersebar di email, WA, dan catatan\par\vspace{4pt}%
+    \textbullet\ \textbf{Mudah terlewat} --- tidak ada yang tahu siapa menangani apa\par\vspace{4pt}%
+    \textbullet\ \textbf{Tanpa prioritas} --- urgent \& biasa diperlakukan sama\par\vspace{4pt}%
+    \textbullet\ \textbf{Sulit dilacak} --- status tiket tidak jelas\par\vspace{4pt}%
+    \textbullet\ \textbf{Tanpa riwayat} --- percakapan hilang, ulang dari awal\par\vspace{4pt}%
+    \textbullet\ \textbf{Sulit diukur} --- tidak tahu beban \& performa tim}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW HELPDESK MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Satu antrian} --- semua tiket masuk terpusat\par\vspace{4pt}%
+    \textbullet\ \textbf{Assignment jelas} --- tiap tiket punya penanggung jawab\par\vspace{4pt}%
+    \textbullet\ \textbf{Prioritas \& status} --- low/medium/high, open sampai closed\par\vspace{4pt}%
+    \textbullet\ \textbf{Kode tiket unik} --- mudah dirujuk \& dicari\par\vspace{4pt}%
+    \textbullet\ \textbf{Riwayat lengkap} --- semua balasan tersimpan berurutan\par\vspace{4pt}%
+    \textbullet\ \textbf{Dashboard ringkas} --- pantau beban tim real-time}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White} Setiap keluhan pelanggan jadi tiket yang terlacak --- dengan prioritas, penanggung jawab, dan riwayat percakapan yang lengkap.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Sejak pakai Omniflow Helpdesk, tidak ada lagi keluhan pelanggan yang terlewat. Semua tiket jelas siapa yang pegang dan apa statusnya.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Fitri Handayani}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Customer Support Lead, SaaS Lokal}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``AI Assistant-nya membantu tim menyusun balasan lebih cepat. Waktu respons kami turun drastis sejak hari pertama.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Andi Nugroho}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Head of Support, E-Commerce}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ── PAGE 3 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW HELPDESK}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Helpdesk berbasis tiket dengan asisten AI --- ringkas, cepat, dan siap dipakai tim support Anda.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Manajemen Tiket}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola siklus tiket dari masuk sampai selesai.\par\vspace{3pt}
+    \textbullet\ 4 status: open, in progress, resolved, closed\par\vspace{2pt}%
+    \textbullet\ 3 tingkat prioritas (low/medium/high)\par\vspace{2pt}%
+    \textbullet\ Kode tiket otomatis \& mudah dirujuk\par\vspace{2pt}%
+    \textbullet\ Filter \& pencarian tiket cepat}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Percakapan Tiket}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Semua balasan tersimpan dalam satu utas.\par\vspace{3pt}
+    \textbullet\ Riwayat balasan berurutan\par\vspace{2pt}%
+    \textbullet\ Pelacakan penulis tiap balasan\par\vspace{2pt}%
+    \textbullet\ Konteks awal selalu terjaga\par\vspace{2pt}%
+    \textbullet\ Lampiran dokumen \& gambar}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Assignment \& Antrian}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Tiap tiket punya penanggung jawab.\par\vspace{3pt}
+    \textbullet\ Assign/reassign ke staf aktif\par\vspace{2pt}%
+    \textbullet\ Tiket belum ditangani ditandai\par\vspace{2pt}%
+    \textbullet\ Antrian admin yang jelas\par\vspace{2pt}%
+    \textbullet\ Distribusi beban kerja merata}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Kategori Tiket}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelompokkan tiket agar rapi.\par\vspace{3pt}
+    \textbullet\ CRUD kategori oleh admin\par\vspace{2pt}%
+    \textbullet\ Aktif/nonaktif kategori\par\vspace{2pt}%
+    \textbullet\ Dipakai saat pembuatan tiket\par\vspace{2pt}%
+    \textbullet\ Pelaporan per kategori}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Dashboard Ringkasan}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pantau performa support sekilas.\par\vspace{3pt}
+    \textbullet\ Total, open, in progress, resolved\par\vspace{2pt}%
+    \textbullet\ Kartu statistik ringkas\par\vspace{2pt}%
+    \textbullet\ Aktivitas terbaru\par\vspace{2pt}%
+    \textbullet\ Insight beban tim}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} AI Assistant \& Copilot}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Percepat penanganan dengan AI.\par\vspace{3pt}
+    \textbullet\ AI Chat streaming (OpenAI)\par\vspace{2pt}%
+    \textbullet\ AI Copilot analisis layar\par\vspace{2pt}%
+    \textbullet\ Riwayat percakapan tersimpan\par\vspace{2pt}%
+    \textbullet\ Multi-bahasa (ID/EN/ZH)}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark} SLA \& eskalasi otomatis\enspace\textcolor{BluePrimary}{\textbullet}\enspace Knowledge base\enspace\textcolor{BluePrimary}{\textbullet}\enspace Kanal WhatsApp \& email-to-ticket}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ── PAGE 4 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK NYATA UNTUK TIM SUPPORT}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Respons lebih cepat, tidak ada tiket terlewat, pelanggan lebih puas.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 0}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Tiket Terlewat}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Semua keluhan masuk ke satu antrian yang terpantau.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} AI}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Balas Lebih Cepat}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Asisten AI bantu susun jawaban dalam hitungan detik.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 100\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Terlacak}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Setiap tiket punya status, penanggung jawab, \& riwayat.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 24/7}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Selalu Siap}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Dashboard \& tiket dapat diakses kapan saja.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} AES-256}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Enkripsi Data}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Selalu Online}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Onboarding cepat dan tim Omniflow bantu setup kategori serta alur tiket kami. Dalam seminggu tim support sudah full pakai sistemnya.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Bimo Saputra}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} COO, Startup Layanan}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} AI}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} asisten cerdas di setiap}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} tiket support Anda}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Mulai dari fitur yang dibutuhkan, tambah kapan saja.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{4pt}\includegraphics[width=1.7cm]{../qr_wa.jpeg}\par\vspace{1pt}{\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Tim Kami Bantu Setup}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Onboarding dipandu langsung tim Omniflow --- \textbf{gratis}, 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White} Tingkatkan Layanan Support Anda Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid} Uji coba gratis 30 hari \enspace\textbullet\enspace \textbf{Tim kami bantu setup \& migrasi} \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight} omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

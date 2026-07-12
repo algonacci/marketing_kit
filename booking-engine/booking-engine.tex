@@ -1,0 +1,515 @@
+% ============================================================
+%  Omniflow Booking Engine — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{PurpleBg}  {HTML}{F5F3FF}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg} {HTML}{ECFDF5}
+\definecolor{EmeraldDark}{HTML}{065F46}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{TealPrimary}{HTML}{0D9488}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\kitheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW BOOKING ENGINE --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,248;green,250;blue,252},bottom color={rgb,255:red,224;green,242;blue,254},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[BluePrimary, opacity=0.06] ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[TealPrimary, opacity=0.05] ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[BlueLight, opacity=0.08] ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+    \fill[BluePrimary] (current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {\includegraphics[height=2.8cm]{../logo.png}};
+    \node[anchor=north, yshift=-6.8cm, fill=TealPrimary, text=White, rounded corners=20pt, inner xsep=14pt, inner ysep=6pt, font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north) {MODULE: BOOKING ENGINE};
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark} Sistem Reservasi \& Booking Real-time}};
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight} Kelola jadwal, slot, dan reservasi untuk bisnis apa pun --- tanpa bentrok jadwal.}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} Real-time}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Anti-Bentrok}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle ([xshift=2.15cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} Dinamis}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Harga Fleksibel}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 24/7}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Booking Mandiri}};
+
+    \node[anchor=north, yshift=-17.2cm, fill=BlueBg, draw=BluePrimary, line width=1.2pt, rounded corners=8pt, inner sep=14pt, text width=12.5cm, align=center] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark} \textbf{\color{BluePrimary}Tidak ada lagi jadwal bentrok atau double-booking.} Slot tersedia terhitung real-time. Uji coba gratis, tanpa biaya setup.}};
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White} omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}};
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid} Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470 \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ──
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA BISNIS ANDA BUTUH OMNIFLOW BOOKING ENGINE?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Reservasi lewat WhatsApp dan buku catatan rawan bentrok, salah jadwal, dan bikin pelanggan kecewa. Anda butuh sistem booking yang akurat dan otomatis.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} RESERVASI CARA LAMA}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Double-booking} --- dua pelanggan, satu slot yang sama\par\vspace{4pt}%
+    \textbullet\ \textbf{Jadwal manual} --- dicatat di buku, mudah salah\par\vspace{4pt}%
+    \textbullet\ \textbf{Harga statis} --- tak bisa sesuaikan jam sibuk\par\vspace{4pt}%
+    \textbullet\ \textbf{Balas lambat} --- pelanggan tunggu konfirmasi lama\par\vspace{4pt}%
+    \textbullet\ \textbf{Tanpa data} --- tak tahu slot mana paling laku\par\vspace{4pt}%
+    \textbullet\ \textbf{Tak ada self-service} --- semua booking harus lewat admin}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW BOOKING ENGINE MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Anti-bentrok} --- deteksi konflik slot real-time\par\vspace{4pt}%
+    \textbullet\ \textbf{Slot otomatis} --- dihitung dari jam operasional\par\vspace{4pt}%
+    \textbullet\ \textbf{Harga dinamis} --- sesuaikan jam, hari, tanggal\par\vspace{4pt}%
+    \textbullet\ \textbf{Konfirmasi instan} --- status booking langsung jelas\par\vspace{4pt}%
+    \textbullet\ \textbf{Portal pelanggan} --- booking mandiri 24/7\par\vspace{4pt}%
+    \textbullet\ \textbf{Data terpusat} --- lokasi, resource, layanan rapi}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White} Slot tersedia dihitung real-time dari jam operasional, aturan ketersediaan, dan booking yang ada --- double-booking mustahil terjadi.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Sejak pakai Omniflow, tidak ada lagi jadwal bentrok. Pelanggan booking sendiri lewat portal, dan tim kami tinggal fokus melayani.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Yoga Pratama}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Owner, Lapangan Olahraga}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Fitur harga dinamis menaikkan pendapatan kami di jam sibuk. Semua otomatis, tidak perlu hitung manual lagi.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Nadia Rahmawati}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Manager, Studio Rental}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ── PAGE 3 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW BOOKING ENGINE}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Mesin booking multi-vertikal --- cocok untuk sport, klinik, rental, dan bisnis berbasis slot lainnya.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Booking Anti-Bentrok}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Slot real-time dengan deteksi konflik.\par\vspace{3pt}
+    \textbullet\ Slot dari jam operasional otomatis\par\vspace{2pt}%
+    \textbullet\ Deteksi tumpang-tindih (overlap)\par\vspace{2pt}%
+    \textbullet\ Blokir resource saat tidak tersedia\par\vspace{2pt}%
+    \textbullet\ Cegah double-booking otomatis}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Harga Dinamis}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Sesuaikan tarif dengan permintaan.\par\vspace{3pt}
+    \textbullet\ Aturan per jam, hari, rentang tanggal\par\vspace{2pt}%
+    \textbullet\ Penyesuaian persen atau nominal\par\vspace{2pt}%
+    \textbullet\ Prioritas aturan berlapis\par\vspace{2pt}%
+    \textbullet\ Tarif tampil real-time saat booking}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Multi-Entity}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola seluruh sumber daya.\par\vspace{3pt}
+    \textbullet\ Lokasi, resource, layanan, pelanggan\par\vspace{2pt}%
+    \textbullet\ Dropdown lokasi ke resource bertingkat\par\vspace{2pt}%
+    \textbullet\ Jam operasional fleksibel (JSON)\par\vspace{2pt}%
+    \textbullet\ CRUD lengkap tiap entitas}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Portal Pelanggan}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Booking mandiri tanpa repot.\par\vspace{3pt}
+    \textbullet\ Login tanpa password (magic-link)\par\vspace{2pt}%
+    \textbullet\ Cek ketersediaan slot live\par\vspace{2pt}%
+    \textbullet\ Dashboard \& riwayat booking\par\vspace{2pt}%
+    \textbullet\ Status booking dengan badge jelas}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Siklus Booking}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola dari pesan sampai selesai.\par\vspace{3pt}
+    \textbullet\ pending, confirmed, completed\par\vspace{2pt}%
+    \textbullet\ Reschedule \& pembatalan\par\vspace{2pt}%
+    \textbullet\ Penanda no-show\par\vspace{2pt}%
+    \textbullet\ Audit log tiap perubahan}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} AI Assistant \& Copilot}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Bantuan cerdas di tiap halaman.\par\vspace{3pt}
+    \textbullet\ AI Chat streaming multi-model\par\vspace{2pt}%
+    \textbullet\ AI Copilot analisis layar\par\vspace{2pt}%
+    \textbullet\ Multi-bahasa (ID/EN/ZH)\par\vspace{2pt}%
+    \textbullet\ Riwayat percakapan tersimpan}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark} Payment gateway terintegrasi\enspace\textcolor{BluePrimary}{\textbullet}\enspace Sinkronisasi kalender\enspace\textcolor{BluePrimary}{\textbullet}\enspace Reminder WhatsApp otomatis}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ── PAGE 4 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK NYATA UNTUK BISNIS ANDA}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Lebih sedikit bentrok, lebih banyak booking, pelanggan lebih puas.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 0}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Double-Booking}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Deteksi konflik real-time mencegah jadwal bentrok.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} +}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Pendapatan}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Harga dinamis maksimalkan tarif di jam sibuk.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 24/7}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Booking Mandiri}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Pelanggan pesan sendiri kapan saja lewat portal.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} Real-time}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Slot Akurat}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Ketersediaan selalu terhitung tepat setiap saat.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} AES-256}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Enkripsi Data}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Selalu Online}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Tim Omniflow bantu setup lokasi, layanan, dan aturan harga kami. Onboarding-nya cepat dan sistemnya langsung bisa dipakai pelanggan.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Fajar Nugraha}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Founder, Klinik Kecantikan}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 0}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} jadwal bentrok berkat}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} deteksi konflik real-time}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Jadwalkan Demo}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Lihat langsung sistem booking anti-bentrok bekerja.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{4pt}\includegraphics[width=1.7cm]{../qr_wa.jpeg}\par\vspace{1pt}{\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Tim Kami Bantu Setup}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Onboarding dipandu langsung tim Omniflow --- \textbf{gratis}, 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White} Otomatiskan Reservasi Bisnis Anda Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid} Uji coba gratis 30 hari \enspace\textbullet\enspace \textbf{Tim kami bantu setup \& migrasi} \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight} omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}

@@ -1,0 +1,515 @@
+% ============================================================
+%  Omniflow Habitat — Marketing Kit
+% ============================================================
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+\usepackage{lmodern}
+\usepackage{helvet}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{eso-pic}
+\usepackage{calc}
+\usepackage{fancyhdr}
+
+\geometry{a4paper,left=0mm,right=0mm,top=0mm,bottom=0mm,noheadfoot}
+\setlength{\parindent}{0pt}
+
+\definecolor{BluePrimary}{HTML}{2563EB}
+\definecolor{BlueDark}   {HTML}{1E3A8A}
+\definecolor{BlueLight}  {HTML}{60A5FA}
+\definecolor{BlueBg}     {HTML}{EFF6FF}
+\definecolor{BlueMid}    {HTML}{DBEAFE}
+\definecolor{TextDark}   {HTML}{1E293B}
+\definecolor{TextLight}  {HTML}{64748B}
+\definecolor{White}      {HTML}{FFFFFF}
+\definecolor{RedLight}   {HTML}{FEE2E2}
+\definecolor{RedText}    {HTML}{B91C1C}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{PurpleBg}  {HTML}{F5F3FF}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg} {HTML}{ECFDF5}
+\definecolor{EmeraldDark}{HTML}{065F46}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{TealPrimary}{HTML}{0D9488}
+
+\renewcommand{\familydefault}{\sfdefault}
+\hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
+
+\newcommand{\compactfooter}{%
+    \begin{tikzpicture}[remember picture,overlay]
+        \fill[BluePrimary](current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+        \node[anchor=south,yshift=1.0cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{White}
+            omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}%
+        };
+        \node[anchor=south,yshift=0.22cm,text width=19cm,align=center] at (current page.south) {%
+            {\fontsize{7}{9}\selectfont\color{BlueMid}
+            Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470
+            \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}%
+        };
+    \end{tikzpicture}%
+}
+
+\newcommand{\sectiontitle}[1]{%
+    \vspace{10pt}%
+    {\fontsize{13}{16}\selectfont\bfseries\color{BlueDark} #1}\par\vspace{3pt}%
+    {\color{BluePrimary}\hrule height 0.6pt}\par\vspace{8pt}%
+}
+
+\newcommand{\kitheader}{%
+    \thispagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[L]{\fontsize{7.5}{9}\selectfont\bfseries OMNIFLOW HABITAT --- MARKETING KIT}
+    \fancyhead[R]{\fontsize{7.5}{9}\selectfont omniflow.id}
+}
+
+\begin{document}
+\pagestyle{empty}
+
+% ── COVER ──
+\begin{tikzpicture}[remember picture, overlay]
+    \shade[top color={rgb,255:red,248;green,250;blue,252},bottom color={rgb,255:red,224;green,242;blue,254},shading angle=135]
+    (current page.north west) rectangle (current page.south east);
+    \fill[BluePrimary, opacity=0.06] ([xshift=-4cm, yshift=-6cm] current page.north west) circle (10cm);
+    \fill[EmeraldPrimary, opacity=0.05] ([xshift=6cm, yshift=-4cm] current page.north east) circle (8cm);
+    \fill[BlueLight, opacity=0.08] ([xshift=-2cm, yshift=-16cm] current page.north west) circle (5cm);
+    \fill[BluePrimary] (current page.south west) rectangle ([yshift=1.8cm] current page.south east);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north, yshift=-3.2cm] at (current page.north) {\includegraphics[height=2.8cm]{../logo.png}};
+    \node[anchor=north, yshift=-6.8cm, fill=EmeraldPrimary, text=White, rounded corners=20pt, inner xsep=14pt, inner ysep=6pt, font=\fontsize{9}{11}\selectfont\bfseries] at (current page.north) {MODULE: HABITAT};
+    \node[anchor=north, yshift=-9.0cm, text width=15cm, align=center] at (current page.north) {%
+        {\fontsize{20}{24}\selectfont\bfseries\color{BlueDark} Manajemen Komunitas Hunian Digital}};
+    \node[anchor=north, yshift=-11.0cm, text width=14cm, align=center] at (current page.north) {%
+        {\fontsize{11}{15}\selectfont\color{TextLight} Kelola iuran, pengumuman, pengaduan, dan layanan warga dalam satu aplikasi.}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-7.05cm, yshift=-15.6cm] current page.north) rectangle ([xshift=-2.75cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} Digital}};
+    \node[anchor=center] at ([xshift=-4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Iuran Warga}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=-2.15cm, yshift=-15.6cm] current page.north) rectangle ([xshift=2.15cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=0cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1 aplikasi}};
+    \node[anchor=center] at ([xshift=0cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Semua Layanan}};
+
+    \draw[BlueMid, line width=1pt, rounded corners=8pt] ([xshift=2.75cm, yshift=-15.6cm] current page.north) rectangle ([xshift=7.05cm, yshift=-13.2cm] current page.north);
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-14.0cm] current page.north) {{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 24/7}};
+    \node[anchor=center] at ([xshift=4.9cm, yshift=-15.0cm] current page.north) {{\fontsize{8}{10}\selectfont\color{TextLight} Akses Warga}};
+
+    \node[anchor=north, yshift=-17.2cm, fill=BlueBg, draw=BluePrimary, line width=1.2pt, rounded corners=8pt, inner sep=14pt, text width=12.5cm, align=center] at (current page.north) {%
+        {\fontsize{10}{14}\selectfont\color{TextDark} \textbf{\color{BluePrimary}Satu aplikasi untuk seluruh urusan komunitas.} Iuran, pengumuman, pengaduan, dan fasilitas --- semua rapi. Uji coba gratis, tanpa biaya setup.}};
+
+    \node[anchor=south, yshift=1.0cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{8.5}{11}\selectfont\bfseries\color{White} omniflow.id \enspace\textcolor{BlueLight}{|}\enspace contact@omniflow.id \enspace\textcolor{BlueLight}{|}\enspace +62 821 2560 9413}};
+    \node[anchor=south, yshift=0.22cm, text width=19cm, align=center] at (current page.south) {%
+        {\fontsize{7}{9}\selectfont\color{BlueMid} Jl.\ Letjen S.\ Parman No.\ 28, Grogol Petamburan, Jakarta Barat 11470 \enspace\textcolor{BlueLight}{·}\enspace Senin--Jumat, 08.00--18.00 WIB}};
+\end{tikzpicture}
+
+\newpage
+
+% ── PAGE 2 ──
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{KENAPA PENGURUS KOMUNITAS BUTUH OMNIFLOW HABITAT?}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Mengelola perumahan, cluster, atau RT/RW dengan grup WhatsApp dan buku kas manual bikin iuran macet, pengumuman terlewat, dan pengaduan tak tertangani.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{RedLight}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{RedText} KELOLA KOMUNITAS CARA LAMA}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Iuran macet} --- sulit lacak siapa sudah bayar\par\vspace{4pt}%
+    \textbullet\ \textbf{Kas manual} --- catatan di buku rawan salah\par\vspace{4pt}%
+    \textbullet\ \textbf{Pengumuman terlewat} --- tenggelam di grup WhatsApp\par\vspace{4pt}%
+    \textbullet\ \textbf{Pengaduan hilang} --- laporan warga tak tertangani\par\vspace{4pt}%
+    \textbullet\ \textbf{Fasilitas rebutan} --- booking balai/lapangan bentrok\par\vspace{4pt}%
+    \textbullet\ \textbf{Keamanan lemah} --- kendaraan tamu sulit dipantau}%
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW HABITAT MENJAWAB}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{6pt}
+
+    {\fontsize{9.5}{13}\selectfont\color{TextDark}%
+    \textbullet\ \textbf{Iuran digital} --- tagihan otomatis \& status jelas\par\vspace{4pt}%
+    \textbullet\ \textbf{Bukti bayar} --- unggah bukti, verifikasi mudah\par\vspace{4pt}%
+    \textbullet\ \textbf{Pengumuman terpusat} --- sampai ke semua warga\par\vspace{4pt}%
+    \textbullet\ \textbf{Pengaduan terlacak} --- open sampai selesai\par\vspace{4pt}%
+    \textbullet\ \textbf{Booking fasilitas} --- jadwal rapi tanpa bentrok\par\vspace{4pt}%
+    \textbullet\ \textbf{Registrasi kendaraan} --- whitelist untuk keamanan}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White} Iuran, pengumuman, pengaduan, dan booking fasilitas --- semua dikelola pengurus dan diakses warga dari satu aplikasi.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Iuran warga kami yang dulu sering macet sekarang tertib. Tagihan otomatis dan warga bisa lihat status bayar sendiri lewat aplikasi.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Pak Hendra}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Ketua RW, Cluster Perumahan}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Pengaduan warga tidak lagi hilang di grup WhatsApp. Semua tercatat, statusnya jelas, dan pengurus bisa tindak lanjuti dengan rapi.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Bu Siti}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Pengurus, Komunitas Hunian}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\restoregeometry
+
+% ── PAGE 3 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{FITUR UTAMA OMNIFLOW HABITAT}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Platform komunitas hunian --- dari iuran hingga keamanan, dibangun untuk pengurus dan warga.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Iuran \& Pembayaran}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola iuran warga secara digital.\par\vspace{3pt}
+    \textbullet\ Jenis iuran bulanan/sekali bayar\par\vspace{2pt}%
+    \textbullet\ Tagihan otomatis per warga\par\vspace{2pt}%
+    \textbullet\ Unggah bukti pembayaran\par\vspace{2pt}%
+    \textbullet\ Status lunas/belum jelas}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Pengumuman}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Info penting sampai ke semua warga.\par\vspace{3pt}
+    \textbullet\ Buat/edit/hapus pengumuman\par\vspace{2pt}%
+    \textbullet\ Broadcast ke seluruh warga\par\vspace{2pt}%
+    \textbullet\ Tanggal terbit \& konten lengkap\par\vspace{2pt}%
+    \textbullet\ Riwayat pengumuman tersimpan}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Pengaduan}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Laporan warga tertangani rapi.\par\vspace{3pt}
+    \textbullet\ Warga lapor kerusakan/masalah\par\vspace{2pt}%
+    \textbullet\ Alur open, in-progress, selesai\par\vspace{2pt}%
+    \textbullet\ Pelacakan status transparan\par\vspace{2pt}%
+    \textbullet\ Tanggapan pengurus tercatat}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Booking Fasilitas}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Atur pemakaian fasilitas bersama.\par\vspace{3pt}
+    \textbullet\ Definisi fasilitas (balai, lapangan)\par\vspace{2pt}%
+    \textbullet\ Booking dengan jam mulai/selesai\par\vspace{2pt}%
+    \textbullet\ Status pending/disetujui/batal\par\vspace{2pt}%
+    \textbullet\ Jadwal rapi tanpa bentrok}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Kendaraan \& Keamanan}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pantau kendaraan penghuni.\par\vspace{3pt}
+    \textbullet\ Registrasi plat, tipe, merek\par\vspace{2pt}%
+    \textbullet\ Whitelist untuk security\par\vspace{2pt}%
+    \textbullet\ Catatan parkir\par\vspace{2pt}%
+    \textbullet\ Basis data untuk keamanan}%%
+
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldDark}{%
+        \begin{minipage}{\dimexpr\textwidth-14pt}
+            \vspace{5pt}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} Manajemen Warga \& AI}
+            \vspace{5pt}
+        \end{minipage}}
+    \vspace{5pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kelola data \& asisten cerdas.\par\vspace{3pt}
+    \textbullet\ Data warga \& unit (Blok A-12)\par\vspace{2pt}%
+    \textbullet\ Peran pengurus \& warga\par\vspace{2pt}%
+    \textbullet\ AI Chat \& Copilot kontekstual\par\vspace{2pt}%
+    \textbullet\ Multi-bahasa (ID/EN/ZH)}%%
+
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark} Pembayaran online (payment gateway)\enspace\textcolor{BluePrimary}{\textbullet}\enspace Notifikasi WhatsApp\enspace\textcolor{BluePrimary}{\textbullet}\enspace Panic button keamanan}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
+
+\restoregeometry
+
+% ── PAGE 4 ──
+\newpage
+\newgeometry{left=14mm,right=14mm,top=10mm,bottom=12mm}
+\kitheader
+\compactfooter
+\setlength{\parskip}{2pt}
+
+\sectiontitle{DAMPAK NYATA UNTUK KOMUNITAS ANDA}
+
+{\fontsize{9.5}{13}\selectfont\color{TextLight} Iuran lebih tertib, warga lebih terhubung, pengurus lebih ringan.}
+
+\vspace{6pt}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} Digital}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Iuran Tertib}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Tagihan otomatis \& status bayar transparan.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 1}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Aplikasi Warga}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Semua layanan komunitas dalam satu tempat.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 100\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Terlacak}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Pengaduan \& pembayaran tercatat lengkap.}%
+            \vspace{6pt}
+        \end{minipage}}%
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep}
+            \vspace{6pt}
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 24/7}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Akses Warga}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Warga urus iuran \& lapor kapan saja.}%
+            \vspace{6pt}
+        \end{minipage}}%
+\end{minipage}
+
+\vspace{8pt}
+
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\vspace{6pt}
+\hspace{6pt}%
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} AES-256}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Enkripsi Data}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Selalu Online}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\vspace{6pt}
+\end{minipage}}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Tim Omniflow bantu kami setup data warga dan jenis iuran. Onboarding-nya dipandu langsung, dan pengurus baru pun cepat paham.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Pak Joko}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Ketua Pengurus, Perumahan}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 1}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} aplikasi untuk semua}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} urusan komunitas Anda}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Mulai dari fitur yang dibutuhkan, tambah kapan saja.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{4pt}\includegraphics[width=1.7cm]{../qr_wa.jpeg}\par\vspace{1pt}{\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \vspace{6pt}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Tim Kami Bantu Setup}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Onboarding dipandu langsung tim Omniflow --- \textbf{gratis}, 2--4 minggu.}
+            \end{center}
+            \vspace{6pt}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{13}{16}\selectfont\bfseries\color{White} Digitalkan Komunitas Hunian Anda Hari Ini}\par\vspace{3pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueMid} Uji coba gratis 30 hari \enspace\textbullet\enspace \textbf{Tim kami bantu setup \& migrasi} \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
+        {\fontsize{9.5}{12}\selectfont\color{BlueLight} omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
+    \end{minipage}}}
+
+\restoregeometry
+\pagestyle{empty}
+\end{document}
