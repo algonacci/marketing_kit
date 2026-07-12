@@ -183,7 +183,7 @@ Pembelian yang tidak terkelola berarti pengeluaran tak terkontrol dan pemasok ya
     \textbullet\ \textbf{PO digital} --- nomor PO unik otomatis, status real-time\par\vspace{4pt}%
     \textbullet\ \textbf{Approval berjenjang} --- assign approver, audit timestamp\par\vspace{4pt}%
     \textbullet\ \textbf{Invoice terpusat} --- faktur supplier tertaut ke PO, tersimpan\par\vspace{4pt}%
-    \textbullet\ \textbf{Manajemen dokumen} --- upload lampiran ke S3, kategori terstruktur\par\vspace{4pt}%
+    \textbullet\ \textbf{Manajemen dokumen} --- upload lampiran ke penyimpanan cloud, kategori terstruktur\par\vspace{4pt}%
     \textbullet\ \textbf{Tracking fulfillment} --- tandai PO diterima dengan catatan lengkap\par\vspace{4pt}%
     \textbullet\ \textbf{Audit trail penuh} --- setiap perubahan tercatat dengan timestamp}%
 \end{minipage}
@@ -217,7 +217,7 @@ Pembelian yang tidak terkelola berarti pengeluaran tak terkontrol dan pemasok ya
     \vspace{6pt}
 
     {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Lampiran dokumen ke S3 sangat membantu. Semua invoice dan kontrak supplier tersimpan rapi, tidak ada lagi file hilang saat diaudit.''}
+    \textit{``Lampiran dokumen ke cloud sangat membantu. Semua invoice dan kontrak supplier tersimpan rapi, tidak ada lagi file hilang saat diaudit.''}
 
     \vspace{4pt}
     {\bfseries\color{OrangeDark} Lina Susanti} {\color{TextLight}--- Procurement Lead, Retail Chain, Bandung}}
@@ -280,7 +280,7 @@ Pembelian yang tidak terkelola berarti pengeluaran tak terkontrol dan pemasok ya
     \textbullet\ Nomor invoice, tanggal, jumlah, jatuh tempo\par\vspace{2pt}%
     \textbullet\ Status pembayaran: unpaid, paid, cancelled\par\vspace{2pt}%
     \textbullet\ Referensi pembayaran (nomor transfer)\par\vspace{2pt}%
-    \textbullet\ Upload file invoice (tersimpan di S3)\par\vspace{2pt}%
+    \textbullet\ Upload file invoice (tersimpan di cloud aman)\par\vspace{2pt}%
     \textbullet\ Timestamp paid\_at tercatat otomatis}%
     \vspace{8pt}
 
@@ -290,7 +290,7 @@ Pembelian yang tidak terkelola berarti pengeluaran tak terkontrol dan pemasok ya
     {\fontsize{9}{13}\selectfont\color{TextDark}%
     \textbullet\ Upload dokumen ke PO atau invoice\par\vspace{2pt}%
     \textbullet\ Kategori: quotation, proposal, agreement, invoice, receipt, photo\par\vspace{2pt}%
-    \textbullet\ Metadata: nama file, tipe MIME, ukuran, S3 key\par\vspace{2pt}%
+    \textbullet\ Metadata: nama file, tipe, ukuran, lokasi file\par\vspace{2pt}%
     \textbullet\ Soft delete --- arsip, tidak hilang permanen\par\vspace{2pt}%
     \textbullet\ Pencarian lampiran per entitas (PO/Invoice)}%
     \vspace{8pt}
@@ -384,7 +384,7 @@ Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
         {{\fontsize{9}{12}\selectfont\color{OrangeDark}
         \textbf{Alur:} PO Draft $\to$ Approval $\to$ Ordered $\to$ Fulfilled
         \quad\textcolor{OrangePrimary}{\textbullet}\quad
-        \textbf{Dokumen:} S3 Storage
+        \textbf{Dokumen:} Cloud Storage
         \quad\textcolor{OrangePrimary}{\textbullet}\quad
         \textbf{Integrasi:} XRM Supplier}};
 \end{tikzpicture}
