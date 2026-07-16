@@ -81,7 +81,7 @@
 
 \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north,yshift=-3.2cm] at (current page.north)
-        {\includegraphics[height=2.8cm]{../../compro/logo.png}};
+        {\includegraphics[height=2.8cm]{../logo.png}};
 
     \node[anchor=north,yshift=-6.8cm,fill=IndigoPrimary,text=White,
           rounded corners=20pt,inner xsep=14pt,inner ysep=6pt,
@@ -227,6 +227,11 @@ Tim sales yang bekerja tanpa sistem terpadu membuang waktu di administrasi, buka
 
 \sectiontitle{FITUR UTAMA OMNIFLOW SALES}
 
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dari penawaran hingga pembayaran --- seluruh siklus penjualan Anda dalam satu alur kerja terintegrasi.}
+
+\vspace{6pt}
+
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
 
@@ -237,9 +242,7 @@ Tim sales yang bekerja tanpa sistem terpadu membuang waktu di administrasi, buka
     \textbullet\ Nomor quotation unik otomatis (QUO-YYYY-XXXXX)\par\vspace{2pt}%
     \textbullet\ Terhubung ke data mitra XRM (pelanggan \& kontak)\par\vspace{2pt}%
     \textbullet\ Diskon per item (persen atau nominal)\par\vspace{2pt}%
-    \textbullet\ Status: draft, sent, accepted, rejected, expired\par\vspace{2pt}%
-    \textbullet\ Tanggal berlaku (valid until) dengan notifikasi expiry\par\vspace{2pt}%
-    \textbullet\ Alamat billing \& shipping dari profil mitra XRM}%
+    \textbullet\ Status draft--expired, valid until \& notifikasi expiry}%
     \vspace{8pt}
 
     {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 2. Sales Order (SO)}
@@ -249,35 +252,49 @@ Tim sales yang bekerja tanpa sistem terpadu membuang waktu di administrasi, buka
     \textbullet\ Konversi quotation accepted ke SO satu klik\par\vspace{2pt}%
     \textbullet\ Nomor SO unik otomatis (SO-YYYY-XXXXX)\par\vspace{2pt}%
     \textbullet\ Status: draft, confirmed, completed, cancelled\par\vspace{2pt}%
-    \textbullet\ Snapshot data pelanggan saat order dibuat\par\vspace{2pt}%
-    \textbullet\ Line items dengan detail qty, harga, subtotal\par\vspace{2pt}%
-    \textbullet\ Catatan internal per SO untuk tim operasional}%
-
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.485\textwidth}
+    \textbullet\ Line items dengan detail qty, harga, subtotal}%
+    \vspace{8pt}
 
     {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 3. Invoice \& Tagihan}
     \vspace{3pt}
 
     {\fontsize{9}{13}\selectfont\color{TextDark}%
     \textbullet\ Konversi SO ke invoice secara otomatis\par\vspace{2pt}%
-    \textbullet\ Nomor invoice unik (INV-YYYY-XXXXX)\par\vspace{2pt}%
     \textbullet\ Status: draft, issued, partially\_paid, paid, overdue\par\vspace{2pt}%
     \textbullet\ Tracking outstanding amount dan paid amount\par\vspace{2pt}%
-    \textbullet\ Due date dengan deteksi otomatis status overdue\par\vspace{2pt}%
-    \textbullet\ Pajak (tax amount) per invoice}%
-    \vspace{8pt}
+    \textbullet\ Pajak per invoice \& deteksi otomatis overdue}%
+
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.485\textwidth}
 
     {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 4. Pencatatan Pembayaran}
     \vspace{3pt}
 
     {\fontsize{9}{13}\selectfont\color{TextDark}%
     \textbullet\ Catat pembayaran per invoice (partial atau full)\par\vspace{2pt}%
-    \textbullet\ Metode: transfer bank, tunai, cek, lainnya\par\vspace{2pt}%
-    \textbullet\ Nomor referensi pembayaran (bukti transfer)\par\vspace{2pt}%
-    \textbullet\ Histori pembayaran per invoice lengkap\par\vspace{2pt}%
-    \textbullet\ Outstanding otomatis terupdate setelah bayar\par\vspace{2pt}%
+    \textbullet\ Metode transfer, tunai, cek + nomor referensi\par\vspace{2pt}%
+    \textbullet\ Histori pembayaran lengkap per invoice\par\vspace{2pt}%
+    \textbullet\ Outstanding otomatis terupdate setelah bayar}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 5. Pipeline \& Riwayat Deal}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Status setiap deal terpantau real-time\par\vspace{2pt}%
+    \textbullet\ Riwayat negosiasi tersimpan meski sales berganti\par\vspace{2pt}%
+    \textbullet\ Snapshot data pelanggan saat order dibuat\par\vspace{2pt}%
+    \textbullet\ Catatan internal per SO untuk tim operasional}%
+    \vspace{8pt}
+
+    {\fontsize{10.5}{13}\selectfont\bfseries\color{IndigoPrimary} 6. Integrasi XRM \& Laporan}
+    \vspace{3pt}
+
+    {\fontsize{9}{13}\selectfont\color{TextDark}%
+    \textbullet\ Histori penjualan tersimpan di profil mitra XRM\par\vspace{2pt}%
+    \textbullet\ Alamat billing \& shipping otomatis dari XRM\par\vspace{2pt}%
+    \textbullet\ Laporan revenue \& konversi real-time\par\vspace{2pt}%
     \textbullet\ Integrasi data dengan modul Akuntansi}%
 
 \end{minipage}

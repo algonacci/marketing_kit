@@ -39,6 +39,12 @@
 \definecolor{TealPrimary}{HTML}{0D9488}
 \definecolor{TealBg}     {HTML}{F0FDFA}
 \definecolor{TealDark}   {HTML}{134E4A}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{PurpleBg}  {HTML}{F5F3FF}
+\definecolor{EmeraldPrimary}{HTML}{059669}
+\definecolor{EmeraldBg} {HTML}{ECFDF5}
+\definecolor{EmeraldDark}{HTML}{065F46}
+\definecolor{OrangePrimary}{HTML}{EA580C}
 
 \renewcommand{\familydefault}{\sfdefault}
 \hypersetup{colorlinks=true,urlcolor=BluePrimary,hidelinks}
@@ -84,7 +90,7 @@
 
 \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north,yshift=-3.2cm] at (current page.north)
-        {\includegraphics[height=2.8cm]{../../compro/logo.png}};
+        {\includegraphics[height=2.8cm]{../logo.png}};
 
     \node[anchor=north,yshift=-6.8cm,fill=TealPrimary,text=White,
           rounded corners=20pt,inner xsep=14pt,inner ysep=6pt,
@@ -174,9 +180,9 @@ Tanpa sistem, aset perusahaan sering tidak diketahui lokasinya, tidak terpelihar
 \end{minipage}%
 \hfill%
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{TealPrimary}{%
+    \colorbox{BluePrimary}{%
         \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW ASSET MANAGEMENT}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW ASSET MANAGEMENT MENJAWAB}
         \end{minipage}}\par
     \vspace{4pt}
 
@@ -191,33 +197,33 @@ Tanpa sistem, aset perusahaan sering tidak diketahui lokasinya, tidak terpelihar
 
 \vspace{8pt}
 
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White} Scan QR di aset mana pun --- status, kondisi, dan pemegang terakhir langsung terlihat. Semua perubahan tercatat otomatis.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{TealBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
-        \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``QR code per aset mengubah cara kami audit. Scan sekali, langsung tahu status, kondisi, siapa pemegang terakhir. Audit tahunan kini selesai dalam sehari.''}
-
-    \vspace{4pt}
-    {\bfseries\color{TealDark} Bagas Setiawan} {\color{TextLight}--- IT Manager, Perusahaan Jasa, Jakarta}}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``QR code per aset mengubah cara kami audit. Scan sekali, langsung tahu status, kondisi, siapa pemegang terakhir. Audit tahunan kini selesai dalam sehari.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Bagas Setiawan}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} IT Manager, Perusahaan Jasa, Jakarta}
+        \end{minipage}}
 \end{minipage}%
-\hfill%
+\hfill
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{TealBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
-        \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Sistem request aset formal mengakhiri drama pinjam-meminjam. Karyawan tahu prosedurnya, manajemen punya visibilitas penuh atas semua aset.''}
-
-    \vspace{4pt}
-    {\bfseries\color{TealDark} Nurul Hidayah} {\color{TextLight}--- GA Head, Startup Teknologi, Bali}}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Sistem request aset formal mengakhiri drama pinjam-meminjam. Karyawan tahu prosedurnya, manajemen punya visibilitas penuh atas semua aset.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Nurul Hidayah}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} GA Head, Startup Teknologi, Bali}
+        \end{minipage}}
 \end{minipage}
 
 \newpage
@@ -231,107 +237,111 @@ Tanpa sistem, aset perusahaan sering tidak diketahui lokasinya, tidak terpelihar
 
 \sectiontitle{FITUR UTAMA OMNIFLOW ASSET MANAGEMENT}
 
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dari registrasi sampai penghapusan --- seluruh siklus hidup aset perusahaan Anda dalam satu sistem yang terlacak penuh.}
+
+\vspace{6pt}
+
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 1. Registrasi \& Identifikasi Aset}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Asset tag unik (kode identifikasi internal)\par\vspace{2pt}%
-    \textbullet\ Serial number, QR code per aset\par\vspace{2pt}%
-    \textbullet\ Kategori aset (elektronik, kendaraan, furnitur, dll)\par\vspace{2pt}%
-    \textbullet\ Status: available, assigned, borrowed, maintenance, retired\par\vspace{2pt}%
-    \textbullet\ Kondisi: excellent, good, fair, damaged\par\vspace{2pt}%
-    \textbullet\ Lokasi fisik saat ini tercatat}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 2. Penugasan Aset}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Assign ke karyawan, tim, atau lokasi tertentu\par\vspace{2pt}%
-    \textbullet\ Handover notes saat serah terima\par\vspace{2pt}%
-    \textbullet\ Tanggal mulai dan berakhir penugasan\par\vspace{2pt}%
-    \textbullet\ Riwayat penugasan lengkap per aset\par\vspace{2pt}%
-    \textbullet\ Custody type: employee / team / location}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 3. Peminjaman Aset}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Proses peminjaman dengan waktu mulai \& batas kembali\par\vspace{2pt}%
-    \textbullet\ Checkout notes dan return notes\par\vspace{2pt}%
-    \textbullet\ Status: ongoing, returned, overdue\par\vspace{2pt}%
-    \textbullet\ Notifikasi overdue (aset belum dikembalikan)}%
-
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 1. Registrasi \& Identifikasi Aset}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Setiap aset punya identitas unik.\par\vspace{3pt}
+    \textbullet\ Asset tag unik + serial number + QR code\par\vspace{2pt}%
+    \textbullet\ Kategori: elektronik, kendaraan, furnitur, dll\par\vspace{2pt}%
+    \textbullet\ Status available sampai retired\par\vspace{2pt}%
+    \textbullet\ Kondisi \& lokasi fisik selalu tercatat}%
 \end{minipage}%
-\hfill%
+\hfill
 \begin{minipage}[t]{0.485\textwidth}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 4. Request \& Approval}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Tipe request: assignment, borrowing, return, status\_update, archive\par\vspace{2pt}%
-    \textbullet\ Assign approver per request\par\vspace{2pt}%
-    \textbullet\ Status: pending, approved, rejected, cancelled\par\vspace{2pt}%
-    \textbullet\ Notes permintaan \& catatan reviewer\par\vspace{2pt}%
-    \textbullet\ Timestamp reviewed\_at tercatat}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 5. Event Log Aset}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Setiap kejadian pada aset tercatat (event\_type)\par\vspace{2pt}%
-    \textbullet\ Judul event, catatan, dan metadata JSON fleksibel\par\vspace{2pt}%
-    \textbullet\ Telusuri riwayat lengkap setiap aset\par\vspace{2pt}%
-    \textbullet\ Basis untuk laporan audit kapanpun}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{TealPrimary} 6. Scan Token \& QR}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Setiap aset punya scan token unik\par\vspace{2pt}%
-    \textbullet\ QR code dapat dicetak dan ditempelkan ke aset\par\vspace{2pt}%
-    \textbullet\ Scan QR langsung buka detail aset di browser\par\vspace{2pt}%
-    \textbullet\ Update status aset cepat via scan}%
-
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 2. Penugasan Aset}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Assign aset ke karyawan, tim, atau lokasi.\par\vspace{3pt}
+    \textbullet\ Custody type: employee / team / location\par\vspace{2pt}%
+    \textbullet\ Handover notes saat serah terima\par\vspace{2pt}%
+    \textbullet\ Tanggal mulai \& berakhir penugasan\par\vspace{2pt}%
+    \textbullet\ Riwayat penugasan lengkap per aset}%
 \end{minipage}
 
 \vspace{8pt}
 
-\colorbox{BlueBg}{%
-\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-    {\fontsize{9.5}{13}\selectfont\bfseries\color{BlueDark} SEGERA HADIR}
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 3. Peminjaman Aset}
+        \end{minipage}}\par
     \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Pinjam-kembali terstruktur dengan due date.\par\vspace{3pt}
+    \textbullet\ Waktu mulai \& batas kembali jelas\par\vspace{2pt}%
+    \textbullet\ Checkout notes dan return notes\par\vspace{2pt}%
+    \textbullet\ Status: ongoing, returned, overdue\par\vspace{2pt}%
+    \textbullet\ Notifikasi aset belum dikembalikan}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueDark}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 4. Request \& Approval}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Permintaan aset formal, bukan via chat.\par\vspace{3pt}
+    \textbullet\ Tipe: assignment, borrowing, return, archive\par\vspace{2pt}%
+    \textbullet\ Assign approver per request\par\vspace{2pt}%
+    \textbullet\ Status pending sampai approved/rejected\par\vspace{2pt}%
+    \textbullet\ Catatan reviewer + timestamp tercatat}%
+\end{minipage}
 
-    \noindent
-    \begin{minipage}[t]{0.31\textwidth}
-        {\fontsize{9}{12}\selectfont\color{TextDark}%
-        \textbullet\ Jadwal Pemeliharaan (Maintenance)\par\vspace{2pt}%
-        \textbullet\ Notifikasi Perawatan Berkala}%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{0.31\textwidth}
-        {\fontsize{9}{12}\selectfont\color{TextDark}%
-        \textbullet\ Laporan Depresiasi Aset\par\vspace{2pt}%
-        \textbullet\ Integrasi Akuntansi (Fixed Asset)}%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{0.31\textwidth}
-        {\fontsize{9}{12}\selectfont\color{TextDark}%
-        \textbullet\ Mobile App Scan QR\par\vspace{2pt}%
-        \textbullet\ Laporan Inventaris Aset PDF}%
-    \end{minipage}
-\end{minipage}}
+\vspace{8pt}
 
-\vspace{4pt}
-{\fontsize{8.5}{11}\selectfont\itshape\color{TextLight}
-Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 5. Event Log Aset}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Setiap kejadian pada aset tercatat.\par\vspace{3pt}
+    \textbullet\ Event type + judul + catatan per kejadian\par\vspace{2pt}%
+    \textbullet\ Metadata JSON fleksibel\par\vspace{2pt}%
+    \textbullet\ Telusuri riwayat lengkap tiap aset\par\vspace{2pt}%
+    \textbullet\ Basis laporan audit kapan pun}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldDark}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 6. Scan Token \& QR}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Scan sekali, semua info aset terbuka.\par\vspace{3pt}
+    \textbullet\ Scan token unik per aset\par\vspace{2pt}%
+    \textbullet\ QR dicetak \& ditempel ke aset\par\vspace{2pt}%
+    \textbullet\ Scan langsung buka detail di browser\par\vspace{2pt}%
+    \textbullet\ Update status cepat via scan}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark} Jadwal pemeliharaan \& notifikasi berkala\enspace\textcolor{BluePrimary}{\textbullet}\enspace Laporan depresiasi \& integrasi akuntansi\enspace\textcolor{BluePrimary}{\textbullet}\enspace Mobile app scan QR}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
 
 \newpage
 
@@ -343,120 +353,150 @@ Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
 \compactfooter
 \setlength{\parskip}{2pt}
 
-\sectiontitle{DAMPAK TERUKUR UNTUK BISNIS ANDA}
+\sectiontitle{DAMPAK NYATA UNTUK BISNIS ANDA}
 
-\noindent
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} 100\%}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Aset terdata\\ dengan lokasi}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} 0\%}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Peminjaman\\ tanpa catatan}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} 1 Hari}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Audit aset\\ dengan QR scan}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{TealPrimary} Real-time}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Status \&\\ kondisi aset}
-\end{minipage}
-
-\vspace{8pt}
-
-\noindent
-\begin{tikzpicture}
-    \fill[TealBg] (0,0) rectangle (\textwidth, 1.4cm);
-    \node[anchor=west,xshift=10pt] at (0,0.7cm)
-        {{\fontsize{9}{12}\selectfont\color{TealDark}
-        \textbf{Identifikasi:} Asset Tag + QR Code + Serial Number
-        \quad\textcolor{TealPrimary}{\textbullet}\quad
-        \textbf{Kategori:} Elektronik, Kendaraan, Furnitur, dll
-        \quad\textcolor{TealPrimary}{\textbullet}\quad
-        \textbf{Audit:} Penuh}};
-\end{tikzpicture}
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Aset terdata, peminjaman tertib, audit cepat --- kontrol penuh atas seluruh aset perusahaan.}
 
 \vspace{6pt}
 
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{TealBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 100\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Aset Terdata}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Setiap aset punya tag, QR, lokasi, dan penanggung jawab yang jelas.}
         \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Sistem request aset dengan approval mengakhiri chaos peminjaman informal. Tim HR dan GA sekarang punya data akurat untuk perencanaan pengadaan.''}
-
-    \vspace{4pt}
-    {\bfseries\color{TealDark} Pratama Wijaya} {\color{TextLight}--- HR Director, Perusahaan Jasa Keuangan, Surabaya}}
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 0\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Peminjaman Tanpa Catatan}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Semua pinjam-kembali tercatat dengan due date dan notifikasi overdue.}
+        \end{minipage}}%
 \end{minipage}%
-\hfill%
+\hfill
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{TealBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{TealDark} TESTIMONI PELANGGAN}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 1 Hari}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Audit Aset}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Scan QR per aset --- audit tahunan selesai dalam hitungan hari, bukan minggu.}
         \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Event log yang lengkap membuat kami bisa pertanggungjawabkan kondisi setiap aset saat ada klaim asuransi. Sangat membantu untuk compliance internal.''}
-
-    \vspace{4pt}
-    {\bfseries\color{TealDark} Indah Permata} {\color{TextLight}--- Finance \& Admin, Perusahaan Konstruksi, Medan}}
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} Real-time}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Status \& Kondisi}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Kondisi excellent sampai damaged terpantau langsung dari dashboard.}
+        \end{minipage}}%
 \end{minipage}
 
 \vspace{8pt}
 
-\sectiontitle{SIAP MENGELOLA ASET PERUSAHAAN?}
+\noindent
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\hspace{6pt}%
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} AES-256}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Enkripsi Data}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Selalu Online}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\end{minipage}}
+
+\vspace{6pt}
+
+\sectiontitle{APA KATA MEREKA?}
 
 \noindent
-\begin{minipage}[t]{0.31\textwidth}
-    \centering
-    \colorbox{TealBg}{%
-        \begin{minipage}[t][4.7cm][c]{\dimexpr\textwidth-2\fboxsep\relax}
-            \vspace{8pt}\centering
-            {\fontsize{20}{24}\selectfont\bfseries\color{TealPrimary} 1}\\[4pt]
-            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Pilih Modul}\\[3pt]
-            {\fontsize{8.5}{12}\selectfont\color{TextLight} Pilih paket yang\\ sesuai skala bisnis Anda}
-            \vspace{8pt}
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Sistem request aset dengan approval mengakhiri chaos peminjaman informal. Tim HR dan GA sekarang punya data akurat untuk perencanaan pengadaan.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Pratama Wijaya}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} HR Director, Perusahaan Jasa Keuangan, Surabaya}
         \end{minipage}}
 \end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.31\textwidth}
-    \centering
-    \colorbox{TealBg}{%
-        \begin{minipage}[t][4.7cm][c]{\dimexpr\textwidth-2\fboxsep\relax}
-            \vspace{8pt}\centering
-            {\fontsize{20}{24}\selectfont\bfseries\color{TealPrimary} 2}\\[4pt]
-            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Kontak via WhatsApp}\\[4pt]
-            \includegraphics[width=1.7cm]{../qr_wa.jpeg}\\[1pt]
-            {\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\\[3pt]
-            {\fontsize{8.5}{12}\selectfont\color{TextLight} +62 821 2560 9413\\ Tim kami siap membantu}
-            \vspace{8pt}
-        \end{minipage}}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.31\textwidth}
-    \centering
-    \colorbox{TealBg}{%
-        \begin{minipage}[t][4.7cm][c]{\dimexpr\textwidth-2\fboxsep\relax}
-            \vspace{8pt}\centering
-            {\fontsize{20}{24}\selectfont\bfseries\color{TealPrimary} 3}\\[4pt]
-            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Tim Kami Bantu Setup}\\[3pt]
-            {\fontsize{8.5}{12}\selectfont\color{TextLight} Aset perusahaan\\ terpantau mulai hari ini}
-            \vspace{8pt}
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 100\%}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} riwayat aset terlacak, dari}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} pengadaan sampai penghapusan}
+            \end{center}
         \end{minipage}}
 \end{minipage}
+
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Mulai dari Asset Management --- tambah modul lain kapan saja.}
+            \end{center}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{4pt}\includegraphics[width=1.7cm]{../qr_wa.jpeg}\par\vspace{1pt}{\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Tim Kami Bantu Setup}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Onboarding dipandu langsung tim Omniflow --- \textbf{gratis}, 2--4 minggu.}
+            \end{center}
+        \end{minipage}}
+\end{minipage}
+\end{center}
 
 \vspace{8pt}
 
@@ -467,15 +507,12 @@ Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
     \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
         \centering
         {\fontsize{13}{16}\selectfont\bfseries\color{White}
-        Mulai gratis 30 hari --- Tidak perlu kartu kredit}\par\vspace{3pt}
+        Kendalikan Semua Aset Perusahaan Anda Hari Ini}\par\vspace{3pt}
         {\fontsize{9.5}{12}\selectfont\color{BlueMid}
         Uji coba gratis 30 hari \enspace\textbullet\enspace \textbf{Tim kami bantu setup \& migrasi} \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
         {\fontsize{9.5}{12}\selectfont\color{BlueLight}
         omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
     \end{minipage}}}
-
-\pagestyle{empty}
-
 
 \vspace{6pt}
 

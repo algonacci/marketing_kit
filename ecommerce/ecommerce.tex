@@ -46,6 +46,10 @@
 \definecolor{EmeraldPrimary}{HTML}{059669}
 \definecolor{EmeraldBg}  {HTML}{ECFDF5}
 \definecolor{EmeraldDark}{HTML}{065F46}
+\definecolor{PurplePrimary}{HTML}{7C3AED}
+\definecolor{PurpleBg}  {HTML}{F5F3FF}
+\definecolor{OrangePrimary}{HTML}{EA580C}
+\definecolor{TealPrimary}{HTML}{0D9488}
 
 % ── Fonts ──────────────────────────────────────────────────
 \renewcommand{\familydefault}{\sfdefault}
@@ -115,7 +119,7 @@
 
 \begin{tikzpicture}[remember picture, overlay]
     \node[anchor=north, yshift=-3.2cm] at (current page.north) {%
-        \includegraphics[height=2.8cm]{../../compro/logo.png}%
+        \includegraphics[height=2.8cm]{../logo.png}%
     };
 
     \node[
@@ -223,7 +227,7 @@ Toko online yang tidak terkelola dengan baik kehilangan penjualan setiap hari. O
 \end{minipage}%
 \hfill%
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{EmeraldPrimary}{%
+    \colorbox{BluePrimary}{%
         \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
             {\fontsize{10}{13}\selectfont\bfseries\color{White} OMNIFLOW E-COMMERCE MENJAWAB}
         \end{minipage}}\par
@@ -240,33 +244,33 @@ Toko online yang tidak terkelola dengan baik kehilangan penjualan setiap hari. O
 
 \vspace{8pt}
 
+{\setlength{\fboxsep}{7pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BluePrimary}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        \centering
+        {\fontsize{9.5}{12}\selectfont\bfseries\color{White} Stok terpotong otomatis saat checkout, pembayaran terverifikasi via webhook --- \textbf{toko online Anda jalan sendiri 24/7}.}
+    \end{minipage}}}
+
+\vspace{8pt}
+\sectiontitle{APA KATA MEREKA?}
+
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{EmeraldBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
-        \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Sebelumnya kami kelola toko lewat WhatsApp, sering kehabisan stok tiba-tiba. Sejak pakai Omniflow, semua pesanan tercatat rapi dan stok selalu akurat.''}
-
-    \vspace{4pt}
-    {\bfseries\color{EmeraldDark} Rina Kusuma} {\color{TextLight}--- Owner, Butik Fashion Online, Jakarta}}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Sebelumnya kami kelola toko lewat WhatsApp, sering kehabisan stok tiba-tiba. Sejak pakai Omniflow, semua pesanan tercatat rapi dan stok selalu akurat.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Rina Kusuma}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Owner, Butik Fashion Online, Jakarta}
+        \end{minipage}}
 \end{minipage}%
-\hfill%
+\hfill
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{EmeraldBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
-        \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Fitur voucher dan promosi sangat membantu saat kampanye Harbolnas. Omisi pesanan turun drastis sejak ada sistem tracking yang jelas.''}
-
-    \vspace{4pt}
-    {\bfseries\color{EmeraldDark} Budi Santoso} {\color{TextLight}--- Manajer Operasional, Toko Elektronik, Surabaya}}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Fitur voucher dan promosi sangat membantu saat kampanye Harbolnas. Omisi pesanan turun drastis sejak ada sistem tracking yang jelas.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Budi Santoso}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} Manajer Operasional, Toko Elektronik, Surabaya}
+        \end{minipage}}
 \end{minipage}
 
 \newpage
@@ -283,103 +287,111 @@ Toko online yang tidak terkelola dengan baik kehilangan penjualan setiap hari. O
 
 \sectiontitle{FITUR UTAMA OMNIFLOW E-COMMERCE}
 
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Dari katalog sampai ulasan pelanggan --- seluruh operasional toko online Anda dalam satu dashboard terpusat.}
+
+\vspace{6pt}
+
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 1. Manajemen Produk \& Katalog}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Kategori produk bersarang dengan slug SEO-friendly\par\vspace{2pt}%
+    \colorbox{BluePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 1. Manajemen Produk \& Katalog}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Katalog rapi \& SEO-friendly.\par\vspace{3pt}
+    \textbullet\ Kategori bersarang dengan slug SEO-friendly\par\vspace{2pt}%
     \textbullet\ Harga, stok, multi-gambar per produk\par\vspace{2pt}%
-    \textbullet\ Aktifkan/nonaktifkan produk tanpa hapus data\par\vspace{2pt}%
-    \textbullet\ Counter views produk untuk analitik popularitas}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 2. Keranjang \& Checkout}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Keranjang belanja dengan status active/completed/abandoned\par\vspace{2pt}%
-    \textbullet\ Magic link login --- pelanggan tanpa perlu password\par\vspace{2pt}%
-    \textbullet\ Multi-alamat pengiriman tersimpan per pelanggan\par\vspace{2pt}%
-    \textbullet\ Validasi area pengiriman secara otomatis}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 3. Manajemen Pesanan}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Status order: pending, processing, shipped, delivered, cancelled\par\vspace{2pt}%
-    \textbullet\ Riwayat status perubahan dengan audit trail lengkap\par\vspace{2pt}%
-    \textbullet\ Multi-payment gateway: Midtrans, VA, QRIS, kartu kredit\par\vspace{2pt}%
-    \textbullet\ Webhook notifikasi pembayaran otomatis}%
-
+    \textbullet\ Aktif/nonaktif produk tanpa hapus data\par\vspace{2pt}%
+    \textbullet\ Counter views untuk analitik popularitas}%
 \end{minipage}%
-\hfill%
+\hfill
 \begin{minipage}[t]{0.485\textwidth}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 4. Promosi, Voucher \& Diskon}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Promosi fleksibel: persen, nominal, free shipping\par\vspace{2pt}%
-    \textbullet\ Target promosi: semua produk, kategori, atau item spesifik\par\vspace{2pt}%
-    \textbullet\ Voucher unik dengan batas pemakaian \& ekspirasi\par\vspace{2pt}%
-    \textbullet\ Voucher eksklusif per pelanggan (first order, loyalitas)}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 5. Pengiriman Dinamis}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Konfigurasi wilayah (region) \& kota pengiriman\par\vspace{2pt}%
-    \textbullet\ Ongkos kirim berbasis rentang nilai pembelian\par\vspace{2pt}%
-    \textbullet\ Slot waktu pengiriman dengan cutoff jam order\par\vspace{2pt}%
-    \textbullet\ Jadwal libur toko (store holidays) otomatis}%
-    \vspace{8pt}
-
-    {\fontsize{10.5}{13}\selectfont\bfseries\color{EmeraldPrimary} 6. Review \& Rating Produk}
-    \vspace{3pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}%
-    \textbullet\ Ulasan hanya dari pembeli terverifikasi (per order item)\par\vspace{2pt}%
-    \textbullet\ Rating bintang, judul, komentar, foto ulasan\par\vspace{2pt}%
-    \textbullet\ Moderasi admin: approve/reject sebelum tampil\par\vspace{2pt}%
-    \textbullet\ Counter helpful count untuk kualitas ulasan}%
-
+    \colorbox{EmeraldPrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 2. Keranjang \& Checkout}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Checkout mulus tanpa ribet password.\par\vspace{3pt}
+    \textbullet\ Status cart: active, completed, abandoned\par\vspace{2pt}%
+    \textbullet\ Magic link login tanpa password\par\vspace{2pt}%
+    \textbullet\ Multi-alamat pengiriman per pelanggan\par\vspace{2pt}%
+    \textbullet\ Validasi area pengiriman otomatis}%
 \end{minipage}
 
 \vspace{8pt}
 
-\colorbox{BlueBg}{%
-\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-    {\fontsize{9.5}{13}\selectfont\bfseries\color{BlueDark} SEGERA HADIR}
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{PurplePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 3. Manajemen Pesanan}
+        \end{minipage}}\par
     \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Semua pesanan terpantau end-to-end.\par\vspace{3pt}
+    \textbullet\ Status pending sampai delivered/cancelled\par\vspace{2pt}%
+    \textbullet\ Riwayat perubahan dengan audit trail\par\vspace{2pt}%
+    \textbullet\ Multi-payment: Midtrans, VA, QRIS, kartu kredit\par\vspace{2pt}%
+    \textbullet\ Webhook notifikasi pembayaran otomatis}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueDark}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 4. Promosi, Voucher \& Diskon}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Kampanye promo fleksibel \& terukur.\par\vspace{3pt}
+    \textbullet\ Diskon persen, nominal, atau free shipping\par\vspace{2pt}%
+    \textbullet\ Target semua produk, kategori, atau item\par\vspace{2pt}%
+    \textbullet\ Voucher dengan batas pemakaian \& ekspirasi\par\vspace{2pt}%
+    \textbullet\ Voucher eksklusif per pelanggan}%
+\end{minipage}
 
-    \noindent
-    \begin{minipage}[t]{0.31\textwidth}
-        {\fontsize{9}{12}\selectfont\color{TextDark}%
-        \textbullet\ Integrasi Marketplace (Shopee, Tokopedia, Lazada)\par\vspace{2pt}%
-        \textbullet\ Sinkronisasi stok multi-channel otomatis}%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{0.31\textwidth}
-        {\fontsize{9}{12}\selectfont\color{TextDark}%
-        \textbullet\ Program Loyalitas \& Poin Reward\par\vspace{2pt}%
-        \textbullet\ Laporan Konversi \& Abandoned Cart}%
-    \end{minipage}%
-    \hfill%
-    \begin{minipage}[t]{0.31\textwidth}
-        {\fontsize{9}{12}\selectfont\color{TextDark}%
-        \textbullet\ Upsell \& Cross-sell Otomatis\par\vspace{2pt}%
-        \textbullet\ Integrasi Akuntansi Otomatis}%
-    \end{minipage}
-\end{minipage}}
+\vspace{8pt}
 
-\vspace{4pt}
-{\fontsize{8.5}{11}\selectfont\itshape\color{TextLight}
-Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{OrangePrimary}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 5. Pengiriman Dinamis}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Ongkir akurat per wilayah, otomatis.\par\vspace{3pt}
+    \textbullet\ Konfigurasi wilayah \& kota pengiriman\par\vspace{2pt}%
+    \textbullet\ Ongkir berbasis rentang nilai pembelian\par\vspace{2pt}%
+    \textbullet\ Slot waktu kirim dengan cutoff jam order\par\vspace{2pt}%
+    \textbullet\ Jadwal libur toko otomatis}%
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{EmeraldDark}{%
+        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+            {\fontsize{10}{13}\selectfont\bfseries\color{White} 6. Review \& Rating Produk}
+        \end{minipage}}\par
+    \vspace{4pt}
+    {\fontsize{9}{12}\selectfont\color{TextDark}%
+    Bangun kepercayaan lewat ulasan asli.\par\vspace{3pt}
+    \textbullet\ Ulasan hanya dari pembeli terverifikasi\par\vspace{2pt}%
+    \textbullet\ Rating bintang, komentar, foto ulasan\par\vspace{2pt}%
+    \textbullet\ Moderasi admin sebelum tampil\par\vspace{2pt}%
+    \textbullet\ Helpful count untuk kualitas ulasan}%
+\end{minipage}
+
+\vspace{8pt}
+
+{\setlength{\fboxsep}{8pt}\setlength{\fboxrule}{0pt}%
+\noindent\colorbox{BlueBg}{%
+    \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
+        {\fontsize{9}{12}\selectfont\bfseries\color{BlueDark} Segera Hadir:}\enspace
+        {\fontsize{9}{12}\selectfont\color{TextDark} Integrasi marketplace \& sinkronisasi stok multi-channel\enspace\textcolor{BluePrimary}{\textbullet}\enspace Loyalitas \& poin reward\enspace\textcolor{BluePrimary}{\textbullet}\enspace Upsell otomatis \& integrasi akuntansi}\par\vspace{3pt}
+        {\fontsize{8.5}{11}\selectfont\color{TextLight}\textit{Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}}
+    \end{minipage}}}
 
 \newpage
 
@@ -394,141 +406,164 @@ Fitur akan terus bertambah dan di-update sesuai kebutuhan industri.}
 
 \setlength{\parskip}{2pt}
 
-\sectiontitle{DAMPAK TERUKUR UNTUK BISNIS ANDA}
+\sectiontitle{DAMPAK NYATA UNTUK BISNIS ANDA}
 
-\noindent
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 40\%}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Peningkatan\\ konversi checkout}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 0}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Stok salah\\ (real-time sync)}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 3x}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Lebih cepat proses\\ manajemen pesanan}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.23\textwidth}
-    \centering
-    {\fontsize{28}{32}\selectfont\bfseries\color{EmeraldPrimary} 25\%}\\[3pt]
-    {\fontsize{8.5}{11}\selectfont\color{TextLight}\centering Peningkatan\\ repeat order}
-\end{minipage}
-
-\vspace{8pt}
-
-% Stats bar
-\noindent
-\begin{tikzpicture}
-    \fill[EmeraldBg] (0,0) rectangle (\textwidth, 1.4cm);
-    \node[anchor=west, xshift=10pt] at (0, 0.7cm)
-        {{\fontsize{9}{12}\selectfont\color{EmeraldDark}
-        \textbf{Multi-gateway:} Midtrans, VA Bank, QRIS, Kartu Kredit
-        \quad\textcolor{EmeraldPrimary}{\textbullet}\quad
-        \textbf{Integrasi:} Toko online \& notifikasi otomatis
-        \quad\textcolor{EmeraldPrimary}{\textbullet}\quad
-        \textbf{Multi-bahasa:} ID \& EN}};
-\end{tikzpicture}
+{\fontsize{9.5}{13}\selectfont\color{TextLight}
+Konversi naik, stok akurat, pesanan terproses cepat --- toko online Anda tumbuh terukur.}
 
 \vspace{6pt}
 
 \noindent
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{EmeraldBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 40\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Konversi Checkout}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Checkout cepat dengan magic link dan multi-payment meningkatkan konversi.}
         \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Fitur pengiriman dinamis sangat membantu kami yang melayani ratusan kota. Ongkir langsung kalkulasi otomatis, nol komplain salah hitung.''}
-
-    \vspace{4pt}
-    {\bfseries\color{EmeraldDark} Dewi Hartanti} {\color{TextLight}--- CEO, Herbal Indonesia, Bandung}}
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 0}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Stok Salah}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Sinkronisasi stok real-time menghapus overselling dan komplain.}
+        \end{minipage}}%
 \end{minipage}%
-\hfill%
+\hfill
 \begin{minipage}[t]{0.485\textwidth}
-    \colorbox{EmeraldBg}{%
-        \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
-            {\fontsize{10}{13}\selectfont\bfseries\color{EmeraldDark} TESTIMONI PELANGGAN}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 3x}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Proses Pesanan Lebih Cepat}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Dashboard status pending sampai delivered tanpa rekap manual.}
         \end{minipage}}\par
-    \vspace{4pt}
-
-    {\fontsize{9}{13}\selectfont\color{TextDark}
-    \textit{``Sistem review terverifikasi meningkatkan kepercayaan pembeli baru. Konversi toko kami naik 40\% dalam 2 bulan pertama pemakaian.''}
-
-    \vspace{4pt}
-    {\bfseries\color{EmeraldDark} Hendra Wijaya} {\color{TextLight}--- Founder, Toko Skincare, Yogyakarta}}
+    \vspace{6pt}
+    \noindent\colorbox{BlueBg}{%
+        \begin{minipage}[t][2.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \centering
+            {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 25\%}\par\vspace{2pt}
+            {\fontsize{9.5}{12}\selectfont\bfseries\color{BlueDark} Repeat Order}\par\vspace{2pt}
+            {\fontsize{8.5}{11}\selectfont\color{TextDark}Voucher eksklusif dan review terverifikasi membuat pelanggan kembali.}
+        \end{minipage}}%
 \end{minipage}
 
 \vspace{8pt}
-
-\sectiontitle{SIAP MULAI BERJUALAN ONLINE?}
 
 \noindent
-\begin{minipage}[t]{0.31\textwidth}
-    \centering
-    \colorbox{EmeraldBg}{%
-        \begin{minipage}[t][4.7cm][c]{\dimexpr\textwidth-2\fboxsep\relax}
-            \vspace{8pt}\centering
-            {\fontsize{20}{24}\selectfont\bfseries\color{EmeraldPrimary} 1}\\[4pt]
-            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Pilih Modul}\\[3pt]
-            {\fontsize{8.5}{12}\selectfont\color{TextLight} Pilih paket yang\\ sesuai skala bisnis Anda}
-            \vspace{8pt}
+\colorbox{BluePrimary}{%
+\begin{minipage}{\dimexpr\textwidth-2\fboxsep}
+\hspace{6pt}%
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} AES-256}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Enkripsi Data}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 99.9\%}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Selalu Online}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} ISO 27001}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Keamanan Bersertifikat}
+    \end{center}
+\end{minipage}%
+\hfill
+\begin{minipage}[t][1.25cm][c]{0.24\linewidth}
+    \begin{center}
+        {\fontsize{18}{22}\selectfont\bfseries\color{White} 24/7}\par
+        {\fontsize{8}{10}\selectfont\color{BlueMid} Dukungan Ahli}
+    \end{center}
+\end{minipage}%
+\hspace{6pt}%
+\end{minipage}}
+
+\vspace{6pt}
+
+\sectiontitle{APA KATA MEREKA?}
+
+\noindent
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            {\fontsize{9.5}{13}\selectfont\color{TextDark}\textit{``Fitur pengiriman dinamis sangat membantu kami yang melayani ratusan kota. Ongkir langsung kalkulasi otomatis, nol komplain salah hitung.''}}\par\vspace{4pt}
+            {\fontsize{8.5}{11}\selectfont\bfseries\color{BluePrimary} Dewi Hartanti}\par
+            {\fontsize{8}{10}\selectfont\color{TextLight} CEO, Herbal Indonesia, Bandung}
         \end{minipage}}
 \end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.31\textwidth}
-    \centering
-    \colorbox{EmeraldBg}{%
-        \begin{minipage}[t][4.7cm][c]{\dimexpr\textwidth-2\fboxsep\relax}
-            \vspace{8pt}\centering
-            {\fontsize{20}{24}\selectfont\bfseries\color{EmeraldPrimary} 2}\\[4pt]
-            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Kontak via WhatsApp}\\[4pt]
-            \includegraphics[width=1.7cm]{../qr_wa.jpeg}\\[1pt]
-            {\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\\[3pt]
-            {\fontsize{8.5}{12}\selectfont\color{TextLight} +62 821 2560 9413\\ Tim kami siap membantu}
-            \vspace{8pt}
-        \end{minipage}}
-\end{minipage}%
-\hfill%
-\begin{minipage}[t]{0.31\textwidth}
-    \centering
-    \colorbox{EmeraldBg}{%
-        \begin{minipage}[t][4.7cm][c]{\dimexpr\textwidth-2\fboxsep\relax}
-            \vspace{8pt}\centering
-            {\fontsize{20}{24}\selectfont\bfseries\color{EmeraldPrimary} 3}\\[4pt]
-            {\fontsize{9.5}{13}\selectfont\bfseries\color{TextDark} Tim Kami Bantu Setup}\\[3pt]
-            {\fontsize{8.5}{12}\selectfont\color{TextLight} Toko online Anda\\ aktif dalam hitungan jam}
-            \vspace{8pt}
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}
+                {\fontsize{20}{24}\selectfont\bfseries\color{BluePrimary} 40\%}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} kenaikan konversi toko}\par
+                {\fontsize{9.5}{12}\selectfont\color{TextDark} dalam 2 bulan pertama}
+            \end{center}
         \end{minipage}}
 \end{minipage}
 
+\sectiontitle{SIAP MULAI?}
+
+\begin{center}
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 1}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Pilih Modul}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Mulai dari E-Commerce --- tambah modul lain kapan saja.}
+            \end{center}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 2}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Kontak via WhatsApp}\par\vspace{4pt}\includegraphics[width=1.7cm]{../qr_wa.jpeg}\par\vspace{1pt}{\fontsize{7}{8}\selectfont\color{TextLight} Scan untuk chat cepat}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Hubungi +62 821 2560 9413 untuk konsultasi gratis.}
+            \end{center}
+        \end{minipage}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.318\textwidth}
+    \colorbox{BlueBg}{%
+        \begin{minipage}[t][4.7cm][c]{\dimexpr\linewidth-2\fboxsep\relax}
+            \begin{center}{\fontsize{22}{26}\selectfont\bfseries\color{BluePrimary} 3}\end{center}
+            \vspace{2pt}
+            \begin{center}
+                {\fontsize{10}{13}\selectfont\bfseries\color{BlueDark} Tim Kami Bantu Setup}\par\vspace{3pt}
+                {\fontsize{9}{12}\selectfont\color{TextDark} Onboarding dipandu langsung tim Omniflow --- \textbf{gratis}, 2--4 minggu.}
+            \end{center}
+        \end{minipage}}
+\end{minipage}
+\end{center}
+
 \vspace{8pt}
-
-% CTA Bar
-
 
 {\setlength{\fboxsep}{10pt}\setlength{\fboxrule}{0pt}%
 \noindent\colorbox{BluePrimary}{%
     \begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}
         \centering
         {\fontsize{13}{16}\selectfont\bfseries\color{White}
-        Mulai gratis 30 hari --- Tidak perlu kartu kredit}\par\vspace{3pt}
+        Buka Toko Online Profesional Anda Hari Ini}\par\vspace{3pt}
         {\fontsize{9.5}{12}\selectfont\color{BlueMid}
         Uji coba gratis 30 hari \enspace\textbullet\enspace \textbf{Tim kami bantu setup \& migrasi} \enspace\textbullet\enspace Dukungan 24/7}\par\vspace{2pt}
         {\fontsize{9.5}{12}\selectfont\color{BlueLight}
         omniflow.id \enspace\textbullet\enspace contact@omniflow.id \enspace\textbullet\enspace +62 821 2560 9413}
     \end{minipage}}}
-
-\pagestyle{empty}
-
 
 \vspace{6pt}
 
